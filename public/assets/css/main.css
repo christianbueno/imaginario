@@ -41,9 +41,58 @@ h1#logo {
     overflow: hidden;
 }
 #holder {
-    width: 2206px;      
+    width: 10000px;
+    position: relative;   
+        animation:move 10s;
+    -moz-animation:move 10s infinite;
+    -webkit-animation:move 10s infinite;     
 }
 #holder a {
 
     float: left;
 }
+
+ @keyframes move
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+        50% {          
+          right:1206px;          
+        }
+        100% {          
+          right:2206px;          
+        }
+      }
+      
+      @-moz-keyframes move /* Firefox */
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+        50% {          
+          right:1206px;          
+        }
+        100% {          
+          right:2206px;          
+        }
+      }
+      
+      @-webkit-keyframes move /* Safari and Chrome */
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+        50% {          
+          right:1206px;          
+        }
+        100% {          
+          right:2206px;          
+        }
+      }

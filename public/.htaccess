@@ -1,6 +1,6 @@
 # Multiple Environment config, set this to development, staging or production
 # SetEnv FUEL_ENV production
-AddHandler application/x-httpd-php54s .php
+# AddHandler application/x-httpd-php54s .php
 <IfModule mod_rewrite.c>
 
     # Make sure directory listing is disabled

@@ -12,9 +12,13 @@
 			<h1 id="logo">Imagina.RIO</h1>
 			<div id="slider" class="row">
 				<div id="holder">
-					<a href="" title="Balletto"><?php echo Asset::img('slider1.png'); ?></a>
-					<a href="" title="Tigre"><?php echo Asset::img('slider2.png'); ?></a>
+					<a href="" title="Balletto"><?php echo Html::img('img/slider1.png'); ?></a>
+					<a href="" title="Tigre"><?php echo Html::img('img/slider2.png'); ?></a>
+					<a href="" title="Balletto"><?php echo Html::img('img/slider1.png'); ?></a>
 				</div>
+			</div>
+			<div class="container">
+				<?php echo Html::img('img/logo-parceiros.png'); ?>" />
 			</div>
 			<div id="expmenu">
 				<div class="heading">
@@ -25,9 +29,6 @@
 				</div>
 			</div>
 	</div>
-
-
-
 
 	<!--div class="container">
 		<div class="hero-unit">
