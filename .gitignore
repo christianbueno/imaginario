@@ -9,10 +9,8 @@ desktop.ini
 *.tmproj
 fuel/app/logs/*/*/*
 fuel/app/cache/*/*
-public/.htaccess
 build
 nbproject/
 .idea
 
 /fuel/app/config/crypt.php
-

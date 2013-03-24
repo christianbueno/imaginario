@@ -1,34 +1,234 @@
+@font-face {
+    font-family: 'brandon_grotesquebold_italic';
+    src: url('fonts/brandon_bld_it-webfont.eot');
+    src: url('fonts/brandon_bld_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_bld_it-webfont.woff') format('woff'),
+         url('fonts/brandon_bld_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_bld_it-webfont.svg#brandon_grotesquebold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquebold';
+    src: url('fonts/brandon_bld-webfont.eot');
+    src: url('fonts/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_bld-webfont.woff') format('woff'),
+         url('fonts/brandon_bld-webfont.ttf') format('truetype'),
+         url('fonts/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesqueblack_italic';
+    src: url('fonts/brandon_blk_it-webfont.eot');
+    src: url('fonts/brandon_blk_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_blk_it-webfont.woff') format('woff'),
+         url('fonts/brandon_blk_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_blk_it-webfont.svg#brandon_grotesqueblack_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesqueblack';
+    src: url('fonts/brandon_blk-webfont.eot');
+    src: url('fonts/brandon_blk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_blk-webfont.woff') format('woff'),
+         url('fonts/brandon_blk-webfont.ttf') format('truetype'),
+         url('fonts/brandon_blk-webfont.svg#brandon_grotesqueblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquelight_italic';
+    src: url('fonts/brandon_light_it-webfont.eot');
+    src: url('fonts/brandon_light_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_light_it-webfont.woff') format('woff'),
+         url('fonts/brandon_light_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_light_it-webfont.svg#brandon_grotesquelight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquelight';
+    src: url('fonts/brandon_light-webfont.eot');
+    src: url('fonts/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_light-webfont.woff') format('woff'),
+         url('fonts/brandon_light-webfont.ttf') format('truetype'),
+         url('fonts/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesqueMdIt';
+    src: url('fonts/brandon_med_it-webfont.eot');
+    src: url('fonts/brandon_med_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_med_it-webfont.woff') format('woff'),
+         url('fonts/brandon_med_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_med_it-webfont.svg#brandon_grotesqueMdIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquemedium';
+    src: url('fonts/brandon_med-webfont.eot');
+    src: url('fonts/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_med-webfont.woff') format('woff'),
+         url('fonts/brandon_med-webfont.ttf') format('truetype'),
+         url('fonts/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesqueRgIt';
+    src: url('fonts/brandon_reg_it-webfont.eot');
+    src: url('fonts/brandon_reg_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_reg_it-webfont.woff') format('woff'),
+         url('fonts/brandon_reg_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_reg_it-webfont.svg#brandon_grotesqueRgIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesque_regularRg';
+    src: url('fonts/brandon_reg-webfont.eot');
+    src: url('fonts/brandon_reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_reg-webfont.woff') format('woff'),
+         url('fonts/brandon_reg-webfont.ttf') format('truetype'),
+         url('fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquethin_italic';
+    src: url('fonts/brandon_thin_it-webfont.eot');
+    src: url('fonts/brandon_thin_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_thin_it-webfont.woff') format('woff'),
+         url('fonts/brandon_thin_it-webfont.ttf') format('truetype'),
+         url('fonts/brandon_thin_it-webfont.svg#brandon_grotesquethin_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'brandon_grotesquethin';
+    src: url('fonts/brandon_thin-webfont.eot');
+    src: url('fonts/brandon_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/brandon_thin-webfont.woff') format('woff'),
+         url('fonts/brandon_thin-webfont.ttf') format('truetype'),
+         url('fonts/brandon_thin-webfont.svg#brandon_grotesquethin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body {
     background: url(../img/bg-home.png) no-repeat left top #ffffff;
     margin: 0;
     width: 100%;
     height: 100%;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+}
 #vignette {
     background: url(../img/bg-vignette.png);
     background-size: cover;
+    z-index: 997
 }
-h1#logo {
+#logo {
     background: url(../img/logo.png) no-repeat center center transparent;
     background-size: cover;
-    text-indent: -9999px;
+    text-indent: -9999px !important;
     width: 403px;
     height: 66px;
-    margin: 60px 0 60px 150px;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 998;
+}
+.branco {
+	background: url(../img/logo-branco.png) no-repeat center center transparent !important;
 }
 #expmenu {
     position: fixed;
     z-index: 999;
-    right: 0;
+    right: -390px;
     top: 185px;
+    transition: right 0.2s linear;
+    -moz-transition: right 0.2s linear;
+    -webkit-transition: right 0.2s linear;
+}
+.open {
+    right: 0 !important;
 }
 .heading {
-    width: 40px;
-    height: 500px;
-    background: #d46002;
+    background: none repeat scroll 0 0 #D46002;
+    color: white;
     float: left;
-    text-indent: -9999px;
+    font-weight: bold;
+    padding: 208px 20px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
     position: relative;
+}
+.heading:hover {
+  background: #EB6D00;
 }
 .content {
     width: 390px;
@@ -39,17 +239,192 @@ h1#logo {
 #slider {
     height: 500px;    
     overflow: hidden;
+    margin-bottom: 10px;
 }
 #holder {
-    width: 10000px;
-    position: relative;   
-        animation:move 10s;
-    -moz-animation:move 10s infinite;
-    -webkit-animation:move 10s infinite;     
+    width: 4412px;  
+    position: relative;    
+    /*animation:30s linear 0s normal none infinite move;
+    -moz-animation:30s linear 0s normal none infinite move;
+    -webkit-animation:30s linear 0s normal none infinite move;*/
 }
-#holder a {
 
+
+#holder a {
     float: left;
+}
+#socialmedia {
+	float: right;
+	margin-top: -60px;
+}
+.parceiros {
+	width: 860px;
+	margin: 0 auto;
+}
+.botaoMenu {
+	float: left;
+	text-align: center;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	color: #b14b02;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+	position: relative;
+	opacity: 0.6;
+}
+.botaoMenu:hover {
+	opacity: 1;
+}
+.inicio {
+	width: 84px;
+}
+.coletivos {
+	width: 77px;
+}
+.agenda {
+	width: 73px;
+}
+.mapa {
+	width: 59px;
+}
+.sobre {
+	width: 93px;
+}
+.meu {
+	width: 81px;
+}
+#expmenu .content .row {
+	margin: 15px 0 0 50px !important;
+}
+.invisibleCont {
+	position: relative;
+	width: 725px;
+	display: block;
+	margin: 135px 0 0 0;
+}
+.texto-wrapper {
+	position: relative;
+	width: 725px;
+	margin-left: 195px;
+	float: left;
+	background: rgba(0,0,0, 0.8);
+	color: #fff;
+	padding: 25px;
+	display: block;
+}
+.texto-wrapper h1 {
+	margin-bottom: 20px;
+}
+.texto-wrapper p {
+	padding-bottom: 10px;
+	line-height: 18px;
+}
+.coletAzul {
+	background: rgba(16,50,96, 0.8);
+}
+.coletAzul p {
+	color: #c0dbff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 18px;
+}
+.coletAzul h2 {
+	font-family: 'brandon_grotesquebold', sans-serif;
+	color: #f8c301;
+	margin-bottom: 18px;
+	margin-top: 20px;
+}
+img.logoCole {
+	float: right;
+	position: relative;
+	margin-right: -245px;
+	margin-top: -82px;
+}
+body.fundosobre {
+	background: #000000;
+}
+iframe.bgMap {
+	position: absolute;
+	width: 110%;
+	height: 120%;
+	overflow: hidden;
+	margin-top: -225px;
+	margin-left: -70px;
+	z-index: 996;
+}
+.gmnoprint {
+	display: none;
+}
+body.zulub {
+	background: url(../img/zulub.jpg) no-repeat left center;
+	background-size: cover;
+}
+#agenda div {
+	width: 100%;
+	font-family: 'brandon_grotesquelight_italic', sans-serif;
+	font-size: 18px;
+	padding: 15px 0 15px 10px;
+	float: left;
+}
+#agenda div span {
+	clear: none;
+	float: left;
+}
+.linhabranca {
+	background: rgba(255,255,255,0.5);
+}
+.nome-evento {
+	margin-left: 10px;
+	margin-top: 18px;
+}
+.coleMap {
+	height: 210px;
+	width: 775px;
+	margin-left: -25px;
+	overflow: hidden;
+}
+.data {
+	background: url(../img/icoCal.png) no-repeat left top transparent;
+	width: 50px;
+	height: 39px;
+	display: block;
+	line-height: 12px;
+	padding: 13px 0 0 0;
+}
+.dia, .mes, .ano {
+	width: 50px;
+	display: block;
+	clear: both;
+	text-align: center;
+}
+.ano, .mes {
+	font-size: 8px;
+}
+.dia {
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+}
+.eventShare {
+	float: right !important;
+	margin-top: 18px;
+	background: url(../img/fbIco.png) no-repeat center center transparent;
+	padding: 0 104px 0 0;
+	margin-right: -65px;
+}
+.noBG {
+	background: #fff;
+}
+.agendaCole {
+	background: #2a61ab;
+	width: 775px;
+	height: 100px;
+	margin-left: -25px;
+	margin-top: 20px;
+	margin-bottom: -25px;
+}
+.linguas {
+	float: right;
+margin-bottom: -10px;
 }
 
  @keyframes move
@@ -59,40 +434,146 @@ h1#logo {
           right:0;
           
         }
-        50% {          
-          right:1206px;          
-        }
+
         100% {          
           right:2206px;          
         }
       }
       
-      @-moz-keyframes move /* Firefox */
+      @-moz-keyframes move
       {
         
         0%   {          
           right:0;
           
         }
-        50% {          
-          right:1206px;          
-        }
+
         100% {          
           right:2206px;          
         }
       }
       
-      @-webkit-keyframes move /* Safari and Chrome */
+      @-webkit-keyframes move
       {
         
         0%   {          
           right:0;
           
         }
-        50% {          
-          right:1206px;          
-        }
+
         100% {          
           right:2206px;          
         }
       }
+
+
+.slider {
+    /*background: url(../img/slider1-2.png) 0 0 no-repeat;*/
+    width: 1106px;
+    height: 504px;
+    display: block;    
+    float: left;
+    position: relative;
+
+}
+
+.slider a {
+    position: absolute;
+
+}
+
+.i-small {
+    width: 100px;
+    height: 100px;
+}
+
+.i-medium {
+    width: 150px;
+    height: 150px;
+}
+
+.i-large {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* posicionamento */
+
+#slider-1 .pos-1 {
+    top: 100px;
+    left: 1px;
+}
+#slider-1 .pos-2 {
+    top: 201px;
+    left: 1px;
+}
+#slider-1 .pos-3 {
+    top: 302px;
+    left: 1px;
+}
+#slider-1 .pos-4 {
+    left: 102px;
+}
+#slider-1 .pos-5 {
+    top: 151px;
+    left: 102px;    
+}
+#slider-1 .pos-6 {
+    left: 253px;
+}
+#slider-1 .pos-7 {
+    top: 101px;
+    left: 253px;
+}
+#slider-1 .pos-8 {
+    left: 354px;
+}
+#slider-1 .pos-9 {
+    top: 101px;
+    left: 354px;    
+}
+#slider-1 .pos-10 {
+    top: 302px;
+    left: 353px;
+}
+#slider-1 .pos-11 {
+    top: 302px;
+    left: 454px;
+}
+#slider-1 .pos-12 {
+    top: 103px;
+    left: 555px;
+}
+#slider-1 .pos-13 {
+    top: 103px;
+    left: 656px;
+}
+#slider-1 .pos-14 {
+    top: 204px;
+    left: 555px;
+}
+#slider-1 .pos-15 {
+    left: 757px;
+    top: 53px;
+}
+#slider-1 .pos-16 {
+    left: 706px;
+    top: 204px;
+}
+#slider-1 .pos-17 {
+    left: 706px;
+    top: 405px;
+}
+#slider-1 .pos-18 {
+    left: 908px;
+    top: 54px;
+}
+#slider-1 .pos-19 {
+    left: 908px;
+    top: 155px;
+}
+#slider-1 .pos-20 {
+    left: 907px;
+    top: 256px;
+}

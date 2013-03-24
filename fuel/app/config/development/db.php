@@ -6,9 +6,9 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=imaginario_dev',
-			'username'   => 'imaginario_dev',
-			'password'   => 'kxa',
+			'dsn'        => 'mysql:host=localhost;dbname=fuel_dev',
+			'username'   => 'root',
+			'password'   => 'root',
 		),
 	),
 );
