@@ -1,7 +1,10 @@
 <?php
 return array(
-	'_root_'  => 'router/index',  // The default route
-	'_404_'   => 'router/404',    // The main 404 route
+	'_root_'  => 'router/inicio',  // The default route
+	'_404_'   => 'router/404',    // The main 404 route	
 	
-	'hello(/:name)?' => array('router/hello', 'name' => 'hello'),
+    
+    'coletivos(/:name)' => array('coletivos/ver', 'name' => 'hello'),
+    
+    
 );

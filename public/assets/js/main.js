@@ -7,11 +7,11 @@ var menu = (function(){
     var toggle = function() {
 
         if($holder.is('.open')) {
-            $handle.html('<img src="http://christianbueno.com/imaginario/index_files/abre.png" width="8" height="74"/>');
+            $handle.html('<img src="/assets/img/abre.png" width="8" height="74"/>');
             $holder.removeClass('open');
         }
         else {
-            $handle.html('<img src="http://christianbueno.com/imaginario/index_files/fecha.png" width="8" height="84"/>');
+            $handle.html('<img src="/assets/img/fecha.png" width="8" height="84"/>');
             $holder.addClass('open');
         }
     },
