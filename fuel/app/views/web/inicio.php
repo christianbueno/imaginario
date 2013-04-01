@@ -7,6 +7,7 @@
 	<?php echo Asset::css('main.css'); ?>
 
 </head>
+testando se foi o checkout no push
 <body>
 	<div id="vignette" class="container-fluid">		
 	<div class="linguas">

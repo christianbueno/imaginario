@@ -16,26 +16,26 @@ class Controller_Users_Evento extends Controller_Users
         {
             if (Upload::is_valid())
             {               
-                $conteudo = new Model_Conteudo();
-                $conteudo->content = Controller_Admin_Coletivo::processUpload();
-                $conteudo->type = 'image';
-                $conteudo->coletivo_id = $id;
-                $conteudo->user_id = $auth->get_user_id()[1];
+                $evento = new Model_evento();
+                $evento->content = Controller_Admin_Coletivo::processUpload();
+                $evento->type = 'image';
+                $evento->coletivo_id = $id;
+                $evento->user_id = $auth->get_user_id()[1];
 
                 $metadata = array(
                     'name' => Input::post('name'),
                     'description' => Input::post('description'),
                 );
 
-                $conteudo->metadata = serialize($metadata);
+                $evento->metadata = serialize($metadata);
 
-                if ($conteudo->save())
+                if ($evento->save())
                 {
-                    Session::set_flash('success', 'Imagem adicionada!');                    
+                    Session::set_flash('success', 'Evento adicionado!');                    
                 }
                 else
                 {
-                    Session::set_flash('error', 'Ocorreu um problema ao adicionar a imagem, tente novamente.');
+                    Session::set_flash('error', 'Ocorreu um problema ao adicionar o evento, tente novamente.');
                 }
 
             }
@@ -44,33 +44,33 @@ class Controller_Users_Evento extends Controller_Users
                 Session::set_flash('error', 'É necessário escolher uma imagem para adicionar');
             }
 
-            Response::redirect("users/conteudo/adicionar/$id");
+            Response::redirect("users/evento/adicionar/$id");
 
         }
 
 
-        $conteudos = Model_Conteudo::find('all', array(
+        $eventos = Model_Evento::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                
                     array('user_id', $auth->get_user_id()[1]),                
             )
         ));
 
-        foreach ($conteudos as $conteudo) {
-            $conteudo->info = unserialize($conteudo->metadata);
+        foreach ($eventos as $evento) {
+            $evento->info = unserialize($evento->metadata);
         }
 
-        $data['conteudos'] = $conteudos;
-        $this->template->title = 'Meu conteudo'; 
-        $this->template->content = View::forge('users/conteudo/adicionar', $data);
+        $data['eventos'] = $eventos;
+        $this->template->title = 'Meu evento'; 
+        $this->template->content = View::forge('users/evento/adicionar', $data);
     }
 
-    public function action_remover($coletivo_id = null, $conteudo_id = null) 
+    public function action_remover($coletivo_id = null, $evento_id = null) 
     {
-        $conteudo = Model_Conteudo::find($conteudo_id);
-        $conteudo->delete();
+        $evento = Model_Evento::find($evento_id);
+        $evento->delete();
 
-        Response::redirect("users/conteudo/adicionar/$coletivo_id");
+        Response::redirect("users/evento/adicionar/$coletivo_id");
     }
   
 }
