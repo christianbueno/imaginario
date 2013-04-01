@@ -6,9 +6,9 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=fuel_prod',
-			'username'   => 'fuel_app',
-			'password'   => 'ImaginaRio##1234**',
+            'dsn'        => 'mysql:host=imaginariodb.ciybmw6nmcee.sa-east-1.rds.amazonaws.com;dbname=imaginario_prod',
+            'username'   => 'leimagina',
+            'password'   => 'rocketSwag!666', 
 		),
 	),
 );
