@@ -7,7 +7,6 @@
 	<?php echo Asset::css('main.css'); ?>
 
 </head>
-testando se foi o checkout no push
 <body>
 	<div id="vignette" class="container-fluid">		
 	<div class="linguas">
@@ -61,7 +60,7 @@ testando se foi o checkout no push
 
 			<?php echo View::forge('modules/menu'); ?>
 	</div>
-
+<?php echo 'env: ' . isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : 'sem env definido' ?>
 <?php echo Asset::js('jquery-1.8.3.min.js'); ?>
 <?php echo Asset::js('main.js'); ?>
 </body></html>
