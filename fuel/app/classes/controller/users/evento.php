@@ -3,8 +3,9 @@ class Controller_Users_Evento extends Controller_Users
 {
     // essa classe necessita de crop para 200x200 
     public function before()
-    {        
-        if( Auth::instance()->get_user_id()[1]===0 )                   
+    {  
+        $user = Auth::instance()->get_user_id();      
+        if( $user[1] === 0 )                   
             Response::redirect('users/login');
 
         parent::before();

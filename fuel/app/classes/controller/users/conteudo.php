@@ -5,7 +5,7 @@ class Controller_Users_Conteudo extends Controller_Users
     public function before()
     {
         $user = Auth::instance()->get_user_id();        
-        if( $user[1]===0 )                   
+        if( $user[1] === 0 )                   
             Response::redirect('users/login');
 
         parent::before();
