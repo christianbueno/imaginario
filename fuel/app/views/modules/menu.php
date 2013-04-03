@@ -13,7 +13,7 @@
     <a  class="span2" href="/coletivos/">
         <span class="botaoMenu coletivos">
         <img src="/assets/img/home.png" alt="inicio" width="77" height="68" />
-        Coletivos
+        Coletivos & Artistas
         </span>
     </a>
     </div>
