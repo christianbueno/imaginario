@@ -12,7 +12,7 @@ class Controller_Users_Evento extends Controller_Users
     public function action_adicionar($id = null)
     {
         $auth = Auth::instance();
-
+        $user = $auth->get_user_id();
         if (Input::method() === 'POST')
         {            
             $val = Model_Evento::validate();
@@ -24,7 +24,7 @@ class Controller_Users_Evento extends Controller_Users
                 $evento->when = Date::create_from_string(Input::post('when') , 'eu')->get_timestamp();
 
                 $evento->coletivo_id = $id;
-                $evento->user_id = $auth->get_user_id()[1];
+                $evento->user_id = $user[1];
 
                 $metadata = array(
                     'type' => Input::post('type'),
@@ -66,7 +66,7 @@ class Controller_Users_Evento extends Controller_Users
         $eventos = Model_Evento::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                
-                    array('user_id', $auth->get_user_id()[1]),                
+                    array('user_id', $user[1]),                
             )
         ));
 
