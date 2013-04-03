@@ -1,11 +1,12 @@
-<?php echo Html::anchor('admin/evento/adicionar', 'Adicionar', array('class' => 'btn btn-primary pull-right')) ?>
-<?php if (isset($eventos)): ?>
+<?php if ( count($eventos) > 0 ): ?>
 <table class="table table-striped">
     <thead>
         <tr>
             <th>ID</th>
-            <th>Nome</th>            
-            <th>Descrição</th>
+            <th>Titulo</th>   
+            <th>Descrição</th>         
+            <th>Quando</th>
+            <th>Onde</th>
             <th>Remover</th>            
         </tr>
     </thead>
@@ -13,8 +14,10 @@
         <?php foreach ($eventos as $evento): ?>     
         <tr>
             <td><?php echo $evento->id ?></td>
-            <td><?php echo Html::anchor("admin/evento/editar/$evento->id", $evento->name); ?></td>     
-            <td><?php echo $evento->description ?></td>       
+            <td><?php echo $evento->title; ?></td>     
+            <td><?php echo $evento->description ?></td> 
+            <td><?php echo Date::forge($evento->when)->format("%d/%m/%Y"); ?></td>
+            <td><?php echo $evento->info['address'] ?></td>       
             <td><?php echo Html::anchor("admin/evento/remover/$evento->id", 'x', array('class' => 'btn btn-danger')); ?></td>
         </tr>
         <?php endforeach; ?>    
