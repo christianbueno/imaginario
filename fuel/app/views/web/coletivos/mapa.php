@@ -41,7 +41,8 @@ $(document).ready(function(){
     <?php foreach ($coletivos as $coletivo):?>     
 
     var image = {
-        url: "/arquivos/<?php echo $coletivo->info['logo']; ?>",        
+        url: "/tt.php?src=http://imaginario:8080/coletivos/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
+        
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(75, 75)
