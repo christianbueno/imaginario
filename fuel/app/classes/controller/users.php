@@ -64,7 +64,7 @@ class Controller_Users extends Controller_Template
     public function action_perfil()
     {
         $auth = Auth::instance();
-        if( $auth->get_user_id()[1]===0 )                   
+        if( $auth->get_user_id() === 0 )                   
             Response::redirect('users/login');
 
         $email = $auth->get_email();
