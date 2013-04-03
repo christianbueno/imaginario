@@ -1,4 +1,4 @@
-<?php echo Html::anchor('admin/usuario/adicionar', 'Adicionar', array('class' => 'btn btn-primary pull-right')) ?>
+
 <?php if (isset($usuarios)): ?>
 <table class="table table-striped">
     <thead>

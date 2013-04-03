@@ -3,8 +3,9 @@ class Controller_Users_Conteudo extends Controller_Users
 {
     // essa classe necessita de crop para 200x200 
     public function before()
-    {        
-        if( Auth::instance()->get_user_id()[1]===0 )                   
+    {
+        $user = Auth::instance()->get_user_id();        
+        if( $user[1] === 0 )                   
             Response::redirect('users/login');
 
         parent::before();
@@ -12,6 +13,7 @@ class Controller_Users_Conteudo extends Controller_Users
     public function action_adicionar($id = null)
     {
         $auth = Auth::instance();
+        $user = $auth->get_user_id();
         if (Input::method() == 'POST')
         {
             if (Upload::is_valid())
@@ -20,7 +22,7 @@ class Controller_Users_Conteudo extends Controller_Users
                 $conteudo->content = Controller_Admin_Coletivo::processUpload();
                 $conteudo->type = 'image';
                 $conteudo->coletivo_id = $id;
-                $conteudo->user_id = $auth->get_user_id()[1];
+                $conteudo->user_id = $user[1];
 
                 $metadata = array(
                     'name' => Input::post('name'),
@@ -52,7 +54,7 @@ class Controller_Users_Conteudo extends Controller_Users
         $conteudos = Model_Conteudo::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                
-                    array('user_id', $auth->get_user_id()[1]),                
+                    array('user_id', $user[1]),                
             )
         ));
 
@@ -62,7 +64,7 @@ class Controller_Users_Conteudo extends Controller_Users
 
         $data['conteudos'] = $conteudos;
         $this->template->title = 'Meu conteudo'; 
-        $this->template->content = View::forge('users/conteudo/adicionar', $data);
+        $this->template->content = View::forge('users/conteudo/view', $data);
     }
 
     public function action_remover($coletivo_id = null, $conteudo_id = null) 

@@ -1,4 +1,12 @@
+<h2>Adicionar evento</h2>
+<?php echo Form::open(array('enctype' => 'multipart/form-data')); ?>
+
+<?php echo render('users/evento/_form'); ?>
+
+<?php echo Form::close(); ?>
+
 <?php if ( count($eventos) > 0 ): ?>
+<h2>Eventos</h2>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -18,7 +26,7 @@
             <td><?php echo $evento->description ?></td> 
             <td><?php echo Date::forge($evento->when)->format("%d/%m/%Y"); ?></td>
             <td><?php echo $evento->info['address'] ?></td>       
-            <td><?php echo Html::anchor("admin/evento/remover/$evento->id", 'x', array('class' => 'btn btn-danger')); ?></td>
+            <td><?php echo Html::anchor("users/evento/remover/$evento->coletivo_id/$evento->id", 'x', array('class' => 'btn btn-danger')); ?></td>
         </tr>
         <?php endforeach; ?>    
     </tbody>

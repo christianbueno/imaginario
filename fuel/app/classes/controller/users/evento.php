@@ -3,8 +3,9 @@ class Controller_Users_Evento extends Controller_Users
 {
     // essa classe necessita de crop para 200x200 
     public function before()
-    {        
-        if( Auth::instance()->get_user_id()[1]===0 )                   
+    {  
+        $user = Auth::instance()->get_user_id();      
+        if( $user[1] === 0 )                   
             Response::redirect('users/login');
 
         parent::before();
@@ -12,26 +13,32 @@ class Controller_Users_Evento extends Controller_Users
     public function action_adicionar($id = null)
     {
         $auth = Auth::instance();
-        if (Input::method() == 'POST')
-        {
-            if (Upload::is_valid())
+        $user = $auth->get_user_id();
+        if (Input::method() === 'POST')
+        {            
+            $val = Model_Evento::validate();
+            if ($val->run())
             {               
-                $evento = new Model_evento();
-                $evento->content = Controller_Admin_Coletivo::processUpload();
-                $evento->type = 'image';
+                $evento = new Model_Evento();                
+                $evento->title = Input::post('title');
+                $evento->description = Input::post('description');
+                $evento->when = Date::create_from_string(Input::post('when') , 'eu')->get_timestamp();
+
                 $evento->coletivo_id = $id;
-                $evento->user_id = $auth->get_user_id()[1];
+                $evento->user_id = $user[1];
 
                 $metadata = array(
-                    'name' => Input::post('name'),
-                    'description' => Input::post('description'),
+                    'type' => Input::post('type'),
+                    'latlng' => Input::post('latlng'),
+                    'address' => Input::post('address'),
                 );
 
                 $evento->metadata = serialize($metadata);
 
                 if ($evento->save())
                 {
-                    Session::set_flash('success', 'Evento adicionado!');                    
+                    Session::set_flash('success', 'Evento adicionado!');      
+                    Response::redirect("users/evento/adicionar/$id");              
                 }
                 else
                 {
@@ -41,10 +48,18 @@ class Controller_Users_Evento extends Controller_Users
             }
             else
             {
-                Session::set_flash('error', 'É necessário escolher uma imagem para adicionar');
-            }
+                $retorno = new Model_Evento();
+                $retorno->title = Input::post('title');
+                $retorno->description = Input::post('description');
+                $retorno->when = Input::post('when');
+                $retorno->address = Input::post('address');
+                $retorno->latlng = Input::post('latlng');
 
-            Response::redirect("users/evento/adicionar/$id");
+                $this->template->set_global('evento', $retorno, false);
+                Session::set_flash('error', $val->error());
+                
+            }
+            
 
         }
 
@@ -52,7 +67,7 @@ class Controller_Users_Evento extends Controller_Users
         $eventos = Model_Evento::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                
-                    array('user_id', $auth->get_user_id()[1]),                
+                    array('user_id', $user[1]),                
             )
         ));
 
@@ -62,7 +77,7 @@ class Controller_Users_Evento extends Controller_Users
 
         $data['eventos'] = $eventos;
         $this->template->title = 'Meu evento'; 
-        $this->template->content = View::forge('users/evento/adicionar', $data);
+        $this->template->content = View::forge('users/evento/view', $data);
     }
 
     public function action_remover($coletivo_id = null, $evento_id = null) 

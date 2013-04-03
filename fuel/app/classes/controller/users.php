@@ -36,7 +36,7 @@ class Controller_Users extends Controller_Template
         Response::redirect('/');
     }
 
-    public function action_register()
+    public function action_registrar()
     {
         $auth = Auth::instance();
         $view = View::forge('users/register');
@@ -64,7 +64,8 @@ class Controller_Users extends Controller_Template
     public function action_perfil()
     {
         $auth = Auth::instance();
-        if( $auth->get_user_id()[1]===0 )                   
+        $user = $auth->get_user_id();
+        if( $user[1]===0 )                   
             Response::redirect('users/login');
 
         $email = $auth->get_email();
@@ -80,7 +81,7 @@ class Controller_Users extends Controller_Template
             $coletivo->address = $metadata['endereco'];
             $coletivo->latlng = $metadata['latlng'];
         }
-        $user = Model_user::find($auth->get_user_id()[1]);
+        $user = Model_user::find($user[1]);
 
         $data['user'] = $user;
         $data['coletivos'] = $coletivos;
