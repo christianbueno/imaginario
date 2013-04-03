@@ -1,3 +1,4 @@
+<a href="/users/logout/">Logout</a>
 <h2>Informações</h2>
 
 ## edição de informações pessoais
