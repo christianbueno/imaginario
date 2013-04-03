@@ -418,3 +418,18 @@ margin-bottom: -10px;
 
 
 
+.mapa-evento-adm {
+    height: 450px;
+    left: 425px;
+    position: absolute;
+    top: -310px;
+    width: 450px;
+}
+
+.mapa-coletivo {
+    height: 450px;
+    left: 425px;
+    position: absolute;
+    top: -400px;
+    width: 450px;
+}

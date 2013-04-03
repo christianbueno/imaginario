@@ -62,7 +62,7 @@ class Controller_Users_Conteudo extends Controller_Users
 
         $data['conteudos'] = $conteudos;
         $this->template->title = 'Meu conteudo'; 
-        $this->template->content = View::forge('users/conteudo/adicionar', $data);
+        $this->template->content = View::forge('users/conteudo/view', $data);
     }
 
     public function action_remover($coletivo_id = null, $conteudo_id = null) 

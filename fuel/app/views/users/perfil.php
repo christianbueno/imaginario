@@ -4,20 +4,7 @@
 
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
-    <?php if (Session::get_flash('success')): ?>
-        <div class="alert-message success">
-            <p>
-            <?php echo implode('</p><p>', e((array) Session::get_flash('success'))); ?>
-            </p>
-        </div>
-    <?php endif; ?>
-    <?php if (Session::get_flash('error')): ?>
-        <div class="alert-message error">
-            <p class="label label-important">                   
-                <?php echo implode('</p><p class="label label-important">', e((array) Session::get_flash('error'))); ?>                 
-            </p>
-        </div>
-    <?php endif; ?>
+
     <?php foreach ($coletivos as $coletivo): ?>    
     <h3><?php echo $coletivo->name; ?></h3>
     <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", 'Enviar conteúdo', array('class' => 'btn btn-default')); ?>
