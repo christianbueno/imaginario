@@ -36,7 +36,7 @@ class Controller_Users extends Controller_Template
         Response::redirect('/');
     }
 
-    public function action_register()
+    public function action_registrar()
     {
         $auth = Auth::instance();
         $view = View::forge('users/register');
