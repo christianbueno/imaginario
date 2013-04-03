@@ -15,7 +15,12 @@
 
         
 
-
+        <div id="participe">
+        	<p>Participe</p>
+        	<span>Coletivos & Artistas</span>
+        	<span>Escolas</span>
+        	<span class="partLast">Individual</span>        	
+        </div>
         <?php echo render('modules/menu'); ?>
     </div>
 
