@@ -41,7 +41,7 @@ $(document).ready(function(){
     <?php foreach ($coletivos as $coletivo):?>     
 
     var image = {
-        url: "http://ec2-54-232-41-47.sa-east-1.compute.amazonaws.com/arquivos/tt.php?src=hhttp://ec2-54-232-41-47.sa-east-1.compute.amazonaws.com/coletivos/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
+        url: "http://ec2-54-232-41-47.sa-east-1.compute.amazonaws.com/arquivos/tt.php?src=http://ec2-54-232-41-47.sa-east-1.compute.amazonaws.com/coletivos/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
         
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
