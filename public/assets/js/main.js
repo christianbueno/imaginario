@@ -29,6 +29,39 @@ var menu = (function(){
         init: init
     }
 
+})(),
+cropper = (function(){
+    
+    var $image = $('#cropme'),
+        $coords = $('#form_coords');
+    
+    
+
+    set = function(c) {
+        $coords.val(c.x + ' ' + c.y + ' ' + c.x2 + ' ' + c.y2);   
+        
+        if($coords.val() === '0 0 0 0')
+            $coords.val('0 0 200 200');
+
+        
+    },
+    init = function() {
+        $image.Jcrop({
+            setSelect: $coords.val() !== '' ? $coords.val().split(' ') : '0 0 200 200',
+            onSelect: set,
+            minSize: [200, 200]            
+        });
+    };
+
+
+    return {
+        init: init
+    }
 })();
 
-$(document).ready(menu.init);
+$(document).ready(function(){
+    menu.init();
+
+    if(typeof start_cropper !== 'undefined')
+        cropper.init();
+});

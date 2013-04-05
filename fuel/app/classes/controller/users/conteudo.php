@@ -24,6 +24,9 @@ class Controller_Users_Conteudo extends Controller_Users
                 $conteudo->coletivo_id = $id;
                 $conteudo->user_id = $user[1];
 
+                Image::load(DOCROOT.DS."arquivos/$conteudo->content")->crop_resize(200,200)->save(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
+
+
                 $metadata = array(
                     'name' => Input::post('name'),
                     'description' => Input::post('description'),
@@ -71,8 +74,42 @@ class Controller_Users_Conteudo extends Controller_Users
     {
         $conteudo = Model_Conteudo::find($conteudo_id);
         $conteudo->delete();
-
+        File::delete(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
+        File::delete(DOCROOT.DS.'arquivos/'.$conteudo->content);
         Response::redirect("users/conteudo/adicionar/$coletivo_id");
+    }
+
+    public function action_crop($coletivo_id = null, $conteudo_id = null) 
+    {
+        is_null($conteudo_id) and Response::redirect("users/conteudo/adicionar/$coletivo_id");
+        
+        $conteudo = Model_Conteudo::find($conteudo_id);
+        $conteudo->info = unserialize($conteudo->metadata);
+        if (Input::method() == 'POST')
+        {
+            if(Input::post('coords') === '') {
+                Session::set_flash('error', 'Escolha um crop para a imagem');                  
+            }
+            else
+            {
+                $conteudo->info['coords'] = Input::post('coords');
+                $conteudo->metadata = serialize($conteudo->info);
+
+                list($c1,$c2,$c3,$c4) = explode(' ',Input::post('coords'));
+                File::delete(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
+                Image::load(DOCROOT.DS."arquivos/$conteudo->content")->crop($c1, $c2, $c3, $c4)->save(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
+
+                $conteudo->save();
+
+                Session::set_flash('success', 'Crop salvo!');      
+                Response::redirect("users/conteudo/adicionar/$coletivo_id");
+            }
+        } 
+
+
+        $data['conteudo'] = $conteudo;
+
+        $this->template->content = View::forge('users/conteudo/crop', $data);
     }
   
 }

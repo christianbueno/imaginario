@@ -66,13 +66,13 @@ h1, h2, h3, h4, h5, h6 {
     background: #ff7200;
     float: left;
 }
-#slider {
+#kaled {
     height: 500px;    
     overflow: hidden;
     margin-bottom: 10px;
 }
 #holder {
-    width: 4412px;  
+    width: 4424px;  
     position: relative;    
     animation:30s linear 0s normal none infinite move;
     -moz-animation:30s linear 0s normal none infinite move;
@@ -328,83 +328,85 @@ margin-bottom: -10px;
 
 /* posicionamento */
 
-#slider-1 .pos-1 {
+.pos-1 {
     top: 100px;
     left: 1px;
 }
-#slider-1 .pos-2 {
+.pos-2 {
     top: 201px;
     left: 1px;
 }
-#slider-1 .pos-3 {
+.pos-3 {
     top: 302px;
     left: 1px;
 }
-#slider-1 .pos-4 {
+.pos-4 {
     left: 102px;
 }
-#slider-1 .pos-5 {
+.pos-5 {
     top: 151px;
     left: 102px;    
 }
-#slider-1 .pos-6 {
+.pos-6 {
     left: 253px;
 }
-#slider-1 .pos-7 {
+.pos-7 {
     top: 101px;
     left: 253px;
 }
-#slider-1 .pos-8 {
+.pos-8 {
     left: 354px;
 }
-#slider-1 .pos-9 {
+.pos-9 {
     top: 101px;
     left: 354px;    
 }
-#slider-1 .pos-10 {
+.pos-10 {
     top: 302px;
     left: 353px;
 }
-#slider-1 .pos-11 {
+.pos-11 {
     top: 302px;
     left: 454px;
 }
-#slider-1 .pos-12 {
+.pos-12 {
     top: 103px;
     left: 555px;
 }
-#slider-1 .pos-13 {
+.pos-13 {
     top: 103px;
     left: 656px;
 }
-#slider-1 .pos-14 {
+.pos-14 {
     top: 204px;
     left: 555px;
 }
-#slider-1 .pos-15 {
+.pos-15 {
     left: 757px;
     top: 53px;
 }
-#slider-1 .pos-16 {
+.pos-16 {
     left: 706px;
     top: 204px;
 }
-#slider-1 .pos-17 {
+.pos-17 {
     left: 706px;
     top: 405px;
 }
-#slider-1 .pos-18 {
+.pos-18 {
     left: 908px;
     top: 54px;
 }
-#slider-1 .pos-19 {
+.pos-19 {
     left: 908px;
     top: 155px;
 }
-#slider-1 .pos-20 {
+.pos-20 {
     left: 907px;
     top: 256px;
 }
+
+
 
 
 

@@ -13,6 +13,7 @@
             <th>Imagem</th>   
             <th>Nome</th>         
             <th>Descrição</th>
+            <th>Cropar</th>
             <th>Remover</th>            
         </tr>
     </thead>
@@ -20,9 +21,10 @@
         <?php foreach ($conteudos as $conteudo): ?>     
         <tr>
             <td><?php echo $conteudo->id ?></td>
-            <td><?php echo Html::img("/arquivos/$conteudo->content", array('alt' =>$conteudo->info['name'])); ?></td>     
+            <td><?php echo Html::img("/arquivos/thumb-$conteudo->content", array('alt' =>$conteudo->info['name'])); ?></td>     
             <td><?php echo $conteudo->info['name'] ?></td> 
-            <td><?php echo $conteudo->info['description'] ?></td>       
+            <td><?php echo $conteudo->info['description'] ?></td>     
+            <td><?php echo Html::anchor("users/conteudo/crop/$conteudo->coletivo_id/$conteudo->id", 'cropar', array('class' => 'btn btn-primary')); ?></td>  
             <td><?php echo Html::anchor("users/conteudo/remover/$conteudo->coletivo_id/$conteudo->id", 'x', array('class' => 'btn btn-danger')); ?></td>
         </tr>
         <?php endforeach; ?>    
