@@ -5,6 +5,11 @@ return array(
 	
     
     'coletivos(/:name)' => array('coletivos/ver', 'name' => 'hello'),
-    
+    'apoio' => 'router/apoio',
+    'artistas' => 'router/artistas',
+    'escolas' => 'router/escolas',
+    'individual' => 'router/individual',
+    'quem-somos' => 'router/quemsomos',
+    'fale-conosco' => 'router/faleconosco'
     
 );
