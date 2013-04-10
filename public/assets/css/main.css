@@ -261,8 +261,6 @@ body.fale-conosco {
     -ms-background-size: cover;
 }
 
-/* <<<<<<< HEAD ======= */
-
 body.artistas {
 	background: url(../img/foto1.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -287,7 +285,14 @@ body.individual {
     -o-background-size: cover;
     -ms-background-size: cover;
 }
-/* >>>>>>> 3e1f5552011ec87cc029993d2ac48c21d5915401 */
+body.apoio {
+	background: url(../img/foto4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
 #agenda div {
 	width: 100%;
 	font-family: 'brandon_grotesquelight_italic', sans-serif;
@@ -595,10 +600,7 @@ span.partLast {
     -o-transition: background .5s linear, color .5s linear;  
     transition: background .5s linear, color .5s linear;
     color: #fff;
-/*
-<<<<<<< HEAD
-=======
-*/
+
 }
 
 /* Código dos Formulários Babel-Team */
@@ -830,5 +832,4 @@ font-family: arial,sans-serif;
 }
 .infusion-form label {
 	color: #fff;
-/* >>>>>>> 3e1f5552011ec87cc029993d2ac48c21d5915401 */
 }
