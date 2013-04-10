@@ -39,8 +39,36 @@ class View_Inicio extends ViewModel
                     $url = "javascript:void(0)";
                 }
 
+                $ref = $i+1;
 
-                $slider .= Html::anchor($url, $content, array('class' => View_Inicio::classify($i+1)));                 
+                switch ($ref) {
+                    case '4':
+                        $output = "pos-$ref i-medium";
+                        break;
+                    case '5':
+                        $output = "pos-$ref i-medium";
+                        break;                            
+                    case '9':
+                        $output = "pos-$ref i-large";
+                        break;   
+                    case '14':
+                        $output = "pos-$ref i-medium";
+                        break;
+                    case '15':
+                        $output = "pos-$ref i-medium";
+                        break;                
+                    case '16':
+                        $output = "pos-$ref i-large";
+                        break;                            
+                    case '20':
+                        $output = "pos-$ref i-large";
+                        break;                                  
+                    default:
+                        $output = "pos-$ref i-small";
+                        break;
+                }
+
+                $slider .= Html::anchor($url, $content, array('class' => $output));                 
             }
 
             echo $slider;
@@ -50,32 +78,7 @@ class View_Inicio extends ViewModel
     
     public function classify($ref) 
     {
-        switch ($ref) {
-            case '4':
-                $output = "pos-$ref i-medium";
-                break;
-            case '5':
-                $output = "pos-$ref i-medium";
-                break;                            
-            case '9':
-                $output = "pos-$ref i-large";
-                break;   
-            case '14':
-                $output = "pos-$ref i-medium";
-                break;
-            case '15':
-                $output = "pos-$ref i-medium";
-                break;                
-            case '16':
-                $output = "pos-$ref i-large";
-                break;                            
-            case '20':
-                $output = "pos-$ref i-large";
-                break;                                  
-            default:
-                $output = "pos-$ref i-small";
-                break;
-        }
+
 
         return $output;
         
