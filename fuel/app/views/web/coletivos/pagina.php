@@ -13,14 +13,14 @@
         <span id="logo" class="offset2 branco"></span>
 
         <div class="invisibleCont">
-        <img class="logoCole" src="/assets/img/logo-coletivo.png" alt="logo-coletivo" width="240" height="76" />
+        <?php echo Html::img('arquivos/'.$coletivo->info['logo'], array('class' => 'logoCole')); ?>
+        
         <div class="texto-wrapper coletAzul">
+            <?php echo $coletivo->name ?>
         <img src="/assets/img/headerCole.png" alt="headerCole" width="231" height="63" style="margin-bottom:21px;"/>
         <div class="coleMap" id="map-canvas"></div>
         <h2>Sobre o Coletivo</h2>
-        <p>Ilha de Gorée é um resort turístico na costa do Senegal. A ilha é símbolo do terror que a Europa promoveu no continente africano. Por isso, aquele local amaldiçoado foi considerado patrimônio mundial pela UNESCO. Considerada a Ilha Infernal do Não Retorno, a Ilha de Gorée é um aterro de 900 metros formado artificialmente pelas potências europeias na costa do Senegal para servir como porto do terror (de escravos). Esse tipo de porto sempre era muito difícil de se instalar no continente, por que frequêntemente eles eram invadidos por canibais.</p>
-        <p>A Ilha de Gorée então durante anos a fio desenvolveu seu papel muito bem de garantir passagem grátis de viajem de negros para a América. Essas pessoas que eram sorteadas eram denominadas de escravos. A ilha durante os séculos XV e XIX foi muito movimentada, muito tiro, muito canhão, sempre estava acontecendo alguma batalha.</p>
-        <p>Como todo raro lugar que é bom na África, a Ilha de Gorée foi região de disputa entre as potências da Europa. Todo mundo queria aquela força de trabalho fácil em detrimento da humanidade e ainda tinham a coragem de fazer mais barbárie guerreando no local.</p>
+        <p><?php echo $coletivo->description ?></p>
         
         <img src="/assets/img/image-strip.png" alt="image-strip" width="775" height="100" />
         <div style="float:left;" class="agendaCole"><img style="margin:20px 0 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="535" height="63" />

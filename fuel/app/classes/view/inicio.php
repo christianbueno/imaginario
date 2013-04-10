@@ -27,7 +27,7 @@ class View_Inicio extends ViewModel
                     $image = Html::img('arquivos/thumb-'.$images[$keys[$i]]->content);
                     $coletivo_id = $images[$keys[$i]]->coletivo->id;
                     $coletivo_name = Inflector::friendly_title($images[$keys[$i]]->coletivo->name, '-', true);                
-                    $url = "coletivos/$coletivo_name/$coletivo_id";
+                    $url = "coletivos/ver/$coletivo_name/$coletivo_id";
 
                     $colour = isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '';
 

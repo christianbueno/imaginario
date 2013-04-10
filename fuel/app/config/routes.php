@@ -4,7 +4,7 @@ return array(
 	'_404_'   => 'router/404',    // The main 404 route	
 	
     
-    'coletivos(/:name)' => array('coletivos/ver', 'name' => 'hello'),
+    
     'apoio' => 'router/apoio',
     'artistas' => 'router/artistas',
     'escolas' => 'router/escolas',
