@@ -13,6 +13,10 @@
         <span id="logo" class="offset2"></span>
 
         <div class="texto-wrapper">
+        <div class="alerta">
+        <h1>Em Breve!</h1>
+        <p>Você terá acesso a todos os eventos <strong>IMAGINA RIO</strong>, e poderá compartilhá-los com seus amigos, e ter mais informações de como fazer parte de cada um!</p>
+        </div>
         <h1>Agenda</h1>
         <div id="agenda">
             <div class="linhabranca">
