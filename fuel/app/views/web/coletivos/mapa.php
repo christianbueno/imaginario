@@ -47,9 +47,12 @@ $(document).ready(function(){
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(75, 75)
     };
+    var contentString = '<?php echo $coletivo->name; ?>'; //Adicionado por hora, a pedido da Micheline
+    var infowindow = new google.maps.InfoWindow({		 //Adicionado por hora, a pedido da Micheline
+    content: contentString								//Adicionado por hora, a pedido da Micheline
+    });													//Adicionado por hora, a pedido da Micheline
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(<?php echo $coletivo->info['latlng']; ?>),
-        icon: image,
         map: map,
         title:"<?php echo $coletivo->name; ?>"
     });
@@ -59,9 +62,12 @@ $(document).ready(function(){
         $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
         $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
     ?>
-    google.maps.event.addListener(marker, 'click', function(e) {
-        window.location.href = '<?php echo $url; ?>';
-    });
+		google.maps.event.addListener(marker, 'click', function() { //Adicionado por hora, a pedido da Micheline
+		  infowindow.open(map,marker);
+		});
+//    google.maps.event.addListener(marker, 'click', function(e) {
+//        window.location.href = '<?php echo $url; ?>';
+//    });
     <?php endforeach; ?> 
 });
 </script>
