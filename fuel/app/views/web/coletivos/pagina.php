@@ -23,7 +23,7 @@
         <p><?php echo $coletivo->description ?></p>
         
 <!--       Aqui vai a galeria de imagens e vídeos  <img src="/assets/img/image-strip.png" alt="image-strip" width="775" height="100" /> -->
-        <div style="float:left;" class="agendaCole"><img style="margin:20px 0 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Em breve agenda de eventos da <?php echo $coletivo->description ?>!
+        <div style="float:left;" class="agendaCole"><img style="margin:20px 0 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Em breve agenda de eventos da <?php echo $coletivo->name ?>!
         </div>
         </div>
         </div>
