@@ -24,16 +24,18 @@ class View_Inicio extends ViewModel
             for ($i = 0; $i < 20; $i++) { 
                 if(isset($keys[$i]))
                 {
-                    $image = Html::img('/arquivos/thumb-'.$images[$keys[$i]]->content);
+                    $image = Html::img('arquivos/thumb-'.$images[$keys[$i]]->content);
                     $coletivo_id = $images[$keys[$i]]->coletivo->id;
                     $coletivo_name = $images[$keys[$i]]->coletivo->name;                
                     $url = "coletivos/$coletivo_name/$coletivo_id";
 
-                    $content = '<span style="background-color:#'. $images[$keys[$i]]->coletivo->info['color'].'">' .  $images[$keys[$i]]->coletivo->name . '</span>' . $image;
+                    $color = isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '';
+
+                    $content = "<span style='background-color:#$color;'>" .  $images[$keys[$i]]->coletivo->name . '</span>' . $image;
                 } 
                 else 
                 {
-                    $content = Html::img('/arquivos/default-kaled.gif');
+                    $content = Html::img('arquivos/default-kaled.gif');
                     $url = "javascript:void(0)";
                 }
 
