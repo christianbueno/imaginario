@@ -566,6 +566,5 @@ span.partLast {
     -ms-transition: background .5s linear, color .5s linear;  
     -o-transition: background .5s linear, color .5s linear;  
     transition: background .5s linear, color .5s linear;
-    cursor: pointer;
     color: #fff;
 }
