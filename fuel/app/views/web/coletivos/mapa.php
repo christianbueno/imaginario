@@ -40,14 +40,14 @@ $(document).ready(function(){
 
     <?php foreach ($coletivos as $coletivo):?>     
 
-    var image = {
-        url: "/arquivos/tt.php?src=/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
-        
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(75, 75)
-    };
-    var contentString = '<?php echo $coletivo->name; ?>'; //Adicionado por hora, a pedido da Micheline
+//    var image = {
+//        url: "/arquivos/tt.php?src=/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
+//        
+//        origin: new google.maps.Point(0, 0),
+//        anchor: new google.maps.Point(17, 34),
+//        scaledSize: new google.maps.Size(75, 75)
+//    };
+    var contentString = '<div id="MapBubble">'+'<?php echo $coletivo->name; ?>'+'</div>'; //Adicionado por hora, a pedido da Micheline
     var infowindow = new google.maps.InfoWindow({		 //Adicionado por hora, a pedido da Micheline
     content: contentString								//Adicionado por hora, a pedido da Micheline
     });													//Adicionado por hora, a pedido da Micheline
