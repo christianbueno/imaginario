@@ -527,3 +527,45 @@ margin-bottom: -10px;
 	box-shadow: 0px 0px 30px rgba(255,205,169,0.8), inset 0px 0px 15px #fec49a;
 	transition: box-shadow .6s linear;
 }
+#participe {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	background: rgba(76,59,12,0.8);
+	color: white;
+	text-align: center;
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	bottom: 40px;
+	left: 40px;
+}
+#participe p {
+	text-transform: uppercase;
+	width: 100%;
+	clear: both;
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	padding: 10px 0 0 0;
+	font-size: 24px;
+}
+#participe span {
+	display: block;
+	background: rgba(76,59,12,1);
+	float: left;
+	padding: 14px 30px 14px 30px;
+	border-right: 1px dotted #c6b58b;
+}
+span.partLast {
+	border-right: none !important;
+}
+#participe a {
+	color: #9b8f6c;
+}
+#participe span:hover {
+	background: rgba(104,84,33,1);
+    -moz-transition: background .5s linear, color .5s linear;  
+    -webkit-transition: background .5s linear, color .5s linear;  
+    -ms-transition: background .5s linear, color .5s linear;  
+    -o-transition: background .5s linear, color .5s linear;  
+    transition: background .5s linear, color .5s linear;
+    cursor: pointer;
+    color: #fff;
+}
