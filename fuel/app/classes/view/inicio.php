@@ -31,9 +31,7 @@ class View_Inicio extends ViewModel
 
                     $colour = isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '';
 
-                    if ( $colour[0] == '#' ) {
-                        $colour = substr( $colour, 1 );
-                    }
+
                     if ( strlen( $colour ) == 6 ) {
                         list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
                     } elseif ( strlen( $colour ) == 3 ) {
