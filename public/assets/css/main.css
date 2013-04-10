@@ -358,8 +358,8 @@ body.mapa-eventos-temp {
 	background: #fff;
 }
 .agendaCole {
-	font-family: 'brandon_grotesquebold_italic', sans-serif;
-	font-size: 18px;
+	font-family: 'brandon_grotesquelight_italic', sans-serif;
+	font-size: 28px;
 	background: rgba(0,0,0,0.5);
 	width: 775px;
 	height: 100px;
