@@ -13,8 +13,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #vignette {
-    background: url(../img/bg-vignette.png);
+    background: url(../img/bg-vignette.png) no-repeat center center fixed;
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
     z-index: 997
 }
 
@@ -232,12 +236,28 @@ body.fundosobre {
 	display: none;
 }
 body.zulub {
-	background: url(../img/zulub.jpg) no-repeat left center;
-	background-size: cover;
+	background: url(../img/zulub.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
 }
 body.quem-somos {
-	background: url(../img/rio-silhueta.jpg) no-repeat left center;
-	background-size: cover;
+	background: url(../img/rio-silhueta.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+body.fale-conosco {
+	background: url(../img/fale-conosco.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
 }
 #agenda div {
 	width: 100%;
@@ -485,4 +505,24 @@ margin-bottom: -10px;
     position: absolute;
     top: -400px;
     width: 450px;
+}
+
+/* babu changes */
+.fcBlock {
+	background: #ff7200;
+	text-align: center;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	color: #b14b02;
+	padding-bottom: 20px;
+}
+.fcBlock:hover {
+	box-shadow: 0px 0px 30px rgba(255,205,169,0.8), inset 0px 0px 15px #fec49a;
+	transition: box-shadow .6s linear;
 }
