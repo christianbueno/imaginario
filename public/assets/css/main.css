@@ -324,6 +324,7 @@ body.mapa-eventos-temp {
 	height: 210px;
 	width: 775px;
 	margin-left: -25px;
+	margin-bottom: 26px;
 	overflow: hidden;
 }
 .data {
@@ -357,12 +358,17 @@ body.mapa-eventos-temp {
 	background: #fff;
 }
 .agendaCole {
-	background: #2a61ab;
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	font-size: 18px;
+	background: rgba(0,0,0,0.5);
 	width: 775px;
 	height: 100px;
 	margin-left: -25px;
 	margin-top: 20px;
 	margin-bottom: -25px;
+}
+.agendaCole img {
+	margin-right: 16px;
 }
 .linguas {
 	float: right;
