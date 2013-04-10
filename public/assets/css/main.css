@@ -155,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .botaoMenu:hover {
 	opacity: 1;
+	transition: opacity .5s linear;
 }
 .inicio {
 	width: 84px;
