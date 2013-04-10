@@ -40,7 +40,7 @@ class View_Inicio extends ViewModel
                 }
 
 
-                $slider .= Html::anchor($url, $content, array('class' => self::classify($i+1)));                 
+                $slider .= Html::anchor($url, $content, array('class' => $this::classify($i+1)));                 
             }
 
             echo $slider;
