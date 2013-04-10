@@ -77,16 +77,25 @@ h1, h2, h3, h4, h5, h6 {
     animation:30s linear 0s normal none infinite move;
     -moz-animation:30s linear 0s normal none infinite move;
     -webkit-animation:30s linear 0s normal none infinite move;
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
 }
-/*
 #holder:hover {
-    animation:0s linear 0s normal none infinite move;
-    -moz-animation:0s linear 0s normal none infinite move;
-    -webkit-animation:0s linear 0s normal none infinite move;
-
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
+    -moz-transition: -moz-animation-play-state .5s linear;  
+    -webkit-transition: -webkit-animation-play-state .5s linear;  
+    -ms-transition: -ms-animation-play-state .5s linear;  
+    -o-transition: -o-animation-play-state .5s linear;  
+    transition: animation-play-state .5s linear; 
 }
 
-*/
 .slider a:hover {
 	text-decoration: none;
 }
