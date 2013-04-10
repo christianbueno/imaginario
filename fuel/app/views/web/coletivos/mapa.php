@@ -17,9 +17,9 @@
 
         <div id="participe">
         	<p>Participe</p>
-        	<span>Coletivos & Artistas</span>
-        	<span>Escolas</span>
-        	<span class="partLast">Individual</span>        	
+        	<a href="/artistas"><span>Coletivos & Artistas</span></a>
+        	<a href="/escolas"><span>Escolas</span></a>
+        	<a href="/individual"><span class="partLast">Individual</span></a>
         </div>
         <?php echo render('modules/menu'); ?>
     </div>
