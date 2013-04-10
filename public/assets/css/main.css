@@ -78,8 +78,51 @@ h1, h2, h3, h4, h5, h6 {
     -moz-animation:30s linear 0s normal none infinite move;
     -webkit-animation:30s linear 0s normal none infinite move;
 }
+/*
+#holder:hover {
+    animation:0s linear 0s normal none infinite move;
+    -moz-animation:0s linear 0s normal none infinite move;
+    -webkit-animation:0s linear 0s normal none infinite move;
 
+}
 
+*/
+.slider a:hover {
+	text-decoration: none;
+}
+.slider a span {
+	position: absolute;
+	opacity: 0;
+	background: rgba(0,255,255, 0.5);
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 230%;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 88%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+.slider a span:hover {
+	opacity: 1;
+    -moz-transition: opacity .5s linear;  
+    -webkit-transition: opacity .5s linear;  
+    -ms-transition: opacity .5s linear;  
+    -o-transition: opacity .5s linear;  
+    transition: opacity .5s linear; 
+}
 #holder a {
     float: left;
 }

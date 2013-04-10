@@ -25,15 +25,15 @@
 			<div id="kaled" class="row">
 				<div id="holder">
 					<div class="slider">
-						<a href="" class="pos-1 i-small"><?php echo Html::img( isset($keys[0]) ? '/arquivos/thumb-'.$images[$keys[0]]->content : '/arquivos/default-kaled.gif' ) ?></a>
+						<a href="" class="pos-1 i-small"><span>Teste Nome</span><?php echo Html::img( isset($keys[0]) ? '/arquivos/thumb-'.$images[$keys[0]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-2 i-small"><?php echo Html::img( isset($keys[1]) ? '/arquivos/thumb-'.$images[$keys[1]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-3 i-small"><?php echo Html::img( isset($keys[2]) ? '/arquivos/thumb-'.$images[$keys[2]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-4 i-medium"><?php echo Html::img( isset($keys[3]) ? '/arquivos/thumb-'.$images[$keys[3]]->content : '/arquivos/default-kaled.gif' ) ?></a>
-						<a href="" class="pos-5 i-medium"><?php echo Html::img( isset($keys[4]) ? '/arquivos/thumb-'.$images[$keys[4]]->content : '/arquivos/default-kaled.gif' ) ?></a>
+						<a href="" class="pos-5 i-medium"><span>Teste Nome</span><?php echo Html::img( isset($keys[4]) ? '/arquivos/thumb-'.$images[$keys[4]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-6 i-small"><?php echo Html::img( isset($keys[5]) ? '/arquivos/thumb-'.$images[$keys[5]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-7 i-small"><?php echo Html::img( isset($keys[6]) ? '/arquivos/thumb-'.$images[$keys[6]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-8 i-small"><?php echo Html::img( isset($keys[7]) ? '/arquivos/thumb-'.$images[$keys[7]]->content : '/arquivos/default-kaled.gif' ) ?></a>
-						<a href="" class="pos-9 i-large"><?php echo Html::img( isset($keys[8]) ? '/arquivos/thumb-'.$images[$keys[8]]->content : '/arquivos/default-kaled.gif' ) ?></a>
+						<a href="" class="pos-9 i-large"><span>Teste Nome</span><?php echo Html::img( isset($keys[8]) ? '/arquivos/thumb-'.$images[$keys[8]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-10 i-small"><?php echo Html::img( isset($keys[9]) ? '/arquivos/thumb-'.$images[$keys[9]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-11 i-small"><?php echo Html::img( isset($keys[10]) ? '/arquivos/thumb-'.$images[$keys[10]]->content : '/arquivos/default-kaled.gif' ) ?></a>
 						<a href="" class="pos-12 i-small"><?php echo Html::img( isset($keys[11]) ? '/arquivos/thumb-'.$images[$keys[11]]->content : '/arquivos/default-kaled.gif' ) ?></a>
