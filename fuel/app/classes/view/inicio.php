@@ -29,9 +29,10 @@ class View_Inicio extends ViewModel
                     $coletivo_name = Inflector::friendly_title($images[$keys[$i]]->coletivo->name, '-', true);                
                     $url = "coletivos/$coletivo_name/$coletivo_id";
 
-                    $color = isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '';
-
-                    $content = "<span style='background-color:#$color;'>" .  $images[$keys[$i]]->coletivo->name . '</span>' . $image;
+                    $color_arr = self::hex2rgb(isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '');
+                    
+                    $color = 'rgba('.$color_arr['r'] . ','. $color_arr['g'] .','. $color_arr['b'] .','. '0.5)';
+                    $content = "<span style='background-color:$color;'>" .  $images[$keys[$i]]->coletivo->name . '</span>' . $image;
                 } 
                 else 
                 {
@@ -75,8 +76,23 @@ class View_Inicio extends ViewModel
         };
         $this->images = $images;
     }
-    
-    public function classify($ref) 
+    public static function hex2rgb( $colour ) {
+        if ( $colour[0] == '#' ) {
+                $colour = substr( $colour, 1 );
+        }
+        if ( strlen( $colour ) == 6 ) {
+                list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+        } elseif ( strlen( $colour ) == 3 ) {
+                list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+        } else {
+                return false;
+        }
+        $r = hexdec( $r );
+        $g = hexdec( $g );
+        $b = hexdec( $b );
+        return array( 'r' => $r, 'g' => $g, 'b' => $b );
+    }
+    public static function classify($ref) 
     {
 
 
