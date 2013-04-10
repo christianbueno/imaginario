@@ -54,9 +54,13 @@ $(document).ready(function(){
         title:"<?php echo $coletivo->name; ?>"
     });
 
-
+    <?php 
+        $coletivo_id = $coletivo->id;
+        $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
+        $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
+    ?>
     google.maps.event.addListener(marker, 'click', function(e) {
-        console.log(e);
+        window.location.href = '<?php echo $url; ?>';
     });
     <?php endforeach; ?> 
 });
