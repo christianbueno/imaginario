@@ -89,11 +89,6 @@ h1, h2, h3, h4, h5, h6 {
     -o-animation-play-state: paused;
     -ms-animation-play-state: paused;
     animation-play-state: paused;
-    -moz-transition: -moz-animation-play-state .5s linear;  
-    -webkit-transition: -webkit-animation-play-state .5s linear;  
-    -ms-transition: -ms-animation-play-state .5s linear;  
-    -o-transition: -o-animation-play-state .5s linear;  
-    transition: animation-play-state .5s linear; 
 }
 
 .slider a:hover {
@@ -238,6 +233,10 @@ body.fundosobre {
 }
 body.zulub {
 	background: url(../img/zulub.jpg) no-repeat left center;
+	background-size: cover;
+}
+body.quem-somos {
+	background: url(../img/rio-silhueta.jpg) no-repeat left center;
 	background-size: cover;
 }
 #agenda div {
