@@ -17,7 +17,7 @@
         
         <div class="texto-wrapper coletAzul">
 
-        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin-bottom:21px;"/><h1><?php echo $coletivo->name ?></h1>
+        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin-bottom:21px;"/><h1 style="width:640px;float:left;"><?php echo $coletivo->name ?></h1>
         <div class="coleMap" id="map-canvas"></div>
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description ?></p>
