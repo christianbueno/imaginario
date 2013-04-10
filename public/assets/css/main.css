@@ -366,9 +366,7 @@ body.mapa-eventos-temp {
 	margin-left: -25px;
 	margin-top: 20px;
 	margin-bottom: -25px;
-}
-.agendaCole img {
-	margin-right: 16px;
+	padding-top: 20px;
 }
 .linguas {
 	float: right;
