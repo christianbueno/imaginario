@@ -7,13 +7,14 @@
     <?php echo Asset::css('main.css'); ?>
 
 </head>
-<body class="zulub">
+<body class="apoio">
     <div id="vignette" class="container-fluid">     
 
         <span id="logo" class="offset2"></span>
 
         <div class="texto-wrapper">
         <h1>Apoio</h1>
+        
 
         
         </div>
