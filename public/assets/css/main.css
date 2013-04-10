@@ -1,0 +1,570 @@
+@import url(fonts.css);
+
+body {
+    background: url(../img/bg-home.png) no-repeat left top #ffffff;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+}
+
+
+#vignette {
+    background: url(../img/bg-vignette.png) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    z-index: 997
+}
+
+#logo {
+    background: url(../img/logo.png) no-repeat center center transparent;
+    background-size: cover;
+    text-indent: -9999px !important;
+    width: 403px;
+    height: 66px;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 998;
+}
+.branco {
+	background: url(../img/logo-branco.png) no-repeat center center transparent !important;
+}
+#expmenu {
+    position: fixed;
+    z-index: 999;
+    right: -390px;
+    top: 185px;
+    transition: right 0.2s linear;
+    -moz-transition: right 0.2s linear;
+    -webkit-transition: right 0.2s linear;
+}
+.open {
+    right: 0 !important;
+}
+.heading {
+    background: none repeat scroll 0 0 #D46002;
+    color: white;
+    float: left;
+    font-weight: bold;
+    padding: 208px 20px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    position: relative;
+}
+.heading:hover {
+  background: #EB6D00;
+}
+.content {
+    width: 390px;
+    height: 500px;
+    background: #ff7200;
+    float: left;
+}
+#kaled {
+    height: 500px;    
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+#holder {
+    width: 4424px;  
+    position: relative;    
+    animation:30s linear 0s normal none infinite move;
+    -moz-animation:30s linear 0s normal none infinite move;
+    -webkit-animation:30s linear 0s normal none infinite move;
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+}
+#holder:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.slider a:hover {
+	text-decoration: none;
+}
+.slider a span {
+	position: absolute;
+	opacity: 0;
+	background: rgba(0,255,255, 0.5);
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 230%;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 88%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+.slider a span:hover {
+	opacity: 1;
+    -moz-transition: opacity .5s linear;  
+    -webkit-transition: opacity .5s linear;  
+    -ms-transition: opacity .5s linear;  
+    -o-transition: opacity .5s linear;  
+    transition: opacity .5s linear; 
+}
+#holder a {
+    float: left;
+}
+#socialmedia {
+	float: right;
+	margin-top: -60px;
+}
+.parceiros {
+	width: 860px;
+	margin: 0 auto;
+}
+.botaoMenu {
+	float: left;
+	text-align: center;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	color: #b14b02;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.4);
+	position: relative;
+	opacity: 0.6;
+}
+.botaoMenu:hover {
+	opacity: 1;
+	transition: opacity .5s linear;
+}
+.inicio {
+	width: 84px;
+}
+.coletivos {
+	width: 77px;
+}
+.agenda {
+	width: 73px;
+}
+.mapa {
+	width: 59px;
+}
+.sobre {
+	width: 93px;
+}
+.meu {
+	width: 81px;
+}
+#expmenu .content .row {
+	margin: 15px 0 0 50px !important;
+}
+.invisibleCont {
+	position: relative;
+	width: 725px;
+	display: block;
+	margin: 135px 0 0 0;
+}
+.texto-wrapper {
+	position: relative;
+	width: 725px;
+	margin-left: 195px;
+	float: left;
+	background: rgba(0,0,0, 0.8);
+	color: #fff;
+	padding: 25px;
+	display: block;
+}
+.texto-wrapper h1 {
+	margin-bottom: 20px;
+}
+.texto-wrapper p {
+	padding-bottom: 10px;
+	line-height: 18px;
+}
+.coletAzul {
+	background: rgba(16,50,96, 0.8);
+}
+.coletAzul p {
+	color: #c0dbff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	line-height: 18px;
+}
+.coletAzul h2 {
+	font-family: 'brandon_grotesquebold', sans-serif;
+	color: #f8c301;
+	margin-bottom: 18px;
+	margin-top: 20px;
+}
+img.logoCole {
+	float: right;
+	position: relative;
+	margin-right: -245px;
+	margin-top: -82px;
+}
+body.fundosobre {
+	background: #000000;
+}
+.bgMap {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	z-index: 996;
+}
+.gmnoprint {
+	display: none;
+}
+body.zulub {
+	background: url(../img/zulub.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+body.quem-somos {
+	background: url(../img/rio-silhueta.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+body.fale-conosco {
+	background: url(../img/fale-conosco.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+#agenda div {
+	width: 100%;
+	font-family: 'brandon_grotesquelight_italic', sans-serif;
+	font-size: 18px;
+	padding: 15px 0 15px 10px;
+	float: left;
+}
+#agenda div span {
+	clear: none;
+	float: left;
+}
+.linhabranca {
+	background: rgba(255,255,255,0.5);
+}
+.nome-evento {
+	margin-left: 10px;
+	margin-top: 18px;
+}
+.coleMap {
+	height: 210px;
+	width: 775px;
+	margin-left: -25px;
+	overflow: hidden;
+}
+.data {
+	background: url(../img/icoCal.png) no-repeat left top transparent;
+	width: 50px;
+	height: 39px;
+	display: block;
+	line-height: 12px;
+	padding: 13px 0 0 0;
+}
+.dia, .mes, .ano {
+	width: 50px;
+	display: block;
+	clear: both;
+	text-align: center;
+}
+.ano, .mes {
+	font-size: 8px;
+}
+.dia {
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+}
+.eventShare {
+	float: right !important;
+	margin-top: 18px;
+	background: url(../img/fbIco.png) no-repeat center center transparent;
+	padding: 0 104px 0 0;
+	margin-right: -65px;
+}
+.noBG {
+	background: #fff;
+}
+.agendaCole {
+	background: #2a61ab;
+	width: 775px;
+	height: 100px;
+	margin-left: -25px;
+	margin-top: 20px;
+	margin-bottom: -25px;
+}
+.linguas {
+	float: right;
+margin-bottom: -10px;
+}
+
+ @keyframes move
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+
+        100% {          
+          right:2206px;          
+        }
+      }
+      
+      @-moz-keyframes move
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+
+        100% {          
+          right:2206px;          
+        }
+      }
+      
+      @-webkit-keyframes move
+      {
+        
+        0%   {          
+          right:0;
+          
+        }
+
+        100% {          
+          right:2206px;          
+        }
+      }
+
+
+.slider {
+    /*background: url(../img/slider1-2.png) 0 0 no-repeat;*/
+    width: 1106px;
+    height: 504px;
+    display: block;    
+    float: left;
+    position: relative;
+
+}
+
+.slider a {
+    position: absolute;
+
+}
+
+.i-small {
+    width: 100px;
+    height: 100px;
+}
+
+.i-medium {
+    width: 150px;
+    height: 150px;
+}
+
+.i-large {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* posicionamento */
+
+.pos-1 {
+    top: 100px;
+    left: 1px;
+}
+.pos-2 {
+    top: 201px;
+    left: 1px;
+}
+.pos-3 {
+    top: 302px;
+    left: 1px;
+}
+.pos-4 {
+    left: 102px;
+}
+.pos-5 {
+    top: 151px;
+    left: 102px;    
+}
+.pos-6 {
+    left: 253px;
+}
+.pos-7 {
+    top: 101px;
+    left: 253px;
+}
+.pos-8 {
+    left: 354px;
+}
+.pos-9 {
+    top: 101px;
+    left: 354px;    
+}
+.pos-10 {
+    top: 302px;
+    left: 353px;
+}
+.pos-11 {
+    top: 302px;
+    left: 454px;
+}
+.pos-12 {
+    top: 103px;
+    left: 555px;
+}
+.pos-13 {
+    top: 103px;
+    left: 656px;
+}
+.pos-14 {
+    top: 204px;
+    left: 555px;
+}
+.pos-15 {
+    left: 757px;
+    top: 53px;
+}
+.pos-16 {
+    left: 706px;
+    top: 204px;
+}
+.pos-17 {
+    left: 706px;
+    top: 405px;
+}
+.pos-18 {
+    left: 908px;
+    top: 54px;
+}
+.pos-19 {
+    left: 908px;
+    top: 155px;
+}
+.pos-20 {
+    left: 907px;
+    top: 256px;
+}
+
+
+
+
+
+
+/* kxa changes */
+
+.notfound {
+  padding-top: 150px !important;
+  padding-bottom: 250px !important;
+}
+
+
+
+.mapa-evento-adm {
+    height: 450px;
+    left: 425px;
+    position: absolute;
+    top: -310px;
+    width: 450px;
+}
+
+.mapa-coletivo {
+    height: 450px;
+    left: 425px;
+    position: absolute;
+    top: -400px;
+    width: 450px;
+}
+
+/* babu changes */
+.fcBlock {
+	background: #ff7200;
+	text-align: center;
+	font-family: 'brandon_grotesqueMdIt', sans-serif;
+	font-size: 21px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	color: #b14b02;
+	padding-bottom: 20px;
+}
+.fcBlock:hover {
+	box-shadow: 0px 0px 30px rgba(255,205,169,0.8), inset 0px 0px 15px #fec49a;
+	transition: box-shadow .6s linear;
+}
+#participe {
+	display: block;
+	position: absolute;
+	z-index: 999;
+	background: rgba(76,59,12,0.8);
+	color: white;
+	text-align: center;
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	bottom: 40px;
+	left: 40px;
+}
+#participe p {
+	text-transform: uppercase;
+	width: 100%;
+	clear: both;
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	padding: 10px 0 0 0;
+	font-size: 24px;
+}
+#participe span {
+	display: block;
+	background: rgba(76,59,12,1);
+	float: left;
+	padding: 14px 30px 14px 30px;
+	border-right: 1px dotted #c6b58b;
+}
+span.partLast {
+	border-right: none !important;
+}
+#participe a {
+	color: #9b8f6c;
+}
+#participe span:hover {
+	background: rgba(104,84,33,1);
+    -moz-transition: background .5s linear, color .5s linear;  
+    -webkit-transition: background .5s linear, color .5s linear;  
+    -ms-transition: background .5s linear, color .5s linear;  
+    -o-transition: background .5s linear, color .5s linear;  
+    transition: background .5s linear, color .5s linear;
+    color: #fff;
+}

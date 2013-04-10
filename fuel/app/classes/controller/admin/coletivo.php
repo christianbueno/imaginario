@@ -24,6 +24,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                     'admins' => explode(';', Input::post('admins')),
                     'logo' => $this->processUpload(),
                     'endereco' => Input::post('address'),
+                    'cor' => Input::post('color'),
                     'latlng' => Input::post('latlng'),
                 );
                 $coletivo = Model_Coletivo::forge(array(
@@ -52,6 +53,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                 $retorno->admins = Input::post('admins');
                 $retorno->address = Input::post('address');
                 $retorno->latlng = Input::post('latlng');
+                $retorno->latlng = Input::post('color');
 
                 $this->template->set_global('coletivo', $retorno, false);
                 Session::set_flash('error', $val->error());
@@ -72,6 +74,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
         $coletivo->image = $metadata['logo'];
         $coletivo->address = $metadata['endereco'];
         $coletivo->latlng = $metadata['latlng'];
+        $coletivo->color = isset($metadata['color']) ? $metadata['color'] : '';
 
         $this->template->set_global('coletivo', $coletivo, false);
 
@@ -87,6 +90,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                     $metadata['logo'] = $this->processUpload();
                 $metadata['endereco'] = Input::post('address');
                 $metadata['latlng'] = Input::post('latlng');
+                $metadata['color'] = Input::post('color');
                 
                 $coletivo->name = Input::post('name');
                 $coletivo->description = Input::post('description');
@@ -113,6 +117,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                 $retorno->admins = Input::post('admins');
                 $retorno->address = Input::post('address');
                 $retorno->latlng = Input::post('latlng');
+                $retorno->color = Input::post('color');
 
                 $this->template->set_global('coletivo', $retorno, false);
                 Session::set_flash('error', $val->error());

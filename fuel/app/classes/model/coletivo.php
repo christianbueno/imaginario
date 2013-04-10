@@ -28,6 +28,7 @@ class Model_Coletivo extends \Orm\Model
 		$val = Validation::forge();
 		$val->add_field('name', 'Nome', 'required|min_length[3]|max_length[150]');
 		$val->add_field('description', 'Descrição', 'required|min_length[3]|max_length[5000]');
+		$val->add_field('color', 'Cor', 'required|exact_length[6]');	
 		$val->add_field('admins', 'Colaboradores', 'required|valid_emails[;]');		
 
 		return $val;
@@ -36,6 +37,7 @@ class Model_Coletivo extends \Orm\Model
 	{
 		$val = Validation::forge();
 		$val->add_field('name', 'Nome', 'required|min_length[3]|max_length[150]');
+		$val->add_field('color', 'Cor', 'required|exact_length[6]');	
 		$val->add_field('description', 'Descrição', 'required|min_length[3]|max_length[5000]');
 
 		return $val;

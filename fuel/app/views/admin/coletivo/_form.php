@@ -64,6 +64,13 @@
         </div>
     </div>
     <div class="clearfix">
+        <?php echo Form::label('Cor', 'color'); ?>
+
+        
+            #<?php echo Form::input('color', isset($coletivo) ? $coletivo->color : '', array('class' => 'span1 colorpicker')); ?>
+        
+    </div>    
+    <div class="clearfix">
         <?php echo Form::label('Descrição', 'description'); ?>
 
         <div class="input">
@@ -105,3 +112,7 @@
 
     </div>
 </fieldset>
+
+<script>
+  var start_colorpicker = true;
+</script>

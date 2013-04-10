@@ -80,6 +80,7 @@ class Controller_Users extends Controller_Template
             $coletivo->image = $metadata['logo'];
             $coletivo->address = $metadata['endereco'];
             $coletivo->latlng = $metadata['latlng'];
+            $coletivo->color = isset($metadata['color']) ? $metadata['color'] : '';
         }
         $user = Model_user::find($user[1]);
 
@@ -105,6 +106,7 @@ class Controller_Users extends Controller_Template
 
             $metadata['endereco'] = Input::post('address');
             $metadata['latlng'] = Input::post('latlng');
+            $metadata['color'] = Input::post('color');
             
             $coletivo->name = Input::post('name');
             $coletivo->description = Input::post('description');
