@@ -24,17 +24,17 @@
 			<div id="kaled" class="row">
 				<div id="holder">
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 0, 19)); ?>
+						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 20, 39)); ?>
+						<?php $renderSlider(array_slice($images, 21, 41)); ?>
 					</div>
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 0, 19)); ?>
+						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 20, 39)); ?>
-					</div>					
+						<?php $renderSlider(array_slice($images, 21, 41)); ?>
+					</div>				
 				</div>
 			</div>
 			<div class="row">

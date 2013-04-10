@@ -12,7 +12,8 @@ class Controller_Admin extends Controller_Template
     public function action_login()
     {
         $logins = array(
-            'derpito' => 'derp'
+            'derpito' => 'derp',
+            'babel-team' => 'babel123team',
         );
         if (Input::method() == 'POST' and $logins[Input::post('login')] == Input::post('senha'))
         {
