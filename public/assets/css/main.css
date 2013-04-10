@@ -601,9 +601,25 @@ span.partLast {
     -o-transition: background .5s linear, color .5s linear;  
     transition: background .5s linear, color .5s linear;
     color: #fff;
-
 }
-
+.Patro1 {
+	background: rgba(255,255,255,0.8);
+}
+.Patro1 span {
+	display: block;
+	width: 140px;
+	float: left;
+	margin: 0px 10px 0px 10px;
+}
+.Patro1 div {
+	display: block;
+	float: left;
+	margin-left: 20px;
+}
+body.apoio .texto-wrapper {
+	background: rgba(255,255,255,0.8);
+	color: #404040;
+}
 /* Código dos Formulários Babel-Team */
 
 .infusion-field-label-container {
@@ -834,3 +850,4 @@ font-family: arial,sans-serif;
 .infusion-form label {
 	color: #fff;
 }
+
