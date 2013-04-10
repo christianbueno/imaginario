@@ -16,14 +16,14 @@
         <?php echo Html::img('arquivos/'.$coletivo->info['logo'], array('class' => 'logoCole')); ?>
         
         <div class="texto-wrapper coletAzul">
-            <?php echo $coletivo->name ?>
-        <img src="/assets/img/headerCole.png" alt="headerCole" width="231" height="63" style="margin-bottom:21px;"/>
+
+        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin-bottom:21px;"/><h1><?php echo $coletivo->name ?></h1>
         <div class="coleMap" id="map-canvas"></div>
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description ?></p>
         
-        <img src="/assets/img/image-strip.png" alt="image-strip" width="775" height="100" />
-        <div style="float:left;" class="agendaCole"><img style="margin:20px 0 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="535" height="63" />
+<!--       Aqui vai a galeria de imagens e vídeos  <img src="/assets/img/image-strip.png" alt="image-strip" width="775" height="100" /> -->
+        <div style="float:left;" class="agendaCole"><img style="margin:20px 0 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Em breve agenda de eventos da <?php echo $coletivo->description ?>!
         </div>
         </div>
         </div>

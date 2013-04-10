@@ -7,18 +7,14 @@
     <?php echo Asset::css('main.css'); ?>
 
 </head>
-<body class="noBG">
+<body class="mapa-eventos-temp">
     <div id="vignette" class="container-fluid">     
 
         <span id="logo" class="offset2"></span>
         <div class="alerta">
         <h1>Em Breve!</h1>
-        <p>Você terá acesso a todos os eventos <strong>IMAGINA RIO</strong>, e poderá compartilhá-los com seus amigos, e ter mais informações de como fazer parte de cada um!</p>
+        <p>Você terá acesso a todos os eventos <strong>IMAGINA RIO</strong>, poderá encontrar um evento do tipo que você mais gosta, mais próximo de você, e poderá compartilhá-los com seus amigos, e ter mais informações de como fazer parte de cada um!</p>
         </div>
-        <img style="position:absolute;z-index:997;margin:-200px 0 0 280px;" src="/assets/img/mapa-eventos.png" alt="mapa-eventos" width="1138" height="535" />
-        <div class="gambiarra">
-        <iframe class="bgMap gambiarra2" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Avenida+Olof+Palme,+Rio+de+Janeiro,+Brazil&amp;aq=0&amp;oq=avenida+olo&amp;sll=37.0625,-95.677068&amp;sspn=43.578243,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Olof+Palme+-+Camorim,+Rio+de+Janeiro,+Brazil&amp;t=m&amp;ll=-22.98052,-43.413506&amp;spn=0.284468,0.548973&amp;z=12&amp;iwloc=near&amp;output=embed&style=feature:all|element:labels|visibility:off"></iframe></div>
-
 
         <?php echo render('modules/menu'); ?>
     </div>

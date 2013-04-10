@@ -38,18 +38,18 @@
         Quem Somos
         </span>
     </a>
-    <a  class="span2" href="/users/perfil/">
-        <span class="botaoMenu meu">
-        <img src="/assets/img/meu.png" alt="inicio" width="81" height="73" />
-        Meu Imagina.RIO
-        </span>
-    </a>
-    </div>
-    <div class="row">
     <a  class="span2" href="/apoio/">
         <span class="botaoMenu agenda">
         <img style="margin-left:28px;" src="/assets/img/apoio.png" alt="inicio" width="45" height="85" />
         Apoio
+        </span>
+    </a>
+    </div>
+    <div class="row">
+    <a  class="span2" href="/users/perfil/">
+        <span class="botaoMenu meu">
+        <img src="/assets/img/meu.png" alt="inicio" width="81" height="73" />
+        Meu Imagina.RIO
         </span>
     </a>
     <a  class="span2" href="/fale-conosco/">
