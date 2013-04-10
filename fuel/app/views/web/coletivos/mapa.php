@@ -37,6 +37,7 @@ $(document).ready(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    
 
     <?php foreach ($coletivos as $coletivo):?>     
 
@@ -48,9 +49,10 @@ $(document).ready(function(){
 //        scaledSize: new google.maps.Size(75, 75)
 //    };
     var contentString = '<div id="MapBubble">'+'<?php echo $coletivo->name; ?>'+'</div>'; //Adicionado por hora, a pedido da Micheline
-    var infowindow = new google.maps.InfoWindow({		 //Adicionado por hora, a pedido da Micheline
-    content: contentString								//Adicionado por hora, a pedido da Micheline
-    });													//Adicionado por hora, a pedido da Micheline
+    
+//    var infowindow = new google.maps.InfoWindow({		 //Adicionado por hora, a pedido da Micheline
+//        content: contentString								//Adicionado por hora, a pedido da Micheline
+//    });		
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(<?php echo $coletivo->info['latlng']; ?>),
         map: map,
@@ -62,13 +64,14 @@ $(document).ready(function(){
         $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
         $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
     ?>
-		google.maps.event.addListener(marker, 'click', function() { //Adicionado por hora, a pedido da Micheline
+		google.maps.event.addListener(marker, 'hover', function() { //Adicionado por hora, a pedido da Micheline
 		  infowindow.open(map,marker);
 		});
-//    google.maps.event.addListener(marker, 'click', function(e) {
-//        window.location.href = '<?php echo $url; ?>';
-//    });
+    google.maps.event.addListener(marker, 'click', function(e) {
+        window.location.href = '<?php echo $url; ?>';
+    });
     <?php endforeach; ?> 
 });
+											//Adicionado por hora, a pedido da Micheline
 </script>
 </body></html>
