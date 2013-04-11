@@ -21,6 +21,7 @@ class View_Inicio extends ViewModel
         {
             $keys = array_keys($images);
             $slider = '';
+            Debug::dump($images);
             for ($i = 0; $i < 20; $i++) { 
                 if(isset($keys[$i]))
                 {
