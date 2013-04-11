@@ -21,10 +21,9 @@
 				<img src="assets/img/twitter_32.png" alt="twitter_32" width="32" height="32" />
 				<img src="assets/img/vimeo_32.png" alt="vimeo_32" width="32" height="32" />
 			</div>	
-			<?php Debug::dump($images); ?>		
+
 			<div id="kaled" class="row">
 				<div id="holder">
-
 					<div class="slider">
 						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
