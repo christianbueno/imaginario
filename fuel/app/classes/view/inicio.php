@@ -13,8 +13,9 @@ class View_Inicio extends ViewModel
         ));
         foreach ($images as $image) {
             $image->info = unserialize($image['metadata']);
-            $image->coletivo = Model_Coletivo::find($image->coletivo_id);
-            $image->coletivo->info = unserialize($image->coletivo->metadata);
+            $coletivo = Model_Coletivo::find($image->coletivo_id);
+            $coletivo->info = unserialize($image->coletivo->metadata);
+            $image->coletivo = $coletivo;
         }                
 
         $this->renderSlider = function($images)
