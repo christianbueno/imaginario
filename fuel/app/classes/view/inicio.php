@@ -19,9 +19,10 @@ class View_Inicio extends ViewModel
 
         $this->renderSlider = function($images)
         {
+            Debug::dump($images);
             $keys = array_keys($images);
             $slider = '';
-            
+
             for ($i = 0; $i < 20; $i++) { 
                 if(isset($keys[$i]))
                 {
