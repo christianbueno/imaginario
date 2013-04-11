@@ -14,7 +14,7 @@
 
         <div class="texto-wrapper">
         <h1>Apoio</h1>
-        <p>A IMAGINA RIO só funciona graças à ajuda de nossos diversos colaboradores.</p>
+        <p>O IMAGINA RIO só funciona graças à ajuda de nossos diversos colaboradores.</p>
         <p>Se você também quer fazer parte desta família, entre em contato conosco.</p>
         <div class="Patro1">
         <span>
