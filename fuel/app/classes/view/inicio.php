@@ -14,6 +14,7 @@ class View_Inicio extends ViewModel
         foreach ($images as $image) {
             $image->info = unserialize($image['metadata']);
             $coletivo = Model_Coletivo::find($image->coletivo_id);
+            Debug::dump($coletivo->metadata, $image->coletivo_id);
             $coletivo->info = unserialize($coletivo->metadata);
             $image->coletivo = $coletivo;
         }                
