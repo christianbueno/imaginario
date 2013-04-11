@@ -23,6 +23,7 @@
 			</div>			
 			<div id="kaled" class="row">
 				<div id="holder">
+					<?php Debug::dump($images); ?>
 					<div class="slider">
 						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
