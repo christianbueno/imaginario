@@ -53,7 +53,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                 $retorno->admins = Input::post('admins');
                 $retorno->address = Input::post('address');
                 $retorno->latlng = Input::post('latlng');
-                $retorno->latlng = Input::post('color');
+                $retorno->color = Input::post('color');
 
                 $this->template->set_global('coletivo', $retorno, false);
                 Session::set_flash('error', $val->error());
