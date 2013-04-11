@@ -18,8 +18,7 @@ class View_Inicio extends ViewModel
         }                
 
         $this->renderSlider = function($images)
-        {
-            Debug::dump($images);
+        {            
             $keys = array_keys($images);
             $slider = '';
 
