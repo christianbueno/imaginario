@@ -74,7 +74,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
         $coletivo->image = $metadata['logo'];
         $coletivo->address = $metadata['endereco'];
         $coletivo->latlng = $metadata['latlng'];
-        $coletivo->color = isset($metadata['color']) ? $metadata['color'] : '';
+        $coletivo->color = isset($metadata['cor']) ? $metadata['cor'] : '';
 
         $this->template->set_global('coletivo', $coletivo, false);
 
@@ -90,7 +90,7 @@ class Controller_Admin_Coletivo extends Controller_Admin
                     $metadata['logo'] = $this->processUpload();
                 $metadata['endereco'] = Input::post('address');
                 $metadata['latlng'] = Input::post('latlng');
-                $metadata['color'] = Input::post('color');
+                $metadata['cor'] = Input::post('color');
                 
                 $coletivo->name = Input::post('name');
                 $coletivo->description = Input::post('description');
