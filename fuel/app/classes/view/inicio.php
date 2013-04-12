@@ -16,21 +16,21 @@ class View_Inicio extends ViewModel
             $image->coletivo = Model_Coletivo::find($image->coletivo_id);
             $image->coletivo->info = unserialize($image->coletivo->metadata);
         }                
-
-        $this->renderSlider = function($images)
+        $this->images = $images;
+        $this->renderSlider = function($items)
         {            
-            $keys = array_keys($images);
+            $keys = array_keys($items);
             $slider = '';
 
             for ($i = 0; $i < 20; $i++) { 
                 if(isset($keys[$i]))
                 {
-                    $image = Html::img('arquivos/thumb-'.$images[$keys[$i]]->content);
-                    $coletivo_id = $images[$keys[$i]]->coletivo->id;
-                    $coletivo_name = Inflector::friendly_title($images[$keys[$i]]->coletivo->name, '-', true);                
+                    $image = Html::img('arquivos/thumb-'.$items[$keys[$i]]->content);
+                    $coletivo_id = $items[$keys[$i]]->coletivo->id;
+                    $coletivo_name = Inflector::friendly_title($items[$keys[$i]]->coletivo->name, '-', true);                
                     $url = "coletivos/ver/$coletivo_name/$coletivo_id";
 
-                    $colour = isset($images[$keys[$i]]->coletivo->info['color']) ? $images[$keys[$i]]->coletivo->info['color'] : '';
+                    $colour = isset($items[$keys[$i]]->coletivo->info['color']) ? $items[$keys[$i]]->coletivo->info['color'] : '';
 
 
                     if ( strlen( $colour ) == 6 ) {
@@ -46,7 +46,7 @@ class View_Inicio extends ViewModel
 
 
                     $color = "rgba($r,$g,$b,0.5)";
-                    $content = "<span style='background-color:$color;'>" .  $images[$keys[$i]]->coletivo->name . '</span>' . $image;
+                    $content = "<span style='background-color:$color;'>" .  $items[$keys[$i]]->coletivo->name . '</span>' . $image;
                 } 
                 else 
                 {
@@ -88,7 +88,7 @@ class View_Inicio extends ViewModel
 
             
         };
-        $this->images = $images;
+        
     }
     public static function hex2rgb( $colour ) {
 
