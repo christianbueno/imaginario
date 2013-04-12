@@ -22,7 +22,7 @@
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description ?></p>
         <?php foreach ($images as $image):
-            echo Html::img('arquivos/thumb-'.$image->content);
+            echo Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-large'));
         endforeach; ?> 
         <div style="float:left;" class="agendaCole"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Em breve agenda de eventos da <?php echo $coletivo->name ?>!
         </div>
