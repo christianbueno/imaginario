@@ -12,6 +12,14 @@ class Controller_Coletivos extends Controller
     {        
         $coletivo = Model_Coletivo::find($id);
         $coletivo->info = unserialize($coletivo->metadata);
+
+        $images = Model_Conteudo::find('all', array(
+            'where' => array(
+                    array('coletivo_id', $id),                                    
+            )
+        ));
+
+        $data['images'] = $images;
         $data['coletivo'] = $coletivo;
         return Response::forge(View::forge('web/coletivos/pagina', $data));
     }
