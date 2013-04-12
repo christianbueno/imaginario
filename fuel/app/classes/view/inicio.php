@@ -83,10 +83,10 @@ class View_Inicio extends ViewModel
                         break;
                 }
 
-                $slider .= Html::anchor($url, $content, array('class' => $output));                 
+                echo Html::anchor($url, $content, array('class' => $output));                 
             }
 
-            echo $slider;
+            
         };
         $this->images = $images;
     }
