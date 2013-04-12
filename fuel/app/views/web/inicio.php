@@ -28,13 +28,13 @@
 						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 21, 41)); ?>
+						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
 					<div class="slider">
 						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>
 					<div class="slider">
-						<?php $renderSlider(array_slice($images, 21, 41)); ?>
+						<?php $renderSlider(array_slice($images, 0, 20)); ?>
 					</div>				
 				</div>
 			</div>
