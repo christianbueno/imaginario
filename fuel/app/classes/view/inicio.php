@@ -9,7 +9,8 @@ class View_Inicio extends ViewModel
         $images = Model_Conteudo::find('all', array(
             'where' => array(
                     array('type', 'image'),                                    
-            )
+            ),
+            'order_by' => array('created_at' => 'desc'),
         ));
         foreach ($images as $image) {
             $image->info = unserialize($image->metadata);

@@ -13,47 +13,20 @@
         <span id="logo" class="offset2"></span>
 
         <div class="texto-wrapper">
-        <div class="alerta">
-        <h1>Em Breve!</h1>
-        <p>Você terá acesso a todos os eventos <strong>IMAGINA RIO</strong>, e poderá compartilhá-los com seus amigos, e ter mais informações de como fazer parte de cada um!</p>
-        </div>
         <h1>Agenda</h1>
         <div id="agenda">
-            <div class="linhabranca">
-                <span class="data"><span class="ano">2013</span><span class="dia">26</span><span class="mes">Jul</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
+        <?php 
+        $i = 1;
+        foreach ($eventos as $evento): 
+            $i++;
+        ?>
+            <div <?php echo $i % 2 === 0 ? 'class="linhabranca"' : ''; ?>>
+                <span class="data"><?php echo Date::forge($evento->when)->format("<span class=\"ano\">%Y</span><span class=\"dia\">%d</span><span class=\"mes\">%m</span>"); ?></span>
+                <span class="nome-evento"><?php echo $evento->title ?></span>
                 <span class="eventShare">Compartilhe</span>         
             </div>
-            <div>
-                <span class="data"><span class="ano">2013</span><span class="dia">30</span><span class="mes">Jul</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
-            <div class="linhabranca">
-                <span class="data"><span class="ano">2013</span><span class="dia">02</span><span class="mes">Ago</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
-            <div>
-                <span class="data"><span class="ano">2013</span><span class="dia">15</span><span class="mes">Ago</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
-            <div class="linhabranca">
-                <span class="data"><span class="ano">2013</span><span class="dia">22</span><span class="mes">Ago</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
-            <div>
-                <span class="data"><span class="ano">2013</span><span class="dia">11</span><span class="mes">Sep</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
-            <div class="linhabranca">
-                <span class="data"><span class="ano">2013</span><span class="dia">15</span><span class="mes">Sep</span></span>
-                <span class="nome-evento">Festival Circo Digital</span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
+        <?php endforeach; ?> 
+
         </div>
         
         </div>

@@ -22,7 +22,16 @@ class Controller_Users_Evento extends Controller_Users
                 $evento = new Model_Evento();                
                 $evento->title = Input::post('title');
                 $evento->description = Input::post('description');
-                $evento->when = Date::create_from_string(Input::post('when') , 'eu')->get_timestamp();
+
+                list($dd,$mm,$yyyy) = explode('/',Input::post('when'));
+
+                if(strlen($dd) === 1)
+                    $dd = "0$dd";
+
+                if(strlen($mm) === 1)
+                    $mm = "0$mm";
+
+                $evento->when = Date::create_from_string("$dd/$mm/$yyyy" , 'eu')->get_timestamp();
 
                 $evento->coletivo_id = $id;
                 $evento->user_id = $user[1];

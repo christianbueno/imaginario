@@ -22,9 +22,23 @@
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description ?></p>
         <?php foreach ($images as $image):
-            echo Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-large'));
+            echo Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-medium'));
         endforeach; ?> 
-        <div style="float:left;" class="agendaCole"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Em breve agenda de eventos da <?php echo $coletivo->name ?>!
+        <div class="agendaCole pull-left"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Agenda de eventos
+        </div>
+        <div id="agenda">
+
+                    <?php 
+        $i = 1;
+        foreach ($eventos as $evento): 
+            $i++;
+        ?>
+            <div <?php echo $i % 2 === 0 ? 'class="linhabranca"' : ''; ?>>
+                <span class="data"><?php echo Date::forge($evento->when)->format("<span class=\"ano\">%Y</span><span class=\"dia\">%d</span><span class=\"mes\">%m</span>"); ?></span>
+                <span class="nome-evento"><?php echo $evento->title ?></span>
+                <span class="eventShare">Compartilhe</span>         
+            </div>
+        <?php endforeach; ?> 
         </div>
         </div>
         </div>

@@ -58,7 +58,8 @@ class Controller_Users_Conteudo extends Controller_Users
             'where' => array(
                     array('coletivo_id', $id),                
                     array('user_id', $user[1]),                
-            )
+            ),
+            'order_by' => array('created_at' => 'desc'),
         ));
 
         foreach ($conteudos as $conteudo) {

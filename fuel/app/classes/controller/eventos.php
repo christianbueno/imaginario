@@ -10,7 +10,7 @@ class Controller_Eventos extends Controller
 
     public function action_agenda()
     {
-        return Response::forge(View::forge('web/eventos/lista'));
+        return Response::forge(ViewModel::forge('eventos/lista'));
     }
 
 }

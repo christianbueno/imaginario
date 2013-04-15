@@ -19,8 +19,16 @@ class Controller_Coletivos extends Controller
             )
         ));
 
+
+        $eventos = Model_Evento::find('all', array(
+            'where' => array(
+                    array('coletivo_id', $id),                                    
+            )
+        ));
+
         $data['images'] = $images;
         $data['coletivo'] = $coletivo;
+        $data['eventos'] = $eventos;
         return Response::forge(View::forge('web/coletivos/pagina', $data));
     }
 
