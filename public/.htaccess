@@ -6,6 +6,7 @@
     # Make sure directory listing is disabled
 	Options +FollowSymLinks -Indexes
 	RewriteEngine on
+	RewriteRule ^cor/([^/]*).svg$ pin.php?fill=$1 [NC]
 
 	# NOTICE: If you get a 404 play with combinations of the following commented out lines
 	#AllowOverride All
