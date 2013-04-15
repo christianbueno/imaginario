@@ -6,7 +6,7 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSUuzKFf-qvUvfah7ekcUoJPB3V1DUDmw&sensor=false"></script>
-  <script type="text/javascript" src="markerwithlabel.js"></script>
+  <script type="text/javascript" src="/assets/js/markerwithlabel.js"></script>
   
   
 <style type="text/css">
