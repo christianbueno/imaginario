@@ -6,36 +6,6 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSUuzKFf-qvUvfah7ekcUoJPB3V1DUDmw&sensor=false"></script>
-  <script type="text/javascript" src="markerwithlabel.js"></script>
-  
-<!--[if IE]> 
-<style type="text/css"> .foto text { filter: DropShadow(Color=#000, OffX=2, OffY=2, Positive=1); } </style> <![endif]-->
-  
-<style type="text/css">
-
-.foto {
-      color: white;
-     text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
-	 font-family: "Lucida Grande", "Arial", sans-serif;
-	 font-size: 19px;
-     font-weight: bold;
-     text-align: center;
-	 width: 123px; 
-     height:123px; 
-     display:table;
-     line-height:120px;
-    border-radius: 60px; 
-    -moz-border-radius: 60px; 
-    -webkit-border-radius: 60px;
-   }
-    <?php foreach ($coletivos as $coletivo):?>   
-   
-   .fundo<?php echo $coletivo->id; ?> {
-	   background:url(arquivos/<?php echo $coletivo->info['logo']; ?>);
-   }
-  
-     <?php endforeach; ?> 
-</style> 
 </head>
 <body class="noBG">
     <div class="bgMap" id="map-canvas"></div>
@@ -53,6 +23,7 @@
         </div>
         <?php echo render('modules/menu'); ?>
     </div>
+
 <?php echo Asset::js('jquery-1.9.1.min.js'); ?>
 <?php echo Asset::js('main.js'); 
 
@@ -69,7 +40,6 @@ $(document).ready(function(){
     
 
     <?php foreach ($coletivos as $coletivo):?>     
-	
 
 //    var image = {
 //        url: "/arquivos/tt.php?src=/arquivos/<?php echo $coletivo->info['logo']; ?>&q=100&w=120&h=120",
@@ -82,24 +52,12 @@ $(document).ready(function(){
     
 //    var infowindow = new google.maps.InfoWindow({		 //Adicionado por hora, a pedido da Micheline
 //        content: contentString								//Adicionado por hora, a pedido da Micheline
-//    });	
-
-	 
-     var marker = new MarkerWithLabel({
+//    });		
+    var marker = new google.maps.Marker({
         position: new google.maps.LatLng(<?php echo $coletivo->info['latlng']; ?>),
         map: map,
-		labelContent: "<span><?php echo $coletivo->name; ?></span>",
-	    labelAnchor: new google.maps.Point(62, 179),
-		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
-		labelVisible: true,
-		icon:'cor/<?php echo $coletivo->info['cor']; ?>.svg',
-		shadow:"arquivos/sombra.png",
-		labelZIndex:  -650,
-		labelInForeground:false
+        title:"<?php echo $coletivo->name; ?>"
     });
-     
-    		   	
-   
 
     <?php 
         $coletivo_id = $coletivo->id;
