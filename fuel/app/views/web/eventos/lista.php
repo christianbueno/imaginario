@@ -25,8 +25,11 @@
                 <span class="nome-evento"><?php echo $evento->title ?></span>
                 <span class="eventShare">Compartilhe</span>         
             </div>
-        <?php endforeach; ?> 
-
+        <?php endforeach; 
+        if(count($eventos) === 0) {
+        ?> 
+        <p>Nenhum evento cadastrado</p>
+        <?php } ?>
         </div>
         
         </div>
