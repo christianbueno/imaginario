@@ -2,7 +2,7 @@
 // modelo para o coletivo, indica uma entidade que agrega conteudos 
 class Model_Coletivo extends \Orm\Model
 {
-	protected static $_has_many = array('conteudos', 'eventos');
+	protected static $_has_many = array('conteudos' => array('cascade_delete' => true ), 'eventos' => array('cascade_delete' => true ));
 	protected static $_properties = array(
 		'id',
 		'name',

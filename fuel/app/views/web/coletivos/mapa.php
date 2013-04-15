@@ -29,7 +29,7 @@
     <?php foreach ($coletivos as $coletivo):?>   
    
    .fundo<?php echo $coletivo->id; ?> {
-	   background:url(arquivos/thumb-<?php echo $coletivo->info['logo']; ?>);
+	   background:url(arquivos/thumb-<?php echo $coletivo->logo; ?>);
    }
   
      <?php endforeach; ?> 
@@ -84,13 +84,13 @@ $(document).ready(function(){
 
 	 
      var marker = new MarkerWithLabel({
-        position: new google.maps.LatLng(<?php echo $coletivo->info['latlng']; ?>),
+        position: new google.maps.LatLng(<?php echo $coletivo->latlng; ?>),
         map: map,
 		labelContent: "<?php echo $coletivo->name; ?>",
 	    labelAnchor: new google.maps.Point(62, 179),
 		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
 		labelVisible: true,
-		icon:'cor/<?php echo $coletivo->info['cor']; ?>.svg',
+		icon:'cor/<?php echo $coletivo->cor; ?>.svg',
 		shadow:"arquivos/sombra.png",
 		labelZIndex:  -650,
 		labelInForeground:false
