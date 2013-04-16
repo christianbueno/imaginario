@@ -81,6 +81,10 @@ $(document).ready(function(){
         anchor: new google.maps.Point(64, 204),
         strokeWeight: 0
     };
+    var shadow = {
+        url: '/assets/img/sombra.png',                
+        anchor: new google.maps.Point(60, 200)
+    };
 
 	 
      var shape = new MarkerWithLabel({
@@ -91,7 +95,7 @@ $(document).ready(function(){
 		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
 		labelVisible: true,
 		icon: seta,
-		shadow:"/arquivos/sombra.png",
+		shadow:shadow,
 		labelZIndex:  -650,
 		labelInForeground:false
     });   		   	
