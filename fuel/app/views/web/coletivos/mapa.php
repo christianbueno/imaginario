@@ -86,6 +86,7 @@ $(document).ready(function(){
         anchor: new google.maps.Point(60, 200)
     };
 
+    
 	 
      var shape = new MarkerWithLabel({
         position: location,
@@ -96,7 +97,6 @@ $(document).ready(function(){
 		labelVisible: true,
 		icon: seta,
 		shadow:shadow,
-		labelZIndex:  -650,
 		labelInForeground:false
     });   		   	
    
