@@ -60,13 +60,13 @@
 $(document).ready(function(){
     var mapOptions = {
         center: new google.maps.LatLng(-22.9035393,-43.20958689999998),
-        zoom: 13,
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     
 
-    <?php foreach ($coletivos as $coletivo):?>   
+<?php foreach ($coletivos as $coletivo):?>   
 	
 
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
     google.maps.event.addListener(thumb, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
-    <?php endforeach; ?> 
+<?php endforeach; ?> 
 });
 
 </script>
