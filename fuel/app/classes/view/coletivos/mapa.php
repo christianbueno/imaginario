@@ -11,7 +11,7 @@ class View_Coletivos_Mapa extends ViewModel
         foreach ($coletivos as $coletivo) {
             $coletivo->info = unserialize($coletivo->metadata);
 
-            $thumb = Model_Conteudo::find('first', array(
+            $thumb = Model_Conteudo::find('last', array(
                 'where' => array('coletivo_id' => $coletivo->id),
             ));
 

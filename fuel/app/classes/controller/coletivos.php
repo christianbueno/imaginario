@@ -13,6 +13,9 @@ class Controller_Coletivos extends Controller
         $coletivo = Model_Coletivo::find($id);
         $coletivo->info = unserialize($coletivo->metadata);
         $coletivo->cor = isset($coletivo->info['cor']) ? $coletivo->info['cor'] : 'FF7200';
+        $coletivo->lastest_image = Model_Conteudo::find('last', array(
+                'where' => array('coletivo_id' => $coletivo->id),
+            ));
 
         $images = Model_Conteudo::find('all', array(
             'where' => array(
