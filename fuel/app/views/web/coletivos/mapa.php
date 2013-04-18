@@ -86,17 +86,23 @@ $(document).ready(function(){
         anchor: new google.maps.Point(60, 200)
     };
 
-    
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,        
+        icon: seta,
+        shadow: shadow        
+    });
 	 
-     var shape = new MarkerWithLabel({
+    var thumb = new MarkerWithLabel({
         position: location,
         map: map,
 		labelContent: "<?php echo $coletivo->name; ?>",
 	    labelAnchor: new google.maps.Point(50, 190),
 		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
-		labelVisible: true,
-		icon: seta,
+		labelVisible: true,	
+        icon: '',
 		shadow:shadow,
+		labelZIndex:  -650,
 		labelInForeground:false
     });   		   	
    
@@ -107,7 +113,7 @@ $(document).ready(function(){
         $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
     ?>
 
-    google.maps.event.addListener(shape, 'click', function(e) {
+    google.maps.event.addListener(thumb, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
     <?php endforeach; ?> 
