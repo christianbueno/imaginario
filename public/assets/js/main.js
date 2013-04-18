@@ -8,9 +8,15 @@ var imaginar = (function(){
         conteudo_id = $current.data('conteudoid');
 
         
-        $.get('/users/imagina/conteudo/'+conteudo_id+'.json', function(data){
-            $current.html(data.message);
-        })
+        $.get('/users/imagina/conteudo/'+conteudo_id+'.json')
+            .done(function(data){
+                $current.html(data.message);
+            })
+            .fail(function(e){
+                data = $.parseJSON(e.responseText);
+                if(data.message === 'unauthorized')
+                    window.location.href = '/users/login/';
+            });
     },
     binds = function (){
         $toggler.on( 'click' , toggle );
