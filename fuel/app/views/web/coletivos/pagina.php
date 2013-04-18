@@ -69,10 +69,21 @@
 $(document).ready(function(){
     var mapOptions = {
         center: new google.maps.LatLng(-22.9035393,-43.20958689999998),
-        zoom: 12,
+        zoom: 9,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    <?php foreach ($eventos as $evento):?>   
+        var location = new google.maps.LatLng(<?php echo $evento->latlng; ?>);        
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,        
+            icon: "<?php echo $evento->icon; ?>"        
+        });
+        google.maps.event.addListener(marker, 'mouseover', function(e) {
+            console.log('hurrrr');
+        });
+    <?php endforeach; ?>     
 });
 </script>
 </body></html>

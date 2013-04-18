@@ -34,6 +34,12 @@ class Controller_Coletivos extends Controller
             )
         ));
 
+        foreach ($eventos as $evento) {
+            $evento->info = unserialize($evento->metadata);            
+
+            $evento->icon = '/assets/img/eventos/'.$evento->info['type'].'.png';
+            $evento->latlng = $evento->info['latlng'];          
+        }
         $data['images'] = $images;
         $data['coletivo'] = $coletivo;
         $data['eventos'] = $eventos;
