@@ -20,7 +20,9 @@
         <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin:0 16px 0 0;float:left;"/><h1 style="width:640px;float:left;margin-top:16px;margin-bottom:40px;"><?php echo $coletivo->name ?></h1>
         <div class="coleMap" id="map-canvas"></div>
         <h2>Sobre o Coletivo</h2>
-        <p><?php echo $coletivo->description ?></p>
+        <p><?php echo $coletivo->description;
+                echo $coletivo->latest_image->content; //ultima imagem publicada pelo coletivo
+        ?></p>
         <ul id="coletivo-images">
         <?php foreach ($images as $image):
             echo '<li>';
