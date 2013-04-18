@@ -15,7 +15,7 @@
         <div class="texto-wrapper">
         <h1>Fale conosco</h1>
         
-        <p>A IMAGINA RIO é feita de você, da sua participação e do seu envolvimento, e é por isso que a IMAGINA RIO busca meios de você fazer parte do nosso grande mesclado, seja você o representante de um <strong>coletivo</strong> ou <strong>escola</strong>, um <strong>artista</strong>, ou simplesmente uma pessoa interessada em cultura e integração.</p>
+        <p>O IMAGINA RIO é feito de você, da sua participação e do seu envolvimento, e é por isso que o IMAGINA RIO busca meios de você fazer parte do nosso grande mesclado, seja você o representante de um <strong>coletivo</strong> ou <strong>escola</strong>, um <strong>artista</strong>, ou simplesmente uma pessoa interessada em cultura e integração.</p>
 	        <div class="row">
 		        <a href="/artistas">
 			        <div class="span3 fcBlock">
