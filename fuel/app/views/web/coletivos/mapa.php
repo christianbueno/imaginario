@@ -60,7 +60,7 @@
 $(document).ready(function(){
     var mapOptions = {
         center: new google.maps.LatLng(-22.9035393,-43.20958689999998),
-        zoom: 12,
+        zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -92,7 +92,7 @@ $(document).ready(function(){
         icon: seta,
         shadow: shadow        
     });
-	 
+	
     var thumb = new MarkerWithLabel({
         position: location,
         map: map,
@@ -101,8 +101,7 @@ $(document).ready(function(){
 		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
 		labelVisible: true,	
         icon: 'null.jpg',
-		shadow:shadow,
-		labelZIndex:  -650,
+		shadow:shadow,		
 		labelInForeground:false
     });   		   	
    
