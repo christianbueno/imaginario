@@ -100,7 +100,8 @@ $(document).ready(function(){
 	    labelAnchor: new google.maps.Point(50, 190),
 		labelClass: "foto fundo<?php echo $coletivo->id; ?>",
 		labelVisible: true,	
-		shadow:shadow,		
+		shadow:shadow,	
+        icon: {path:''},
 		labelInForeground:false
     });   		   	
    

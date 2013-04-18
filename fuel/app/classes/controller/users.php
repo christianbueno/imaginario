@@ -64,8 +64,8 @@ class Controller_Users extends Controller_Template
     public function action_perfil()
     {
         $auth = Auth::instance();
-        $user = $auth->get_user_id();
-        if( $user[1]===0 )                   
+        
+        if( !Auth::check() )                   
             Response::redirect('users/login');
 
         $email = $auth->get_email();
@@ -82,8 +82,19 @@ class Controller_Users extends Controller_Template
             $coletivo->latlng = $metadata['latlng'];
             $coletivo->color = isset($metadata['color']) ? $metadata['color'] : '';
         }
-        $user = Model_user::find($user[1]);
+        $user = Model_user::find(Auth::instance()->get_user_id());
 
+        $saved_content = Auth::instance()->get_profile_fields('conteudos');
+
+        $images = array();
+        foreach ($saved_content as $content_id) {
+            if($image = Model_Conteudo::find($content_id)){                
+                array_push($images,$image);
+            }
+        }
+        
+
+        $data['images'] = $images;
         $data['user'] = $user;
         $data['coletivos'] = $coletivos;
 

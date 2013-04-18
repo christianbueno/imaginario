@@ -21,9 +21,19 @@
         <div class="coleMap" id="map-canvas"></div>
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description ?></p>
+        <ul id="coletivo-images">
         <?php foreach ($images as $image):
-            echo Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-medium'));
+            echo '<li>';
+            echo Html::anchor('arquivos/'.$image->content, Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-medium')));
+
+            if($image->saved)
+                $text = 'Remover';
+            else
+                $text = 'Salvar';
+            echo Html::anchor('javascript:void(0)',$text,array('data-conteudoid' => $image->id, 'data-saved' => $image->saved ? 'true' : 'false', 'class'=>'imaginar'));
+            echo '</li>';
         endforeach; ?> 
+        </ul>
         <div class="agendaCole pull-left"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Agenda de eventos
         </div>
         <div id="agenda">

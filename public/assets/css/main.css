@@ -881,3 +881,15 @@ font-family: arial,sans-serif;
 	color: #fff;
 }
 
+
+
+
+#coletivo-images li {
+    list-style: none;
+    list-style-image: none;
+    float: left;
+}
+
+#coletivo-images li a {
+    display: block;
+}

@@ -1,4 +1,29 @@
-var menu = (function(){
+var imaginar = (function(){
+    var $toggler = $('.imaginar');
+
+    var toggle = function(e) {
+        $current = $(e.target);
+
+        is_saved = $current.data('saved');
+        conteudo_id = $current.data('conteudoid');
+
+        
+        $.get('/users/imagina/conteudo/'+conteudo_id+'.json', function(data){
+            $current.html(data.message);
+        })
+    },
+    binds = function (){
+        $toggler.on( 'click' , toggle );
+    },
+    init = function() {
+        binds();
+    };
+
+    return {
+        init: init
+    }
+})(),
+menu = (function(){
 
     var $handle = $('#handle'),
         $holder = $('#expmenu');
@@ -101,7 +126,7 @@ slider =  (function(){
 })();
 $(document).ready(function(){
     menu.init();
-    
+    imaginar.init();
     if(!supports('animation'))
         slider.init();
 

@@ -12,14 +12,17 @@ class Controller_Coletivos extends Controller
     {        
         $coletivo = Model_Coletivo::find($id);
         $coletivo->info = unserialize($coletivo->metadata);
+        $coletivo->cor = isset($coletivo->info['cor']) ? $coletivo->info['cor'] : 'FF7200';
 
         $images = Model_Conteudo::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                                    
             )
         ));
-
-
+        $saved_content = Auth::instance()->get_profile_fields('conteudos');
+        foreach ($images as $image) {
+            $image->saved = in_array($image->id, $saved_content);
+        }
         $eventos = Model_Evento::find('all', array(
             'where' => array(
                     array('coletivo_id', $id),                                    
@@ -29,6 +32,8 @@ class Controller_Coletivos extends Controller
         $data['images'] = $images;
         $data['coletivo'] = $coletivo;
         $data['eventos'] = $eventos;
+
+
         return Response::forge(View::forge('web/coletivos/pagina', $data));
     }
 
