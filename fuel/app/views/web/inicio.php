@@ -7,19 +7,6 @@
 	<?php echo Asset::css('main.css'); ?>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	
-	<script type="text/javascript">
-		$(document).ready(function slidetown(){
-			$('#holder').animate({'left' : '2px'}, {
-				duration: 25000, 
-				easing : "linear",
-				complete: function() {
-					$(this).css('left','-99%');
-      slidetown();
-    }
-  });
-});
-	</script>
-	
 </head>
 <body>
 	<div id="vignette" class="container-fluid">		

@@ -77,10 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #holder {
     width: 4428px;  
-    position: relative;   
-    float: left;
-    display:inline;
-    /*  
+    position: relative;    
     animation:30s linear 0s normal none infinite move;
     -moz-animation:30s linear 0s normal none infinite move;
     -webkit-animation:30s linear 0s normal none infinite move;
@@ -88,14 +85,14 @@ h1, h2, h3, h4, h5, h6 {
     -moz-animation-play-state: running;
     -o-animation-play-state: running;
     -ms-animation-play-state: running;
-    animation-play-state: running;*/
+    animation-play-state: running;
 }
 #holder:hover {
-    /*-webkit-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;
     -o-animation-play-state: paused;
     -ms-animation-play-state: paused;
-    animation-play-state: paused;*/
+    animation-play-state: paused;
 }
 
 .slider a:hover {
