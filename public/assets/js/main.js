@@ -74,9 +74,9 @@ slider =  (function(){
     var $holderItem = $('.slider a');
     var binds = function() {
         $holderItem.hover(function() {
-            $(this).pause();
+            $holder.pause();
         }, function() {
-            $(this).resume();
+            $holder.resume();
         });
     },
     animate = function() {             
