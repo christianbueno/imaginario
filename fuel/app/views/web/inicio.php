@@ -9,11 +9,11 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function slidetown(){
-			$('#holder').animate({'left' : '1px'}, {
+			$('#holder').animate({'left' : '2px'}, {
 				duration: 25000, 
 				easing : "linear",
 				complete: function() {
-					$(this).css('left','-2028px');
+					$(this).css('left','-4428px');
       slidetown();
     }
   });
