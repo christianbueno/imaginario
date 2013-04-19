@@ -76,7 +76,7 @@ slider =  (function(){
         $holderItem.hover(function() {
             //$holder.pause();
             
-                         
+        $holder.pause();                 
         $holder.animate({            
             left: -2216,
             easing: 'linear'
