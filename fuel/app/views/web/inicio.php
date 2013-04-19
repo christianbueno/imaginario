@@ -40,7 +40,7 @@
 			</div>
 			<div class="row">
 				<div class="parceiros">
-				<img src="assets/img/logo-parceiros.png" width="938" height="196"/>
+				<a href="/apoio" alt="Nossos Parceiros"><img src="assets/img/logo-parceiros.png" width="938" height="196"/></a>
 				</div>
 				<div class="span2 pull-right">
 
