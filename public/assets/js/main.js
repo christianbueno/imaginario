@@ -80,7 +80,7 @@ slider =  (function(){
         $holder.animate({            
             left: -2216,
             easing: 'linear'
-            }, 80000, 'linear', function() {
+            }, 100000, 'linear', function() {
                 $holder.css('left', 0);
                 animate();
             }
