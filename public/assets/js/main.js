@@ -71,8 +71,9 @@ supports = (function() {
 })(); 
 slider =  (function(){
     var $holder = $('#holder');
+    var $holderItem = $('#holder .slider a');
     var binds = function() {
-        $holder.hover(function() {
+        $holderItem.hover(function() {
             $(this).pause();
         }, function() {
             $(this).resume();
