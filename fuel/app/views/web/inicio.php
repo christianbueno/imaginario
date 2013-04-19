@@ -5,7 +5,21 @@
 	<title>Imagina.RIO</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('main.css'); ?>
-
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function slidetown(){
+			$('#holder').animate({'left' : '960px'}, {
+				duration: 1000, 
+				easing : "linear",
+				complete: function() {
+					$(this).css('left','-2028px');
+      slidetown();
+    }
+  });
+});
+	</script>
+	
 </head>
 <body>
 	<div id="vignette" class="container-fluid">		
