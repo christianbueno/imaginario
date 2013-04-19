@@ -89,7 +89,7 @@ slider =  (function(){
             
             
         }, function() {
-            
+           // $holder.resume();
             $holder.animate({            
             left: -2216,
             easing: 'linear'
@@ -97,8 +97,7 @@ slider =  (function(){
                 $holder.css('left', 0);
                 animate();
             }
-        );
-        $holder.resume(); 
+        ); 
         });
     },
     animate = function() {             
