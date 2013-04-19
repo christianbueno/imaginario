@@ -8,7 +8,7 @@ var imaginar = (function(){
         conteudo_id = $current.data('conteudoid');
 
         
-        $.get('/users/imagina/conteudo/'+conteudo_id+'.json')
+        $.get('/users/imagina/conteudo/'+conteudo_id)
             .done(function(data){
                 $current.html(data.message);
             })

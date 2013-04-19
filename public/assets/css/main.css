@@ -893,3 +893,13 @@ font-family: arial,sans-serif;
 #coletivo-images li a {
     display: block;
 }
+
+
+.infoboxeventos {
+    margin-top: 8px; background: #22AADE; padding: 5px;
+}
+
+
+img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
+    max-width: 99999px;
+}
