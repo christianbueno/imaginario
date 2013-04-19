@@ -89,7 +89,7 @@ slider =  (function(){
             
             
         }, function() {
-           // $holder.resume();
+            $holder.resume();
             $holder.animate({            
             left: -2216,
             easing: 'linear'
