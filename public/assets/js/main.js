@@ -89,15 +89,16 @@ slider =  (function(){
             
             
         }, function() {
-            $holder.resume();
+            
             $holder.animate({            
             left: -2216,
             easing: 'linear'
-            }, 30000, 'linear', function() {
+            }, 80000, 'linear', function() {
                 $holder.css('left', 0);
                 animate();
             }
-        ); 
+        );
+        $holder.resume(); 
         });
     },
     animate = function() {             
