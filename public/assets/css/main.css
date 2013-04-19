@@ -88,11 +88,9 @@ h1, h2, h3, h4, h5, h6 {
     animation-play-state: running;
 }
 #holder:hover {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    -ms-animation-play-state: paused;
-    animation-play-state: paused;
+	animation:60s linear 0s normal none infinite move;
+    -moz-animation:60s linear 0s normal none infinite move;
+    -webkit-animation:60s linear 0s normal none infinite move;
 }
 
 .slider a:hover {
