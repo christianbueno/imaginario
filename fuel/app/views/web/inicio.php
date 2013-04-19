@@ -9,7 +9,7 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function slidetown(){
-			$('#holder').animate({'left' : '100%'}, {
+			$('#holder').animate({'left' : '4428px'}, {
 				duration: 25000, 
 				easing : "linear",
 				complete: function() {
