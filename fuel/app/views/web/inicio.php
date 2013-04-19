@@ -9,8 +9,8 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function slidetown(){
-			$('#holder').animate({'left' : '960px'}, {
-				duration: 1000, 
+			$('#holder').animate({'left' : '100%'}, {
+				duration: 25000, 
 				easing : "linear",
 				complete: function() {
 					$(this).css('left','-2028px');
