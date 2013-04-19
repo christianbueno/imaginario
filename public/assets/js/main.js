@@ -74,7 +74,20 @@ slider =  (function(){
     var $holderItem = $('.slider a');
     var binds = function() {
         $holderItem.hover(function() {
-            $holder.pause();
+            //$holder.pause();
+            
+                         
+        $holder.animate({            
+            left: -2216,
+            easing: 'linear'
+            }, 80000, 'linear', function() {
+                $holder.css('left', 0);
+                animate();
+            }
+        );   
+
+            
+            
         }, function() {
             $holder.resume();
         });
