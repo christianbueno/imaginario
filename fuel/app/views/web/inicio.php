@@ -13,7 +13,7 @@
 				duration: 25000, 
 				easing : "linear",
 				complete: function() {
-					$(this).css('left','-100px');
+					$(this).css('left','-99%');
       slidetown();
     }
   });
