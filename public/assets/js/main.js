@@ -102,7 +102,6 @@ slider =  (function(){
 $(document).ready(function(){
     menu.init();
     
-    if(!supports('animation'))
         slider.init();
 
     if(typeof start_cropper !== 'undefined')
