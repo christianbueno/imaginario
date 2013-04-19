@@ -5,7 +5,6 @@
 	<title>Imagina.RIO</title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<?php echo Asset::css('main.css'); ?>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	
 </head>
 <body>
