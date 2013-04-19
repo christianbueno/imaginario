@@ -88,9 +88,11 @@ h1, h2, h3, h4, h5, h6 {
     animation-play-state: running;
 }
 #holder:hover {
-	animation:60s linear inherit normal none infinite move;
-    -moz-animation:60s linear inherit normal none infinite move;
-    -webkit-animation:60s linear inherit normal none infinite move;
+animation-delay: 60s;
+-moz-animation-delay: 60s;
+-o-animation-delay: 60s;
+-webkit-animation-delay: 60s;
+-ms-animation-delay: 60s;
 }
 
 .slider a:hover {
