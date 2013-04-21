@@ -99,16 +99,30 @@ supports = (function() {
       }  
       return false;  
    };  
-})(); 
+})(),
 slider =  (function(){
-    var $holder = $('#holder');
-    var binds = function() {
-        $holder.hover(function() {
-            $(this).pause();
+    var $holder = $('#holder'),
+        $items = $holder.find('a');
+
+    var binds = function() {        
+        $items.hover(function() {  
+            $holder.stop();
+            slowly();
         }, function() {
-            $(this).resume();
+            $holder.stop();
+            animate();
         });
     },
+    slowly = function() {             
+        $holder.animate({            
+            left: -2216,
+            easing: 'linear'
+            }, 100000, 'linear', function() {
+                $holder.css('left', 0);
+                animate();
+            }
+        );   
+    }, 
     animate = function() {             
         $holder.animate({            
             left: -2216,
@@ -119,11 +133,9 @@ slider =  (function(){
             }
         );   
     },
-    init = function() {
-        $.getScript('/assets/js/jquery.pause.min.js').done(function(){
-            binds();
-            animate();
-        });        
+    init = function() {        
+        binds();
+        animate();        
     };
     
     return {
@@ -132,9 +144,8 @@ slider =  (function(){
 })();
 $(document).ready(function(){
     menu.init();
-    imaginar.init();
-    if(!supports('animation'))
-        slider.init();
+    imaginar.init();    
+    slider.init();
 
     if(typeof start_cropper !== 'undefined')
         cropper.init();
