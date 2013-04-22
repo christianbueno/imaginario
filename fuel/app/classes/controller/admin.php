@@ -6,7 +6,7 @@ class Controller_Admin extends Controller_Template
     public function before()
     {
         parent::before();
-        
+
         $user = Auth::instance()->get_user_id();        
         $groups = Auth::instance()->get_groups();
 
@@ -14,10 +14,7 @@ class Controller_Admin extends Controller_Template
             Response::redirect('users/login');
 
         if( (int)$groups[0][1] < 50 )     
-            Response::redirect('/');      
-                                          
-
-        
+            Response::redirect('/');  
     }
 
     public function action_index()

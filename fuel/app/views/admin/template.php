@@ -43,15 +43,12 @@
 
 			
 
-			if( Session::get('logado') ) 
-			{	
+			
 				echo View::forge('admin/menu');
 				echo "<h2>$title</h2>";
 				echo $content;			
-			}
-			else { 
-				echo View::forge('admin/login');
-		}
+
+
 
 	?>
 			
