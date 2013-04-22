@@ -83,7 +83,7 @@ class Controller_Users extends Controller_Template
             $coletivo->color = isset($metadata['cor']) ? $metadata['cor'] : '';
         }
         $user_id = Auth::instance()->get_user_id();
-
+        $saved_content = Auth::instance()->get_profile_fields('conteudos');
         $user = Model_User::find($user_id[1]);
 
         $images = array();
