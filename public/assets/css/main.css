@@ -190,8 +190,8 @@ h1, h2, h3, h4, h5, h6 {
 	width: 725px;
 	margin-left: 195px;
 	float: left;
-	background: rgba(0,0,0, 0.8);
-	color: #fff;
+	background: rgba(255,255,255, 0.8);
+	color: #3a3a3a;
 	padding: 25px;
 	display: block;
 }
