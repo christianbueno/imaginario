@@ -918,4 +918,5 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     display: box;
     box-pack: center;
     box-align: center;
+    line-height: 25px;
 }
