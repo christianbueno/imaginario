@@ -82,9 +82,9 @@ class Controller_Users extends Controller_Template
             $coletivo->latlng = $metadata['latlng'];
             $coletivo->color = isset($metadata['cor']) ? $metadata['cor'] : '';
         }
-        $user_id = Auth::instance()->get_user_id()[1];
+        $user_id = Auth::instance()->get_user_id();
 
-        $user = Model_User::find($user_id);
+        $user = Model_User::find($user_id[1]);
 
         $images = array();
         if(isset($saved_content)) {
