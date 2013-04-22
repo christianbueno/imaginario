@@ -3,6 +3,20 @@ class Controller_Admin extends Controller_Template
 {
     public $template = 'admin/template';
     
+    public function before()
+    {
+        $user = Auth::instance()->get_user_id();        
+        $groups = Auth::instance()->get_groups();
+        if( $user[1] === 0 )                   
+            Response::redirect('users/login');
+
+        //if( (int)$groups[0][1] < 50 )     redirect pra quem não está no grupo de super admins
+            //Response::redirect('/');      descomentar quando for pra valer, isto é, admin ficara
+        //                                  inacessivel para quem não estiver no grupo 50
+
+        parent::before();
+    }
+
     public function action_index()
     {        
         $this->template->title = 'Imagina.RIO';
