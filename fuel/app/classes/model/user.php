@@ -2,7 +2,7 @@
 // modelo para usuários do site
 class Model_User extends \Orm\Model
 {
-	protected static $_has_many = array('conteudos');
+	protected static $_has_many = array('conteudos' => array('cascade_delete' => true ), 'authentications'  => array('cascade_delete' => true ));
 	protected static $_properties = array(
 		'id',
 		'username',

@@ -24,7 +24,8 @@ class Controller extends \Controller
 	public static $linked_redirect = '/auth/linked';
 	public static $login_redirect = '/';
 	public static $register_redirect = '/auth/register';
-	public static $registered_redirect = '/';
+	public static $registered_redirect = '/';	
+    
 
 	public function before()
 	{
@@ -108,7 +109,7 @@ class Controller extends \Controller
 		$email = Input::post('email') ?: Arr::get($user_hash, 'email');
 		$password = Input::post('password');
 		
-		if ($username and $full_name and $email and $password)
+		if ($username and $email and $password)
 		{
 			$user_id = $strategy->adapter->create_user(array(
 				'username' => $username,

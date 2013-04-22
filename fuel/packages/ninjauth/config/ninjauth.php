@@ -20,8 +20,8 @@ return array(
 	'providers' => array(
 		
 		'facebook' => array(
-			'id' => '',
-			'secret' => '',
+			'id' => '428196857269693',
+			'secret' => 'f251c5a5164cc698107d24e703d98091',
 			'scope' => array('email', 'offline_access'),
 		),
 		
@@ -63,7 +63,7 @@ return array(
 	 * 
 	 * Can multiple providers be attached to one user account
 	 */
-	'link_multiple_providers' => true,
+	'link_multiple_providers' => false,
 
 	/**
 	 * default_group

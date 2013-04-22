@@ -1,7 +1,6 @@
 <a href="/users/logout/">Logout</a>
 <h2>Informações</h2>
 
-## edição de informações pessoais
 
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>

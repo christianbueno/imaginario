@@ -31,7 +31,7 @@ class View_Inicio extends ViewModel
                     $coletivo_name = Inflector::friendly_title($items[$keys[$i]]->coletivo->name, '-', true);                
                     $url = "coletivos/ver/$coletivo_name/$coletivo_id";
 
-                    $colour = isset($items[$keys[$i]]->coletivo->info['color']) ? $items[$keys[$i]]->coletivo->info['color'] : '';
+                    $colour = isset($items[$keys[$i]]->coletivo->info['cor']) ? $items[$keys[$i]]->coletivo->info['cor'] : 'FF7200';
 
 
                     if ( strlen( $colour ) == 6 ) {
@@ -89,17 +89,6 @@ class View_Inicio extends ViewModel
 
             
         };
-        
-    }
-    public static function hex2rgb( $colour ) {
-
-        return array( 'r' => $r, 'g' => $g, 'b' => $b );
-    }
-    public static function classify($ref) 
-    {
-
-
-        return $output;
         
     }
 

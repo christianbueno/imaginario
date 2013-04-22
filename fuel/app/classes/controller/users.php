@@ -80,16 +80,18 @@ class Controller_Users extends Controller_Template
             $coletivo->image = $metadata['logo'];
             $coletivo->address = $metadata['endereco'];
             $coletivo->latlng = $metadata['latlng'];
-            $coletivo->color = isset($metadata['color']) ? $metadata['color'] : '';
+            $coletivo->color = isset($metadata['cor']) ? $metadata['cor'] : '';
         }
-        $user = Model_user::find(Auth::instance()->get_user_id());
+        $user_id = Auth::instance()->get_user_id()[1];
 
-        $saved_content = Auth::instance()->get_profile_fields('conteudos');
+        $user = Model_User::find($user_id);
 
         $images = array();
-        foreach ($saved_content as $content_id) {
-            if($image = Model_Conteudo::find($content_id)){                
-                array_push($images,$image);
+        if(isset($saved_content)) {
+            foreach ($saved_content as $content_id) {
+                if($image = Model_Conteudo::find($content_id)){                
+                    array_push($images,$image);
+                }
             }
         }
         

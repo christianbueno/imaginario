@@ -16,14 +16,14 @@ class Controller_Admin_Usuario extends Controller_Admin
         if ($user = Model_User::find($id))
         {
             $user->delete();
-            Session::set_flash('success', 'Coletivo removido');
+            Session::set_flash('success', 'Usuário removido');
         }
         else
         {
-            Session::set_flash('error', 'Não foi possivel remover o coletivo');
+            Session::set_flash('error', 'Não foi possivel remover o usuário');
         }
 
-        Response::redirect('admin/coletivo');
+        Response::redirect('admin/usuario');
 
     }
   

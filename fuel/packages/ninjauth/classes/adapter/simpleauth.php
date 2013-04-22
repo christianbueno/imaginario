@@ -26,7 +26,7 @@ class Adapter_SimpleAuth extends Adapter
 	{
 		try
 		{
-			$user_id = Auth::create_user(
+			$user_id = Auth::instance()->create_user(
 
 				// Username
 				isset($user['username']) ? $user['username'] : null,
@@ -35,21 +35,12 @@ class Adapter_SimpleAuth extends Adapter
 				isset($user['password']) ? $user['password'] : \Str::random(),
 
 				// Email address 
-				isset($user['email']) ? $user['email'] : null,
+				isset($user['email']) ? $user['email'] : null
 
-				// Which group are they?
-				\Config::get('ninjauth.default_group'), 
-
-				// Extra information
-				array(
-
-					// Got their full name? Or first and last to make up a full name?
-					'full_name' => isset($user['full_name']) ? $user['full_name'] : (
-						isset($user['first_name'], $user['last_name']) ? $user['first_name'].' '.$user['last_name'] : null
-					),
-				)
 			);
-			
+			if(isset($user_id))
+				$this::force_login($user_id);
+
 		    return $user_id ?: false;
 		}
 		catch (SimpleUserUpdateException $e)

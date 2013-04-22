@@ -99,21 +99,14 @@ supports = (function() {
       }  
       return false;  
    };  
-})(),
+})(); 
 slider =  (function(){
-    var $holder = $('#holder'),
-        $items = $holder.find('a');
-
-    var binds = function() {        
-        $items.hover(function() {  
-            $holder.stop();
-            slowly();
-        }, function() {
-            $holder.stop();
-            animate();
-        });
-    },
-    slowly = function() {             
+    var $holder = $('#holder');
+    var $holderItem = $('.slider a');
+    var binds = function() {
+        $holderItem.hover(function() {
+        
+        $holder.pause();                   
         $holder.animate({            
             left: -2216,
             easing: 'linear'
@@ -122,7 +115,21 @@ slider =  (function(){
                 animate();
             }
         );   
-    }, 
+
+            
+            
+        }, function() {
+            $holder.resume();
+            $holder.animate({            
+            left: -2216,
+            easing: 'linear'
+            }, 20000, 'linear', function() {
+                $holder.css('left', 0);
+                animate();
+            }
+        ); 
+        });
+    },
     animate = function() {             
         $holder.animate({            
             left: -2216,
@@ -133,9 +140,11 @@ slider =  (function(){
             }
         );   
     },
-    init = function() {        
-        binds();
-        animate();        
+    init = function() {
+        $.getScript('/assets/js/jquery.pause.min.js').done(function(){
+            binds();
+            animate();
+        });        
     };
     
     return {
@@ -144,8 +153,8 @@ slider =  (function(){
 })();
 $(document).ready(function(){
     menu.init();
-    imaginar.init();    
-    slider.init();
+    
+        slider.init();
 
     if(typeof start_cropper !== 'undefined')
         cropper.init();

@@ -13,9 +13,9 @@
         <?php foreach ($usuarios as $usuario): ?>     
         <tr>
             <td><?php echo $usuario->id ?></td>
-            <td><?php echo Html::anchor("admin/coletivo/editar/$usuario->id", $usuario->username); ?></td>     
+            <td><?php echo Html::anchor("admin/usuario/editar/$usuario->id", $usuario->username); ?></td>     
             <td><?php echo $usuario->email ?></td>       
-            <td><?php echo Html::anchor("admin/coletivo/remover/$usuario->id", 'x', array('class' => 'btn btn-danger')); ?></td>
+            <td><?php echo Html::anchor("admin/usuario/remover/$usuario->id", 'x', array('class' => 'btn btn-danger')); ?></td>
         </tr>
         <?php endforeach; ?>    
     </tbody>
