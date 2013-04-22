@@ -10,9 +10,9 @@ class Controller_Admin extends Controller_Template
         if( $user[1] === 0 )                   
             Response::redirect('users/login');
 
-        //if( (int)$groups[0][1] < 50 )     redirect pra quem não está no grupo de super admins
-            //Response::redirect('/');      descomentar quando for pra valer, isto é, admin ficara
-        //                                  inacessivel para quem não estiver no grupo 50
+        if( (int)$groups[0][1] < 50 )     
+            Response::redirect('/');      
+                                          
 
         parent::before();
     }
