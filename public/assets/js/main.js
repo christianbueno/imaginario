@@ -101,39 +101,31 @@ supports = (function() {
    };  
 })(); 
 slider =  (function(){
-    var $holder = $('#holder');
-    var $holderItem = $('.slider a');
-    var binds = function() {
-        $holderItem.hover(function() {
-        
-        $holder.pause();                   
-        $holder.animate({            
-            left: -2216,
-            easing: 'linear'
-            }, 100000, 'linear', function() {
-                $holder.css('left', 0);
-                animate();
-            }
-        );   
+    var $holder = $('#holder'),
+        $item = $holder.find('a');
 
-            
-            
-        }, function() {
-            $holder.resume();
-            $holder.animate({            
-            left: -2216,
-            easing: 'linear'
-            }, 20000, 'linear', function() {
-                $holder.css('left', 0);
-                animate();
-            }
-        ); 
-        });
+    var timeout = null;
+
+    var binds = function() {
+        $item.hover( holdAndSlow , play );
+    },
+    play = function() {
+        $holder.resume();     
+        clearTimeout(timeout);
+    },
+    holdAndSlow = function() {       
+        $holder.pause(); 
+        timeout = setInterval(left,80);
+    },
+    left = function() {
+        if($holder.offset().left <= -2116)
+            $holder.css('left', 0);
+
+        $holder.css('left', '-=1px');
     },
     animate = function() {             
         $holder.animate({            
             left: -2216,
-            easing: 'linear'
             }, 30000, 'linear', function() {
                 $holder.css('left', 0);
                 animate();
@@ -152,9 +144,10 @@ slider =  (function(){
     }
 })();
 $(document).ready(function(){
-    menu.init();
     
-        slider.init();
+    menu.init();
+    imaginar.init();
+    slider.init();
 
     if(typeof start_cropper !== 'undefined')
         cropper.init();
