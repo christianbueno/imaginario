@@ -12,7 +12,7 @@
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
-        <span id="logo" class="offset2 branco"></span>
+        <span id="logo" class="offset2"></span>
 
         <div class="invisibleCont">
         <?php echo Html::img('arquivos/'.$coletivo->info['logo'], array('class' => 'logoCole')); ?>
