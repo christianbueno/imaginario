@@ -903,3 +903,19 @@ font-family: arial,sans-serif;
 img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     max-width: 99999px;
 }
+.foto {
+	font-family: 'brandon_grotesquebold_italic', sans-serif !important;
+	word-break: break-word;
+	display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
