@@ -118,7 +118,7 @@ slider =  (function(){
         timeout = setInterval(left,80);
     },
     left = function() {
-        if($holder.offset().left <= -2116)
+        if($holder.offset().left <= -2216)
             $holder.css('left', 0);
 
         $holder.css('left', '-=1px');
