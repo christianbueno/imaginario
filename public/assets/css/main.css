@@ -905,18 +905,18 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 .foto {
 	font-family: 'brandon_grotesquebold_italic', sans-serif !important;
-	word-break: break-word;
-	display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    display: -moz-box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-    display: -ms-box;
-    -ms-box-pack: center;
-    -ms-box-align: center;
-    display: box;
-    box-pack: center;
-    box-align: center;
-    line-height: 25px;
+	word-break: break-word !important;
+	display: -webkit-box !important;
+    -webkit-box-pack: center !important;
+    -webkit-box-align: center !important;
+    display: -moz-box !important;
+    -moz-box-pack: center !important;
+    -moz-box-align: center !important;
+    display: -ms-box !important;
+    -ms-box-pack: center !important;
+    -ms-box-align: center !important;
+    display: box !important;
+    box-pack: center !important;
+    box-align: center !important;
+    line-height: 25px !important;
 }
