@@ -922,19 +922,19 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 .imaginar {
 	font-family: 'brandon_grotesquebold_italic', sans-serif;
-	display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    display: -moz-box;
-    -moz-box-pack: center;
-    -moz-box-align: center;
-    display: -ms-box;
-    -ms-box-pack: center;
-    -ms-box-align: center;
-    display: box;
-    box-pack: center;
-    box-align: center;
-    line-height: 25px;
-    text-align: center;
-    font-size: 18px;
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	text-transform: uppercase;
+	color: #fff;
+	background: rgba(212,96,2,0.7);
+	position: absolute;
+	z-index: 993;
+	margin-top: -150px;
+	display: block;
+	opacity: 0;
+}
+.imaginar:hover {
+	opacity: 1;
+	transition: opacity .5s linear;
 }
