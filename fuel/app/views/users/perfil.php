@@ -1,15 +1,8 @@
-<a class="btn btn-danger" href="/users/logout/"><i class="icon-off icon-white"></i>Logout</a>
+<a class="btn btn-danger" href="/users/logout/"><i class="icon-off icon-white">Logout</a>
 <h2>Informações</h2>
 
 
 <?php if( count($coletivos) > 0 ) { ?>
-<div class="tabbable"> <!-- Only required for left/right tabs -->
-<ul class="nav nav-tabs">
-<li><a href="#tab1" data-toggle="tab">Meus coletivos</a></li>
-<li><a href="#tab2" data-toggle="tab">Meu Imagina RIO</a></li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane" id="tab1">
 <h2>Meus coletivos</h2>
 
 <?php foreach ($coletivos as $coletivo): ?>    
@@ -24,30 +17,10 @@
     echo Form::close();
     ?>    
 <?php endforeach; ?>  
-</div>
-<div class="tab-pane" id="tab2">
-<h2>Meu Imagina.RIO</h2>
 
-<h3>Imagens salvas</h3>
 
-<ul id="coletivo-images">
-<?php foreach ($images as $image):
-    echo '<li>';
-    echo Html::anchor('arquivos/'.$image->content, Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-medium')));
-    echo '</li>';
-endforeach; ?> 
-</ul>
-</div>
-</div>
+
 <?php } ?>
-<?php if( count($coletivos) === 0 ) { ?>
-<div class="tabbable"> <!-- Only required for left/right tabs -->
-<ul class="nav nav-tabs">
-<li><a href="#tab1" data-toggle="tab">Meu Imagina RIO</a></li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane" id="tab1">
-
 
 <h2>Meu Imagina.RIO</h2>
 
@@ -60,6 +33,3 @@ endforeach; ?>
     echo '</li>';
 endforeach; ?> 
 </ul>
-</div>
-</div>
-<?php } ?>
