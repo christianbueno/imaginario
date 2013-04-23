@@ -1,8 +1,15 @@
-<a class="btn-danger" href="/users/logout/">Logout</a>
+<a class="btn btn-danger" href="/users/logout/"><i class="icon-off icon-white"></i>Logout</a>
 <h2>Informações</h2>
 
 
 <?php if( count($coletivos) > 0 ) { ?>
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Meus coletivos</a></li>
+<li><a href="#tab2" data-toggle="tab">Meu Imagina RIO</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab1">
 <h2>Meus coletivos</h2>
 
 <?php foreach ($coletivos as $coletivo): ?>    
@@ -17,10 +24,16 @@
     echo Form::close();
     ?>    
 <?php endforeach; ?>  
-
-
-
+</div>
 <?php } ?>
+<?php if( count($coletivos) === 0 ) { ?>
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab2" data-toggle="tab">Meu Imagina RIO</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tab1">
+
 
 <h2>Meu Imagina.RIO</h2>
 
@@ -33,3 +46,6 @@
     echo '</li>';
 endforeach; ?> 
 </ul>
+</div>
+</div>
+<?php } ?>
