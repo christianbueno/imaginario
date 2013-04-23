@@ -1,4 +1,4 @@
-<a href="/users/logout/">Logout</a>
+<a class="btn-danger" href="/users/logout/">Logout</a>
 <h2>Informações</h2>
 
 
