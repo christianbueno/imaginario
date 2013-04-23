@@ -9,7 +9,7 @@
     <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
         
 </head>
-<body class="zulub">
+<body class="zulub" style="background: url(/arquivos/<?php echo $coletivo->latest_image->content; ?>) no-repeat center center fixed;">
     <div id="vignette" class="container-fluid">     
 
         <span id="logo" class="offset2"></span>

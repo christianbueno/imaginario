@@ -942,3 +942,6 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	text-decoration: none;
 	color: #fff;
 }
+#agenda {
+	clear: both;
+}
