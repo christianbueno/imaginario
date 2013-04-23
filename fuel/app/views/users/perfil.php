@@ -25,7 +25,7 @@
     ?>    
 <?php endforeach; ?>  
 </div>
-<div class="tab-pane active" id="tab2">
+<div class="tab-pane" id="tab2">
 <h2>Meu Imagina.RIO</h2>
 
 <h3>Imagens salvas</h3>
