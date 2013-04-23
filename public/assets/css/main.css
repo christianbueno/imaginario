@@ -920,3 +920,21 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     box-align: center !important;
     line-height: 25px !important;
 }
+.imaginar {
+	font-family: 'brandon_grotesquebold_italic', sans-serif;
+	display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -ms-box;
+    -ms-box-pack: center;
+    -ms-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+    line-height: 25px;
+    text-align: center;
+    font-size: 18px;
+}
