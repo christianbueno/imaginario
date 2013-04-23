@@ -933,8 +933,11 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	margin-top: -150px;
 	display: block;
 	opacity: 0;
+	font-size: 18px;
 }
 .imaginar:hover {
 	opacity: 1;
 	transition: opacity .5s linear;
+	text-decoration: none;
+	color: #fff;
 }
