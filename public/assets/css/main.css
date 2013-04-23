@@ -934,6 +934,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	display: block;
 	opacity: 0;
 	font-size: 18px;
+	text-align: center;
 }
 .imaginar:hover {
 	opacity: 1;
