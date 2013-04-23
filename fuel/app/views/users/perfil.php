@@ -5,11 +5,11 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
 <ul class="nav nav-tabs">
-<li class="active"><a href="#tab1" data-toggle="tab">Meus coletivos</a></li>
+<li><a href="#tab1" data-toggle="tab">Meus coletivos</a></li>
 <li><a href="#tab2" data-toggle="tab">Meu Imagina RIO</a></li>
 </ul>
 <div class="tab-content">
-<div class="tab-pane active" id="tab1">
+<div class="tab-pane" id="tab1">
 <h2>Meus coletivos</h2>
 
 <?php foreach ($coletivos as $coletivo): ?>    
@@ -43,10 +43,10 @@ endforeach; ?>
 <?php if( count($coletivos) === 0 ) { ?>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
 <ul class="nav nav-tabs">
-<li class="active"><a href="#tab1" data-toggle="tab">Meu Imagina RIO</a></li>
+<li><a href="#tab1" data-toggle="tab">Meu Imagina RIO</a></li>
 </ul>
 <div class="tab-content">
-<div class="tab-pane active" id="tab1">
+<div class="tab-pane" id="tab1">
 
 
 <h2>Meu Imagina.RIO</h2>
