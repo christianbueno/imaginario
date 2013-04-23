@@ -110,8 +110,8 @@ slider =  (function(){
         $item.hover( holdAndSlow , play );
     },
     play = function() {
-        $holder.resume();     
-        clearTimeout(timeout);
+        clearInterval(timeout);
+        $holder.resume();             
     },
     holdAndSlow = function() {       
         $holder.pause(); 

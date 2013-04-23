@@ -7,7 +7,7 @@
             <th>ID</th>
             <th>Username</th>            
             <th>E-mail</th>
-            <th>Remover</th>            
+            <th>Ações</th>            
         </tr>
     </thead>
     <tbody>

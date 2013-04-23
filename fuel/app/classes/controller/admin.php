@@ -5,13 +5,12 @@ class Controller_Admin extends Controller_Template
     
     public function before()
     {
-        parent::before();
+        parent::before();        
 
-        $user = Auth::instance()->get_user_id();        
-        $groups = Auth::instance()->get_groups();
-
-        if( $user[1] === 0 )                   
+        if( !Auth::check() )                   
             Response::redirect('users/login');
+
+        $groups = Auth::instance()->get_groups();
 
         if( (int)$groups[0][1] < 50 )     
             Response::redirect('/');  
@@ -21,22 +20,6 @@ class Controller_Admin extends Controller_Template
     {        
         $this->template->title = 'Imagina.RIO';
         $this->template->content = View::forge('admin/index');
-    }
-
-    public function action_login()
-    {
-        $logins = array(
-            'derpito' => 'derp',
-            'babel-team' => 'babel123team',
-        );
-        if (Input::method() == 'POST' and $logins[Input::post('login')] == Input::post('senha'))
-        {
-            Session::set('logado', true);
-            Response::redirect('/admin');
-        } else {
-            Session::set_flash('error', 'Login ou senha incorretos');
-        }
-
     }
 
     public function action_logout()

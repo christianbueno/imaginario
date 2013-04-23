@@ -13,11 +13,17 @@ class Controller_Users extends Controller_Template
         $form->add('username', 'Username:');
         $form->add('password', 'Password:', array('type' => 'password'));
         $form->add('submit', ' ', array('type' => 'submit', 'value' => 'Login'));
+        
+        Debug::dump(Input::referrer());
+
+        if(strpos(Input::referrer(), 'users/login') === 0)
+            Session::set_flash('redir_to', Input::referrer());
+
         if($_POST)
         {
             if($auth->login(Input::post('username'), Input::post('password')))
             {                
-                Response::redirect('users/perfil');
+                Response::redirect(Session::get_flash('redir_to'));
             }
             else
             {
