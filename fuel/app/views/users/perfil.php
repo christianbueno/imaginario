@@ -25,11 +25,25 @@
     ?>    
 <?php endforeach; ?>  
 </div>
+<div class="tab-pane active" id="tab2">
+<h2>Meu Imagina.RIO</h2>
+
+<h3>Imagens salvas</h3>
+
+<ul id="coletivo-images">
+<?php foreach ($images as $image):
+    echo '<li>';
+    echo Html::anchor('arquivos/'.$image->content, Html::img('arquivos/thumb-'.$image->content, array('class' => 'i-medium')));
+    echo '</li>';
+endforeach; ?> 
+</ul>
+</div>
+</div>
 <?php } ?>
 <?php if( count($coletivos) === 0 ) { ?>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
 <ul class="nav nav-tabs">
-<li class="active"><a href="#tab2" data-toggle="tab">Meu Imagina RIO</a></li>
+<li class="active"><a href="#tab1" data-toggle="tab">Meu Imagina RIO</a></li>
 </ul>
 <div class="tab-content">
 <div class="tab-pane active" id="tab1">
