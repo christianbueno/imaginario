@@ -9,7 +9,7 @@
 
 
 </head>
-<body>
+<body class="zulub">
     <div id="vignette" class="container-fluid">     
 
         <span id="logo" class="offset2"></span>
