@@ -371,7 +371,7 @@ body.mapa-eventos-temp {
 	font-size: 28px;
 	background: rgba(0,0,0,0.5);
 	width: 775px;
-	height: 100px;
+	height: 130px;
 	margin-left: -25px;
 	margin-top: 20px;
 	margin-bottom: -25px;
@@ -960,4 +960,9 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #coletivo-images {
 	width: 600px;
 	margin: 0 auto;
+}
+#agenda .alert {
+	margin-top: -30px;
+	position: absolute;
+	width: 87%;
 }
