@@ -7,7 +7,7 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
 
-
+    <?php echo Asset::js('jquery-1.8.3.min.js'); ?>
 </head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
@@ -36,7 +36,7 @@
         <?php echo View::forge('modules/menu'); ?>
     </div>
 
-<?php echo Asset::js('jquery-1.8.3.min.js'); ?>
+
 <?php echo Asset::js('jquery.Jcrop.min.js'); ?>
 <?php echo Asset::js('main.js'); ?>
 </body></html>

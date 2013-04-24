@@ -22,7 +22,12 @@
         <span id="logo" class="offset2"></span>
 
         <div id="galeria" class="container">
-        <h1>Galeria</h1>
+        <h1>Galeria <?php echo $title; ?></h1>
+        <nav>
+            <?php //echo Html::anchor('/conteudos/', 'Todos', array('class' => $selected === 'todos' ? 'selected' : '')); ?>
+            <?php echo Html::anchor('/conteudos/imagens/', 'Imagens', array('class' => $selected === 'imagens' ? 'selected' : '')); ?>
+            <?php echo Html::anchor('/conteudos/videos/', 'Videos', array('class' => $selected === 'videos' ? 'selected' : '')); ?>
+        </nav>
         <ul id="items">
         <?php foreach ($conteudos as $conteudo):
             echo '<li class="pull-left">';

@@ -11,45 +11,56 @@ class Controller_Users_Conteudo extends Controller_Users
         parent::before();
     }
     public function action_adicionar($id = null)
-    {
+    {        
         $auth = Auth::instance();
         $user = $auth->get_user_id();
+        $error = false;
+
         if (Input::method() == 'POST')
         {
-            if (Upload::is_valid())
-            {               
-                $conteudo = new Model_Conteudo();
-                $conteudo->content = Controller_Admin_Coletivo::processUpload();
-                $conteudo->type = 'image';
-                $conteudo->coletivo_id = $id;
-                $conteudo->user_id = $user[1];
-
-                Image::load(DOCROOT.DS."arquivos/$conteudo->content")->crop_resize(200,200)->save(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
-
-
-                $metadata = array(
+            $conteudo = new Model_Conteudo();
+            $conteudo->coletivo_id = $id;
+            $conteudo->user_id = $user[1];
+            $conteudo->type = Input::post('type');
+            $metadata = array(
                     'name' => Input::post('name'),
                     'description' => Input::post('description'),
-                );
+            );
+            $conteudo->metadata = serialize($metadata);
 
-                $conteudo->metadata = serialize($metadata);
+            if($conteudo->type === 'video') {
+                parse_str( parse_url( Input::post('content') , PHP_URL_QUERY ), $url );
+                $error = !(isset($url) and isset($url['v']));
+                if($error)
+                    Session::set_flash('error', 'Verifique se a URL informada é uma URL válida e contem o parametro v');
+                else
+                    $conteudo->content = $url['v'];
+            }
 
-                if ($conteudo->save())
-                {
-                    Session::set_flash('success', 'Imagem adicionada!');                    
+            if($conteudo->type === 'image') {
+                if (Upload::is_valid())
+                {               
+                    $conteudo->content = Controller_Admin_Coletivo::processUpload();
+                    $conteudo->type = 'image';
+
+                    Image::load(DOCROOT.DS."arquivos/$conteudo->content")->crop_resize(200,200)->save(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);                                   
                 }
                 else
                 {
-                    Session::set_flash('error', 'Ocorreu um problema ao adicionar a imagem, tente novamente.');
+                    $error = true;
+                    Session::set_flash('error', 'É necessário escolher uma imagem para enviar');
                 }
-
             }
-            else
+
+            if(!$error)
             {
-                Session::set_flash('error', 'É necessário escolher uma imagem para adicionar');
+                if($conteudo->save())
+                    Session::set_flash('success', 'Conteudo enviado!');                   
+                else
+                    Session::set_flash('success', 'Ocorreu um problema ao tentar salvar o conteudo');                   
             }
-
-            Response::redirect("users/conteudo/adicionar/$id");
+            $data['conteudo'] = $conteudo;
+            //Response::redirect("users/conteudo/adicionar/$id");
 
         }
 
@@ -74,9 +85,15 @@ class Controller_Users_Conteudo extends Controller_Users
     public function action_remover($coletivo_id = null, $conteudo_id = null) 
     {
         $conteudo = Model_Conteudo::find($conteudo_id);
+
+        if($conteudo->type === 'image')  
+        {
+            File::delete(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
+            File::delete(DOCROOT.DS.'arquivos/'.$conteudo->content);
+        }
+
         $conteudo->delete();
-        File::delete(DOCROOT.DS.'arquivos/thumb-'.$conteudo->content);
-        File::delete(DOCROOT.DS.'arquivos/'.$conteudo->content);
+
         Response::redirect("users/conteudo/adicionar/$coletivo_id");
     }
 
