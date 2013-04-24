@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     z-index: 999;
     right: -390px;
-    top: 185px;
+    top: 115px;
     transition: right 0.2s linear;
     -moz-transition: right 0.2s linear;
     -webkit-transition: right 0.2s linear;
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     float: left;
     font-weight: bold;
-    padding: 208px 20px;
+    padding: 238px 20px;
     cursor: pointer;
     transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -66,9 +66,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content {
     width: 390px;
-    height: 500px;
+    height: 550px;
     background: #ff7200;
     float: left;
+    padding-top: 10px;
 }
 #kaled {
     height: 500px;    
@@ -176,8 +177,16 @@ h1, h2, h3, h4, h5, h6 {
 .meu {
 	width: 81px;
 }
+.fotos {
+	width: 73px;
+	margin-top: -7px;
+}
+.contato {
+	width: 84px;
+	margin-top: 5px;
+}
 #expmenu .content .row {
-	margin: 15px 0 0 50px !important;
+	margin: 5px 0 0 50px !important;
 }
 .invisibleCont {
 	position: relative;

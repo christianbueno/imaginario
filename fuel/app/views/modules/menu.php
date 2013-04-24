@@ -53,9 +53,17 @@
         </span>
     </a>
     <a  class="span2" href="/fale-conosco/">
-        <span class="botaoMenu mapa">
+        <span class="botaoMenu contato">
         <img src="/assets/img/contato.png" alt="inicio" width="84" height="74" />
         Fale Conosco
+        </span>
+    </a>
+    </div>
+    <div class="row">
+    <a  class="span2 offset2" href="/conteudos">
+        <span class="botaoMenu fotos">
+        <img src="/assets/img/fotos.png" alt="inicio" width="73" height="77" />
+        Fotos
         </span>
     </a>
     </div>
