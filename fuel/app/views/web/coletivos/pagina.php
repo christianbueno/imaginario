@@ -53,7 +53,7 @@
         <?php endforeach; 
         if(count($eventos) === 0) {
         ?> 
-        <p class="alert alert-info"><i class="icon-calendar">Nenhum evento cadastrado</i></p>
+        <p class="alert alert-info"><i class="icon-calendar"></i>Nenhum evento cadastrado</p>
         <?php } ?>
         </div>
         </div>
