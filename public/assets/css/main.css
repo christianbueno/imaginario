@@ -957,3 +957,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #galeria h1 {
 	margin: 25px 0 25px 25px;
 }
+#coletivo-images {
+	width: 600px;
+	margin: 0 auto;
+}
