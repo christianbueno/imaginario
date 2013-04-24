@@ -16,7 +16,7 @@ class View_Conteudos_Galeria extends ViewModel
 
         foreach ($conteudos as $conteudo) {
             $conteudo->info = unserialize($conteudo->metadata);
-            $conteudo->saved = isset($saved_content) ? in_array($image->id, $saved_content) : false;
+            $conteudo->saved = isset($saved_content) ? in_array($conteudo->id, $saved_content) : false;
 
         }
         $this->conteudos = $conteudos;
