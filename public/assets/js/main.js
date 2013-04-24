@@ -126,7 +126,7 @@ slider =  (function(){
     animate = function() {             
         $holder.animate({            
             left: -4424,
-            }, 30000, 'linear', function() {
+            }, 40000, 'linear', function() {
                 $holder.css('left', 0);
                 animate();
             }
