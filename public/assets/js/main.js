@@ -1,4 +1,30 @@
-var imaginar = (function(){
+var shadowbox = (function(){
+    var $items = $('.video'),
+        $player = $('#player');
+
+    var play = function(e) {
+        e.preventDefault;
+        $current = $(e.target);
+
+        id = $current.data('videoid');
+        conteudo_id = $current.data('conteudoid');
+        
+        var params = { allowScriptAccess: "always" };
+        var atts = { id: "myytplayer" };
+        swfobject.embedSWF("http://www.youtube.com/v/"+id+"?enablejsapi=1&playerapiid=ytplayer&version=3&autoplay=1","player", "425", "356", "8", null, null, params, atts);
+    },
+    binds = function (){
+        $items.on( 'click' , play );
+    },
+    init = function() {
+        binds();
+    };
+
+    return {
+        init: init
+    }
+})(),
+imaginar = (function(){
     var $toggler = $('.imaginar');
 
     var toggle = function(e) {

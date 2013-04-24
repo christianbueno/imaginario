@@ -1,8 +1,8 @@
 <?php
 
-class View_Conteudos_Imagens extends ViewModel
+class View_Conteudos_Todos extends ViewModel
 {
-    public $_view = 'web/conteudos/galeria/imagens';
+    public $_view = 'web/conteudos/galeria/todos';
 
     public function view()
     {        
@@ -10,8 +10,7 @@ class View_Conteudos_Imagens extends ViewModel
         if(Auth::check())
             $saved_content = Auth::instance()->get_profile_fields('conteudos');
 
-        $conteudos = Model_Conteudo::find('all', array(
-            'where'    => array('type' => 'image'),
+        $conteudos = Model_Conteudo::find('all', array(            
             'order_by' => array('created_at' => 'desc'),
         ));
 
@@ -20,8 +19,8 @@ class View_Conteudos_Imagens extends ViewModel
             $conteudo->saved = isset($saved_content) ? in_array($conteudo->id, $saved_content) : false;
 
         }
-        $this->title = '> Imagens';
-        $this->selected = 'imagens';
+        $this->title = '';
+        $this->selected = 'todos';
         $this->conteudos = $conteudos;
     }
 

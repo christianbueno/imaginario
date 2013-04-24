@@ -2,7 +2,7 @@
 
 class View_Conteudos_Videos extends ViewModel
 {
-    public $_view = 'web/conteudos/galeria';
+    public $_view = 'web/conteudos/galeria/videos';
 
     public function view()
     {        
