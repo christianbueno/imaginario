@@ -118,14 +118,14 @@ slider =  (function(){
         timeout = setInterval(left,80);
     },
     left = function() {
-        if($holder.offset().left <= -2216)
+        if($holder.offset().left <= -4424)
             $holder.css('left', 0);
 
         $holder.css('left', '-=1px');
     },
     animate = function() {             
         $holder.animate({            
-            left: -2216,
+            left: -4424,
             }, 30000, 'linear', function() {
                 $holder.css('left', 0);
                 animate();

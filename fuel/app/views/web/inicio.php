@@ -36,6 +36,12 @@
 					<div class="slider">
 						<?php $renderSlider(array_slice($images, 60, 20, true)); ?>
 					</div>				
+					<div class="slider">
+						<?php $renderSlider(array_slice($images, 0, 20, true)); ?>
+					</div>
+					<div class="slider">
+						<?php $renderSlider(array_slice($images, 20, 20, true)); ?>
+					</div>
 				</div>
 			</div>
 			<div class="row">
