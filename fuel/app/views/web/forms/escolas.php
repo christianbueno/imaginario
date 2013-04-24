@@ -116,7 +116,7 @@ form.appendChild(javaEnabled);">
 </div>
 <div>
 <label for="inf_custom_Consulta">Coment&aacute;rios</label>
-<input class="infusion-field-input-container contDescr" id="inf_custom_Consulta" name="inf_custom_Consulta" type="text" />
+<textarea class="infusion-field-input-container contDescr" id="inf_custom_Consulta" name="inf_custom_Consulta" type="text"></textarea>
 </div>
 <div>
 <div style="height:15px; line-height:15px">

@@ -113,7 +113,7 @@
 			</div>
 			<div>
 			<label for="inf_custom_Descricao">Descri&ccedil;&atilde;o *</label>
-			<input class="infusion-field-input-container contDescr" id="inf_custom_Descricao" name="inf_custom_Descricao" type="text" />
+			<textarea  class="infusion-field-input-container contDescr" id="inf_custom_Descricao" name="inf_custom_Descricao" type="text"></textarea>
 			</div>
 			<div>
 			<div class="infusion-captcha" style="-moz-border-radius:10px; background-color:#CCCCCC; border-radius:10px; border: 1px solid #000000; color:#000000; margin-left:auto; margin-right:auto">
