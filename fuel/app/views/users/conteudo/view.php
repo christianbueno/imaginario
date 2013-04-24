@@ -25,7 +25,13 @@
         <?php foreach ($conteudos as $conteudo): ?>     
         <tr>
             <td><?php echo $conteudo->id ?></td>
-            <td><?php echo Html::img("/arquivos/thumb-$conteudo->content", array('alt' =>$conteudo->info['name'])); ?></td>     
+            <td><?php 
+            if($conteudo->type === 'image')
+                echo Html::img("/arquivos/thumb-$conteudo->content", array('alt' =>$conteudo->info['name']));
+            else
+                echo Html::anchor('javascript:void(0)', Html::img("http://img.youtube.com/vi/$conteudo->content/default.jpg", array('class' => 'i-medium video', 'data-videoid' => $conteudo->content)));
+            
+            ?></td>     
             <td><?php echo $conteudo->info['name'] ?></td> 
             <td><?php echo $conteudo->info['description'] ?></td>                 
             <td><?php 
