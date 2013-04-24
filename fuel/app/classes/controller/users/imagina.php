@@ -5,7 +5,7 @@ class Controller_Users_Imagina extends Controller_Rest
 
     public function router($resource, array $arguments)
     {  
-        if ( ! \Auth::check())
+        if ( !Auth::check() )
         {
             $this->response(array('error'=> 'true', 'message'=> 'unauthorized'), 401);
         }
