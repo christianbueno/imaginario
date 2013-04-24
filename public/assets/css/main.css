@@ -954,3 +954,6 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #agenda {
 	clear: both;
 }
+#galeria h1 {
+	margin: 25px 0 25px 25px;
+}
