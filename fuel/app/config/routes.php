@@ -10,6 +10,9 @@ return array(
     'escolas' => 'router/escolas',
     'individual' => 'router/individual',
     'quem-somos' => 'router/quemsomos',
-    'fale-conosco' => 'router/faleconosco'
+    'fale-conosco' => 'router/faleconosco',
+    'copyright' => 'router/copyright',
+    'anti-spam' => 'router/antispam',
+    'politicas-de-privacidade' => 'router/politicas'
     
 );

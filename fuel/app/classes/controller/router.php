@@ -40,6 +40,21 @@ class Controller_Router extends Controller
         return Response::forge(View::forge('web/forms/artistas'));
     }
 
+    public function action_copyright()
+    {
+        return Response::forge(View::forge('web/copyright'));
+    }
+
+    public function action_antispam()
+    {
+        return Response::forge(View::forge('web/spam'));
+    }
+
+    public function action_politicas()
+    {
+        return Response::forge(View::forge('web/politicas'));
+    }
+
 
 	public function action_404()
 	{
