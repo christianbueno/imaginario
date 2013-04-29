@@ -6,12 +6,18 @@ class View_Inicio extends ViewModel
 
     public function view()
     {
+        $config = Config::load('carrossel'); 
+
         $images = Model_Conteudo::find('all', array(
             'where' => array(
                     array('type', 'image'),                                    
             ),
             'order_by' => array('created_at' => 'desc'),
         ));
+        if($config['order'] === 'random') 
+        {            
+            shuffle($images);
+        }
         foreach ($images as $image) {
             $image->info = unserialize($image->metadata);
             $image->coletivo = Model_Coletivo::find($image->coletivo_id);
