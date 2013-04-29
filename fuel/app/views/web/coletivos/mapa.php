@@ -12,20 +12,21 @@
 <style type="text/css">
 
 .foto {
-        color: white;
-        text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
-        font-family: "Lucida Grande", "Arial", sans-serif;
-        font-size: 19px;
-        font-weight: bold;
-        text-align: center;
-        width: 124px; 
-        height:124px; 
-        display:table;
-        line-height:120px;
-        border-radius: 60px; 
-        -moz-border-radius: 60px; 
-        -webkit-border-radius: 60px;
-   }
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    width: 124px; 
+    height:124px; 
+    display:table;
+    line-height:120px;
+    border-radius: 60px; 
+    -moz-border-radius: 60px; 
+    -webkit-border-radius: 60px;
+}
+
     <?php foreach ($coletivos as $coletivo):?>   
    
    .fundo<?php echo $coletivo->id; ?> {
@@ -123,6 +124,16 @@ $(document).ready(function(){
     google.maps.event.addListener(thumb, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
+    google.maps.event.addListener(thumb, 'mouseover', function(e) {
+        $current = $(e.target);
+
+        $current.addClass('hovered');
+    });
+    google.maps.event.addListener(thumb, 'mouseout', function(e) {
+        $current = $(e.target);
+
+        $current.removeClass('hovered');
+    });    
 <?php endforeach; ?> 
 });
 
