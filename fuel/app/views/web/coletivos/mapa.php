@@ -58,9 +58,17 @@
 
 <script>
 $(document).ready(function(){
-    var mapOptions = {
+    var mapOptions = {        
+        zoom: 12,        
+        zoomControl: true,
+        streetViewControl: false,
+        mapTypeControl: false,
+        zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.LARGE
+        },
         center: new google.maps.LatLng(-22.9035393,-43.20958689999998),
-        zoom: 12,
+        scaleControl: false,  
+        panControl: false,        
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);

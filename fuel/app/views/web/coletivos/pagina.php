@@ -19,8 +19,10 @@
         
         <div class="texto-wrapper">
 
-        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin:0 16px 0 0;float:left;"/><h1 style="width:640px;float:left;margin-top:16px;margin-bottom:40px;"><?php echo $coletivo->name ?></h1>
+        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin:0 16px 0 0;float:left;"/><h1 style="width:640px;float:left;margin-top:16px;margin-bottom:40px;"><?php echo Html::anchor( Input::uri() , $coletivo->name ); ?></h1>
+        <?php if(count($eventos) > 0) { ?>
         <div class="coleMap" id="map-canvas"></div>
+        <?php } ?>
         <h2>Sobre o Coletivo</h2>
         <p><?php echo $coletivo->description; ?></p>
         <ul id="coletivo-images">
@@ -68,11 +70,21 @@
 <script>
 $(document).ready(function(){
     var mapOptions = {
+        zoom: 12,        
+        zoomControl: true,
+        streetViewControl: false,
+        mapTypeControl: false,
+        zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.SMALL
+        },
         center: new google.maps.LatLng(-22.9035393,-43.20958689999998),
-        zoom: 10,
+        scaleControl: false,  
+        panControl: false,        
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    <?php if(count($eventos) > 0) { ?>
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    <?php } ?>
 
     <?php foreach ($eventos as $evento):?>   
         var location = new google.maps.LatLng(<?php echo $evento->latlng; ?>); 
