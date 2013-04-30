@@ -100,7 +100,7 @@
 			<input class="infusion-field-input-container" id="inf_field_Phone1" name="inf_field_Phone1" type="text" />
 			</div>
 			<div>
-			<label for="inf_field_StreetAddress1">Endre&ccedil;o *</label>
+			<label for="inf_field_StreetAddress1">Endere&ccedil;o *</label>
 			<input class="infusion-field-input-container" id="inf_field_StreetAddress1" name="inf_field_StreetAddress1" type="text" />
 			</div>
 			<div>
