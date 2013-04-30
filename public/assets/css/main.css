@@ -971,3 +971,9 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	position: absolute;
 	width: 87%;
 }
+.texto-wrapper h1 a {
+	color: #3a3a3a;
+}
+.texto-wrapper h1 a:hover {
+	text-decoration: none;
+}
