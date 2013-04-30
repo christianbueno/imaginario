@@ -39,11 +39,6 @@ class Controller_Router extends Controller
     {
         return Response::forge(View::forge('web/forms/artistas'));
     }
-    
-    public function action_obrigado_publico()
-    {
-        return Response::forge(View::forge('web/publico/obrigado'));
-    }
 
     public function action_copyright()
     {

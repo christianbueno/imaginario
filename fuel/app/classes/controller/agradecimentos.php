@@ -15,7 +15,7 @@ class Controller_Agradecimentos extends Controller
 
     public function action_publico()
     {
-        return Response::forge(View::forge('web/publico/obrigado'));
+        return Response::forge(View::forge('web/agradecimentos/publico'));
     }
 
     public function action_coletivos()

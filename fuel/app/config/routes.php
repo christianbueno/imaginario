@@ -14,6 +14,5 @@ return array(
     'copyright' => 'router/copyright',
     'anti-spam' => 'router/antispam',
     'politicas-de-privacidade' => 'router/politicas'
-    'publico/obrigado.php' => 'router/publico/obrigado'
     
 );
