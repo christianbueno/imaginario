@@ -10,7 +10,7 @@
 <body class="escolas">
     <div id="vignette" class="container-fluid">     
 
-        <span id="logo" class="offset2 branco"></span>
+        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
         <div class="texto-wrapper">
         <h1>Escolas</h1>
