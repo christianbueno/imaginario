@@ -96,6 +96,22 @@ form.appendChild(javaEnabled);">
 <input class="infusion-field-input-container" id="inf_field_Email" name="inf_field_Email" type="text" />
 </div>
 <div>
+			<div class="infusion-captcha" style="-moz-border-radius:10px; background-color:#CCCCCC; border-radius:10px; border: 1px solid #000000; color:#000000; margin-left:auto; margin-right:auto">
+			<div>
+			<img alt="captcha" border="0px" name="captcha" onclick="reloadJcaptcha();" src="https://ky108.infusionsoft.com/Jcaptcha/img.jsp" title="If you can't read the image, click it to get another one." />
+			<script type="text/javascript">
+			function reloadJcaptcha() {var now = new Date();if (document.images) {document.images.captcha.src = 'https://ky108.infusionsoft.com/Jcaptcha/img.jsp?reload=' + now}}
+			</script>
+			</div>
+			<div>
+			<label for="captcha.typed">Copie c&oacute;digo acima:</label>
+			</div>
+			<div>
+			<input class="infusion-field-input-container" id="captcha.typed" name="captcha.typed" type="text" />
+			</div>
+			</div>
+			</div>
+<div>
 <div class="infusion-submit" style="text-align:center">
 <button style="" class="btn btn-primary" type="submit" value="Enviar">Enviar</button>
 </div>
