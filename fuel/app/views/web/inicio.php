@@ -14,7 +14,7 @@
 <img src="assets/img/flag-11.png" alt="flag-11" width="32" height="32" />
 <img src="assets/img/flag-12.png" alt="flag-12" width="32" height="32" />
 	</div>
-			<span id="logo" class="offset2"></span>
+			<a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 			<div id="socialmedia">
 				<a href="http://www.facebook.com/pages/ImaginaRio/210683839051269" target="_blank"><img src="assets/img/facebook_32.png" alt="facebook_32" width="32" height="32" /></a>
 				<img src="assets/img/google_32.png" alt="google_32" width="32" height="32" />
