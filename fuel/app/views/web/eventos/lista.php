@@ -5,6 +5,7 @@
     <title>Imagina.RIO > Agenda</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
+    <?php echo Asset::js('analytics.js'); ?>
 
 </head>
 <body class="zulub">

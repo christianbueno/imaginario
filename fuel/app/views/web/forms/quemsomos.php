@@ -5,7 +5,7 @@
     <title>Imagina.RIO > Quem somos</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
-
+    <?php echo Asset::js('analytics.js'); ?>
 </head>
 <body class="quem-somos">
     <div id="vignette" class="container-fluid">     

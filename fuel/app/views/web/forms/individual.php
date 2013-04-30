@@ -5,7 +5,7 @@
     <title>Imagina.RIO > Fale Conosco > Individual</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
-
+    <?php echo Asset::js('analytics.js'); ?>
 </head>
 <body class="individual">
     <div id="vignette" class="container-fluid">     

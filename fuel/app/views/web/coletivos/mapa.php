@@ -5,6 +5,7 @@
     <title>Imagina.RIO > Coletivos &amp; Artistas</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
+    <?php echo Asset::js('analytics.js'); ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSUuzKFf-qvUvfah7ekcUoJPB3V1DUDmw&sensor=false"></script>
   <script type="text/javascript" src="/assets/js/markerwithlabel.js"></script>
   

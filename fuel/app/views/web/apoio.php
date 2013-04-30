@@ -5,7 +5,7 @@
     <title>Imagina.RIO > Apoio</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
-
+    <?php echo Asset::js('analytics.js'); ?>
 </head>
 <body class="apoio">
     <div id="vignette" class="container-fluid">     

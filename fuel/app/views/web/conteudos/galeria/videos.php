@@ -6,6 +6,7 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
     <?php echo Asset::js('swfobject.js'); ?>
+    <?php echo Asset::js('analytics.js'); ?>
     <style>
         #galeria {
             background-color: rgba(0, 0, 0, 0.8);
