@@ -16,7 +16,7 @@
 	</div>
 			<span id="logo" class="offset2"></span>
 			<div id="socialmedia">
-				<a href="http://www.facebook.com/pages/ImaginaRio/210683839051269" targer="_blank"><img src="assets/img/facebook_32.png" alt="facebook_32" width="32" height="32" /></a>
+				<a href="http://www.facebook.com/pages/ImaginaRio/210683839051269" target="_blank"><img src="assets/img/facebook_32.png" alt="facebook_32" width="32" height="32" /></a>
 				<img src="assets/img/google_32.png" alt="google_32" width="32" height="32" />
 				<img src="assets/img/twitter_32.png" alt="twitter_32" width="32" height="32" />
 				<img src="assets/img/vimeo_32.png" alt="vimeo_32" width="32" height="32" />
