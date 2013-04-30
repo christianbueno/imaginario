@@ -10,7 +10,7 @@
 <body class="individual">
     <div id="vignette" class="container-fluid">     
 
-        <span id="logo" class="offset2"></span>
+        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
         <div class="texto-wrapper">
         <h1>Público Geral</h1>

@@ -40,7 +40,7 @@
     <div class="bgMap" id="map-canvas"></div>
     <div id="vignette" class="container-fluid">     
 
-        <span id="logo" class="offset2"></span>        
+        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>        
 
         
 
