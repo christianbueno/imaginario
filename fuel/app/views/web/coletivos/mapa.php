@@ -52,7 +52,7 @@
             $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
         ?>   
 
-            <li><?php echo Html::anchor($url, Html::img($coletivo->thumb, array('class' => 'i-thumb')) . $coletivo->name, array('style' => "background-color: #$coletivo->cor")); ?></li>
+            <li><?php echo Html::anchor($url, Html::img($coletivo->thumb, array('class' => 'i-thumb pull-left')) . $coletivo->name, array('style' => "background-color: #$coletivo->cor")); ?></li>
         <?php endforeach; ?>
     </div>
     <div class="bgMap" id="map-canvas"></div>

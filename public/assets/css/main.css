@@ -1065,7 +1065,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 
 #box-coletivos-lista li {
     list-style-image: none;
-    list-style: none;          
+    list-style: none;            
     margin-bottom: 2.5px;  
 }
 #box-coletivos-lista img {
@@ -1077,6 +1077,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     padding: 5px;      
     display: block;
     text-transform: uppercase; 
+    overflow: auto;
     background: #D46002; 
     color: white;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
