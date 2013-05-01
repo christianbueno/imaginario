@@ -4,7 +4,7 @@
 
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
-
+<div id="accordion">
 <?php foreach ($coletivos as $coletivo): ?>    
     <h3><?php echo $coletivo->name; ?></h3>
     <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
@@ -17,7 +17,7 @@
     echo Form::close();
     ?>    
 <?php endforeach; ?>  
-
+</div>
 
 
 <?php } ?>
