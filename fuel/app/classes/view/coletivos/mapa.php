@@ -6,7 +6,9 @@ class View_Coletivos_Mapa extends ViewModel
 
     public function view()
     {
-        $coletivos = Model_Coletivo::find('all');
+        $coletivos = Model_Coletivo::find('all', array(            
+            'order_by' => array('name' => 'asc'),
+        ));
 
         foreach ($coletivos as $coletivo) {
             $coletivo->info = unserialize($coletivo->metadata);
@@ -24,7 +26,7 @@ class View_Coletivos_Mapa extends ViewModel
         }
 
 
-        $this->coletivos = Arr::sort($coletivos, 'coletivo.name','asc', SORT_LOCALE_STRING);
+        $this->coletivos = $coletivos;
     }
 
 
