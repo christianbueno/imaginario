@@ -24,10 +24,10 @@
 
         <div id="galeria" class="container">
         <h1>Galeria <?php echo $title; ?></h1>
-       <nav class="btn-group">
+        <nav class="btn-group">
             <?php //echo Html::anchor('/conteudos/', 'Todos', array('class' => $selected === 'todos' ? 'selected' : '')); ?>
-            <button class="btn active"><i class="icon-camera"></i> <?php echo Html::anchor('/conteudos/imagens/', 'Imagens', array('class' => $selected === 'imagens' ? 'selected' : '')); ?></button>
-            <button class="btn"><i class="icon-facetime-video"></i> <?php echo Html::anchor('/conteudos/videos/', 'Vídeos', array('class' => $selected === 'videos' ? 'selected' : '')); ?></button>
+            <?php echo Html::anchor('/conteudos/imagens/', '<i class="icon-camera"></i>  Imagens', array('class' => $selected === 'imagens' ? 'active btn' : 'btn')); ?>
+            <?php echo Html::anchor('/conteudos/videos/', '<i class="icon-facetime-video"></i> Vídeos', array('class' => $selected === 'videos' ? 'active btn' : 'btn')); ?>
         </nav>
         <ul id="items">
         <?php foreach ($conteudos as $conteudo):
