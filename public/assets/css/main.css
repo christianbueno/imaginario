@@ -1004,3 +1004,17 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     padding-bottom: 25px;
     margin-bottom: 105px;
 }
+.btnSMico {
+    margin-right: 10px;
+}
+.fakeInput {
+    height: 100px;
+    width: 512px;
+    padding: 15px;
+    white-space: normal;
+}
+.shareBox {
+    display: block;
+    width: 545px;
+    margin: 0 auto;
+}
