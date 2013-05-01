@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 997;
     padding-right: 0px;
     padding-left: 0px;
+    min-height: 100%;
 }
 
 #logo {
@@ -203,7 +204,8 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	background: rgba(255,255,255, 0.8);
 	color: #3a3a3a;
-	padding: 25px;
+	padding: 25px 25px 105px 25px;
+    overflow: auto;
 	display: block;
 }
 .texto-wrapper h1 {
@@ -983,13 +985,15 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     background: rgba(255,114,0,0.7);
     text-align: center;
     font-size: 10px;
-    margin-top: 50px;
+    margin-top: -50px;
     padding: 15px 0 15px 0;
     color: #ffffff;
     line-height: 12px;
     bottom: 0px;
     width:100%;
     clear: both;
+    position: relative;
+    height: 50px;
 }
 .copyFooter a {
     color: #ffffff;
