@@ -13,7 +13,7 @@
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div class="texto-wrapper">
+        <div class="texto-wrapper" style="overflow: hidden;">
         <h1>Agenda</h1>
         <div id="agenda">
         <?php 
