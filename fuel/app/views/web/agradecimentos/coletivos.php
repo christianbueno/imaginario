@@ -11,7 +11,7 @@
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
-        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
+        <a href="/" id="logo" class="offset2"></a>
 
         <div class="texto-wrapper" style="margin-bottom:250px">
             <h1>Obrigado por se cadastrar como Artista/Coletivo!</h1>

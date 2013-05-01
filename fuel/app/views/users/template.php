@@ -12,7 +12,7 @@
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
-        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
+        <a href="/" id="logo" class="offset2"></a>
 
         <div class="container">
          <?php if (Session::get_flash('success')): ?>

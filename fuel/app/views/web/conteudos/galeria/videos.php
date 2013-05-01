@@ -21,7 +21,7 @@
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
-        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
+        <a href="/" id="logo" class="offset2"></a>
 
         <div id="galeria" class="container">
         <h1>Galeria <?php echo $title; ?></h1>

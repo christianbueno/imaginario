@@ -13,7 +13,7 @@
 <body class="zulub" style="background: url(<?php echo $coletivo->latest_image; ?>) no-repeat center center fixed;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;-ms-background-size: cover;">
     <div id="vignette" class="container-fluid">     
 
-        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
+        <a href="/" id="logo" class="offset2"></a>
 
         <div class="invisibleCont">
         <?php echo Html::img('arquivos/'.$coletivo->info['logo'], array('class' => 'logoCole')); ?>

@@ -12,7 +12,7 @@
     <div class="bgMap" id="map-canvas"></div>
     <div id="vignette" class="container-fluid">     
 
-        <span id="logo" class="offset2"></span>               
+        <a href="/" id="logo" class="offset2"></a>             
 
 
         <?php echo render('modules/menu'); ?>
