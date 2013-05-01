@@ -137,7 +137,7 @@ $(document).ready(function(){
         map: map,       
         zIndex: <?php echo $i ?>,     
         optimized: false,  
-        flat: true,
+        
         icon: seta<?php echo $coletivo->id; ?>,        
         shadow: shadow        
     });
