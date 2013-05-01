@@ -370,8 +370,6 @@ body.mapa-eventos-temp {
 	background: #fff;
 }
 .agendaCole {
-	font-family: 'brandon_grotesquelight_italic', sans-serif;
-	font-size: 28px;
 	background: rgba(0,0,0,0.5);
 	width: 775px;
 	height: 130px;
@@ -379,6 +377,13 @@ body.mapa-eventos-temp {
 	margin-top: 20px;
 	margin-bottom: -25px;
 	padding-top: 20px;
+}
+.agendaCole h1 {
+    font-family: 'brandon_grotesquelight_italic', sans-serif;
+    width: 600px;
+    font-size: 28px;
+    float: right;
+    clear: none;
 }
 .linguas {
 	float: right;

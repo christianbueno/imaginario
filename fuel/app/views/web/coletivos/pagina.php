@@ -39,9 +39,8 @@
             echo '</li>';
         endforeach; ?> 
         </ul>
-        <div class="agendaCole pull-left"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" />Agenda de eventos
-        </div>
-        <div id="agenda">
+        <div class="agendaCole pull-left"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" /><h1>Agenda de eventos</h1>
+            <div id="agenda">
 
                     <?php 
         $i = 1;
@@ -59,6 +58,8 @@
         <p class="alert alert-info"><i class="icon-calendar"></i> Nenhum evento cadastrado</p>
         <?php } ?>
         </div>
+        </div>
+        
         </div>
         </div>
 
