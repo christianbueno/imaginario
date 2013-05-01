@@ -5,16 +5,17 @@
     <title>Imagina.RIO > Obrigado!</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
+    <script src="https://ky108.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=4f04c36b6b1db8ad14a88bb9450b4899"></script> 
     <?php echo Asset::js('analytics.js'); ?>
-   </head>
+</head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div class="container">
-	        <h1>Obrigado por se cadastrar!</h1>
-	        <p>Em breve você receberá, via e-mail, a programação completa do Imagina Rio 2013, locais, horários e datas disponíveis para se apresentar e todas as orientações necessárias para fazer parte desse grande encontro.</p>
+        <div class="texto-wrapper" style="margin-bottom:250px">
+            <h1>Obrigado por se cadastrar como Artista/Coletivo!</h1>
+            <p><a href="/espalhe/coletivos/"><img src="/assets/img/spread-the-love.png" width="175" height="150" align="right" style="margin-top:-50px;"/></a>Em breve você receberá, via e-mail, a programação completa do <strong>Imagina Rio 2013</strong>, locais, horários e datas disponíveis para se apresentar e todas as orientações necessárias para fazer parte desse grande encontro. Enquanto isso clique no coração ao lado para compartilhar o <strong>Imagina Rio</strong> com os seus amigos e familiares.</p>
         </div>
 
         <?php echo render('modules/menu'); ?>

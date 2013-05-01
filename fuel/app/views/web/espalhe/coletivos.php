@@ -6,24 +6,22 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
     <?php echo Asset::js('analytics.js'); ?>
-    <style>
-        #galeria {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-        #items li {            
-            list-style: none;
-            list-style-image: none;
-        }
-    </style>
+    <?php echo Asset::js('popup.js'); ?>
 </head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div id="galeria" class="container">
-            espalhe o amor coletivos
+         <div class="texto-wrapper" style="margin-bottom:250px;">
+            <h1>Espalhe sua paixão!</h1>
+                <img src="/assets/img/spread-the-love.png" width="155" height="130" align="right" style="margin-top:-70px;"/>
+                <div class="shareBox">
+                    <span class="input-xxlarge uneditable-input fakeInput">Para se apresentar no ImaginaRio 2013, cadastre-se em http://www.imaginario.etc.br/coletivos e receba todas as orientações por e-mail</span>
+                    <a style="margin-right:7px;" class="btn btn-info btn-large" href="http://twitter.com/home?status=Para se apresentar no ImaginaRio 2013, cadastre-se em http://www.imaginario.etc.br/coletivos e receba todas as orientações por e-mail"  onclick="return popitup('http://twitter.com/home?status=Para participar do ImaginaRio 2013, cadastre-se em www.imaginario.etc.br/individual e receba a programação completa por e-mail')">
+        <img src="/assets/img/twitter-ico.png" width="14" height="14" class="btnSMico"> Compartilhe no Twitter</a>
+                    <a class="btn btn-primary btn-large" href="http://www.facebook.com/share.php?u=http://imaginario.etc.br" onclick="return popitup('http://www.facebook.com/share.php?u=http://imaginario.etc.br')"><img src="/assets/img/facebook-ico.png" width="14" height="14" class="btnSMico"> Compartilhe no Facebook</a>
+                </div>
         </div>
 
         <?php echo render('modules/menu'); ?>
