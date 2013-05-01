@@ -6,24 +6,21 @@
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
     <?php echo Asset::js('analytics.js'); ?>
-    <style>
-        #galeria {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-        #items li {            
-            list-style: none;
-            list-style-image: none;
-        }
-    </style>
 </head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div id="galeria" class="container">
-            espalhe o amor escolas
+        <div class="texto-wrapper" style="margin-bottom:250px;">
+            <h1>Espalhe sua paixão!</h1>
+                <img src="/assets/img/spread-the-love.png" width="155" height="130" align="right" style="margin-top:-70px;"/>
+                <div class="shareBox">
+                    <span class="input-xxlarge uneditable-input fakeInput">Para sua escola participar do ImaginaRio 2013, cadastre-se em http://www.imaginario.etc.br/escolas e receba as orientações por e-mail</span>
+                    <a style="margin-right:7px;" class="btn btn-info btn-large" href="http://twitter.com/home?status=Para sua escola participar do ImaginaRio 2013, cadastre-se em http://www.imaginario.etc.br/escolas e receba as orientações por e-mail" target="_blank">
+        <img src="/assets/img/twitter-ico.png" width="14" height="14" class="btnSMico"> Compartilhe no Twitter</a>
+                    <a class="btn btn-primary btn-large" href="http://www.facebook.com/share.php?u=http://imaginario.etc.br" target="_blank"><img src="/assets/img/facebook-ico.png" width="14" height="14" class="btnSMico"> Compartilhe no Facebook</a>
+                </div>
         </div>
 
         <?php echo render('modules/menu'); ?>

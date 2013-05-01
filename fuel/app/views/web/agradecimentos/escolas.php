@@ -5,25 +5,17 @@
     <title>Imagina.RIO > Agradecimentos > Obrigado</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
+    <script src="https://ky108.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=4f04c36b6b1db8ad14a88bb9450b4899"></script>
     <?php echo Asset::js('analytics.js'); ?>
-    <style>
-        #galeria {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-        #items li {            
-            list-style: none;
-            list-style-image: none;
-        }
-    </style>
 </head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div id="galeria" class="container">
-            obrigado escolas
+        <div class="texto-wrapper" style="margin-bottom:250px">
+            <h1>Obrigado cadastrar sua escola!</h1>
+            <p><a href="/espalhe/escolas/"><img src="/assets/img/spread-the-love.png" width="175" height="150" align="right" style="margin-top:-50px;"/></a>Em breve você receberá, via e-mail, a programação completa do <strong>Imagina Rio 2013</strong>, horários e datas disponíveis e as orientações necessárias para agendar a visita da sua escola. Enquanto isso clique no coração ao lado para compartilhar o <strong>Imagina Rio</strong> com os seus amigos e familiares.</p>
         </div>
 
         <?php echo render('modules/menu'); ?>
