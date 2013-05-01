@@ -999,3 +999,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     color: #ffffff;
     text-decoration: underline;
 }
+#galeria {
+    padding-bottom: 25px;
+    margin-bottom: 105px;
+}
