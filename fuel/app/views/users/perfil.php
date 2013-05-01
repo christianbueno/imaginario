@@ -5,20 +5,22 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
 <?php foreach ($coletivos as $coletivo): ?>
-    <?php echo $coletivo->name; ?><br/>
+    <a href="#<?php echo $coletivo->name; ?>"><?php echo $coletivo->name; ?></a><br/>
 <?php endforeach; ?>
 
-<?php foreach ($coletivos as $coletivo): ?>    
-    <h3><?php echo $coletivo->name; ?></h3>
-    <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
-    <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
-    <h4>Informações</h4>    
-    <?php 
-    $data['coletivo'] = $coletivo;
-    echo Form::open(array('action' => "users/salvarcoletivo/$coletivo->id", 'enctype' => 'multipart/form-data')); 
-    echo View::forge('admin/coletivo/_form',$data);
-    echo Form::close();
-    ?>    
+<?php foreach ($coletivos as $coletivo): ?>
+    <div name="<?php echo $coletivo->name; ?>">    
+        <h3><?php echo $coletivo->name; ?></h3>
+        <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
+        <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
+        <h4>Informações</h4>    
+        <?php 
+        $data['coletivo'] = $coletivo;
+        echo Form::open(array('action' => "users/salvarcoletivo/$coletivo->id", 'enctype' => 'multipart/form-data')); 
+        echo View::forge('admin/coletivo/_form',$data);
+        echo Form::close();
+        ?>
+    </div>
 <?php endforeach; ?>  
 
 
