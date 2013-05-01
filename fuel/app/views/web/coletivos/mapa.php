@@ -100,7 +100,7 @@ $(document).ready(function(){
     
 
 <?php 
-    $i = 666;
+    $i = 999;
     foreach ($coletivos as $coletivo):
 ?>   
 	
@@ -121,7 +121,17 @@ $(document).ready(function(){
         url: '/assets/img/sombra.png',                
         anchor: new google.maps.Point(60, 200)
     };
-    <?php $i++; ?>
+    <?php $i--; ?>
+    var thumb<?php echo $coletivo->id; ?> = new RichMarker({
+        position: location,        
+        map: map,  
+        shadow: null,
+        zIndex: <?php echo $i ?>,
+        flat: true,          
+        optimized: false,  
+        content: '<span class="fundo<?php echo $coletivo->id; ?> foto"><?php echo $coletivo->name; ?></span>',
+    });    
+    <?php $i--; ?>
     var marker<?php echo $coletivo->id; ?> = new google.maps.Marker({
         position: location,        
         map: map,       
@@ -131,16 +141,7 @@ $(document).ready(function(){
         icon: seta<?php echo $coletivo->id; ?>,        
         shadow: shadow        
     });
-    <?php $i++; ?>
-    var thumb<?php echo $coletivo->id; ?> = new RichMarker({
-        position: location,        
-        map: map,  
-        shadow: null,
-        zIndex: <?php echo $i ?>,
-        flat: true,          
-        optimized: false,  
-        content: '<span class="fundo<?php echo $coletivo->id; ?> foto"><?php echo $coletivo->name; ?></span>',
-    });
+
 
     <?php 
         $coletivo_id = $coletivo->id;

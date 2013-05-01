@@ -5,7 +5,6 @@
     <title>Imagina.RIO > Mapa de Eventos</title>
     <?php echo Asset::css('bootstrap.css'); ?>
     <?php echo Asset::css('main.css'); ?>
-    <?php echo Asset::js('analytics.js'); ?>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSUuzKFf-qvUvfah7ekcUoJPB3V1DUDmw&sensor=false"></script>  
     <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 </head>
@@ -13,7 +12,7 @@
     <div class="bgMap" id="map-canvas"></div>
     <div id="vignette" class="container-fluid">     
 
-        <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>               
+        <span id="logo" class="offset2"></span>               
 
 
         <?php echo render('modules/menu'); ?>
