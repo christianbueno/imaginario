@@ -4,8 +4,9 @@
 
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
-<div id="accordion">
-<?php foreach ($coletivos as $coletivo): ?>    
+
+<?php foreach ($coletivos as $coletivo): ?>
+    <div id="accordion"> 
     <h3><?php echo $coletivo->name; ?></h3>
     <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
     <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
@@ -15,9 +16,9 @@
     echo Form::open(array('action' => "users/salvarcoletivo/$coletivo->id", 'enctype' => 'multipart/form-data')); 
     echo View::forge('admin/coletivo/_form',$data);
     echo Form::close();
-    ?>    
+    ?>
+    </div>
 <?php endforeach; ?>  
-</div>
 
 
 <?php } ?>
