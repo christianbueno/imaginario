@@ -24,7 +24,7 @@ class View_Coletivos_Mapa extends ViewModel
         }
 
 
-        $this->coletivos = Arr::sort($coletivos, 'coletivo.name','asc', SORT_STRING);
+        $this->coletivos = Arr::sort($coletivos, 'coletivo.name','asc', SORT_LOCALE_STRING);
     }
 
 
