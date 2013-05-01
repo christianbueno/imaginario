@@ -7,8 +7,8 @@
 
 <?php foreach ($coletivos as $coletivo): ?>    
     <h3><?php echo $coletivo->name; ?></h3>
-    <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", 'Enviar conteúdo', array('class' => 'btn btn-default')); ?>
-    <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", 'Criar evento', array('class' => 'btn btn-default')); ?>
+    <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
+    <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
     <h4>Informações</h4>    
     <?php 
     $data['coletivo'] = $coletivo;
