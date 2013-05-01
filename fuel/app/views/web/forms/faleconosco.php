@@ -12,7 +12,7 @@
 
         <a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 
-        <div class="texto-wrapper">
+        <div class="texto-wrapper" style="margin-bottom: 80px;">
         <h1>Fale conosco</h1>
         
         <p>O IMAGINA RIO é feito de você, da sua participação e do seu envolvimento, e é por isso que o IMAGINA RIO busca meios de você fazer parte do nosso grande mesclado, seja você o representante de um <strong>coletivo</strong> ou <strong>escola</strong>, um <strong>artista</strong>, ou simplesmente uma pessoa interessada em cultura e integração.</p>
