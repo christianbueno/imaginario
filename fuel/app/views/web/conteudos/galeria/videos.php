@@ -28,7 +28,7 @@
         <nav class="btn-group">
             <?php //echo Html::anchor('/conteudos/', 'Todos', array('class' => $selected === 'todos' ? 'selected' : '')); ?>
             <button class="btn"><i class="icon-camera"></i> <?php echo Html::anchor('/conteudos/imagens/', 'Imagens', array('class' => $selected === 'imagens' ? 'selected' : '')); ?></button>
-            <button class="btn"><i class="icon-facetime-video"></i> <?php echo Html::anchor('/conteudos/videos/', 'Vídeos', array('class' => $selected === 'videos' ? 'selected' : '')); ?></button>
+            <button class="btn active"><i class="icon-facetime-video"></i> <?php echo Html::anchor('/conteudos/videos/', 'Vídeos', array('class' => $selected === 'videos' ? 'selected' : '')); ?></button>
         </nav>
         <div id="player">
 
