@@ -9,7 +9,7 @@
 <?php endforeach; ?>
 
 <?php foreach ($coletivos as $coletivo): ?>
-    <div id="<?php echo $coletivo->id; ?>">    
+    <div id="<?php echo $coletivo->id; ?>" class="editorCole">    
         <h3><?php echo $coletivo->name; ?></h3>
         <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
         <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
