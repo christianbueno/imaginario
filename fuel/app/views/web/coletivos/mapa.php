@@ -33,7 +33,9 @@
     -webkit-border-radius: 60px;
 }
 
-    <?php foreach ($coletivos as $coletivo):?>   
+    <?php 
+    $total = count($coletivos);
+    foreach ($coletivos as $coletivo):?>   
    
    .fundo<?php echo $coletivo->id; ?> {
 	   background: <?php echo $coletivo->background; ?>;
@@ -44,7 +46,7 @@
 </head>
 <body class="noBG">
     <div id="box-coletivos">
-        <h1>Coletivos</h1>
+        <h1>Coletivos &amp; Artistas (<?php echo $total; ?>)</h1>
         <ul id="box-coletivos-lista">
         <?php foreach ($coletivos as $coletivo):
             $coletivo_id = $coletivo->id;
