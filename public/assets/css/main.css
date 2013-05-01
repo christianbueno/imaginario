@@ -1032,6 +1032,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     margin: 0 auto;
 }
 
+
 #box-coletivos {
     position: absolute;
     left: 75%;
@@ -1086,4 +1087,22 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #box-coletivos-lista a:hover {
     text-decoration: none;
     background: #c35802;        
+}
+#galeria .btn-group {
+    margin: 0 0 25px 25px;
+}
+#galeria .btn-group button a {
+    text-decoration: none;
+    color: #3a3a3a !important;
+    font-weight: bold !important;
+}
+#galeria .btn-group button a:hover {
+    text-decoration: none !important;
+}
+.editorCole, .liColetivos {
+    display: block;
+    background: rgba(255,255,255,0.8);
+    padding: 25px;
+    margin-bottom: 50px;
+
 }

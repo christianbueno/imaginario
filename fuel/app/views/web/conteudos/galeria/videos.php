@@ -25,10 +25,10 @@
 
         <div id="galeria" class="container">
         <h1>Galeria <?php echo $title; ?></h1>
-        <nav>
+        <nav class="btn-group">
             <?php //echo Html::anchor('/conteudos/', 'Todos', array('class' => $selected === 'todos' ? 'selected' : '')); ?>
-            <?php echo Html::anchor('/conteudos/imagens/', 'Imagens', array('class' => $selected === 'imagens' ? 'selected' : '')); ?>
-            <?php echo Html::anchor('/conteudos/videos/', 'Videos', array('class' => $selected === 'videos' ? 'selected' : '')); ?>
+            <?php echo Html::anchor('/conteudos/imagens/', '<i class="icon-camera"></i>  Imagens', array('class' => $selected === 'imagens' ? 'active btn' : 'btn')); ?>
+            <?php echo Html::anchor('/conteudos/videos/', '<i class="icon-facetime-video"></i> Vídeos', array('class' => $selected === 'videos' ? 'active btn' : 'btn')); ?>
         </nav>
         <div id="player">
 

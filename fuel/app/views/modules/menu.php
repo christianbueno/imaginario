@@ -60,10 +60,16 @@
     </a>
     </div>
     <div class="row">
-    <a  class="span2 offset2" href="/conteudos/">
+    <a  class="span2" href="/conteudos/imagens">
         <span class="botaoMenu fotos">
         <img src="/assets/img/fotos.png" alt="inicio" width="73" height="77" />
         Fotos
+        </span>
+    </a>
+    <a  class="span2" href="/conteudos/videos">
+        <span class="botaoMenu fotos">
+        <img src="/assets/img/video.png" alt="inicio" width="73" height="77" />
+        Vídeos
         </span>
     </a>
     </div>

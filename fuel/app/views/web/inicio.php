@@ -10,9 +10,9 @@
 <body>
 	<div id="vignette" class="container-fluid">		
 	<div class="linguas">
-	<img src="assets/img/flag-02.png" alt="flag-02" width="32" height="32" />
-<img src="assets/img/flag-11.png" alt="flag-11" width="32" height="32" />
-<img src="assets/img/flag-12.png" alt="flag-12" width="32" height="32" />
+		<img src="assets/img/flag-11.png" alt="flag-11" width="32" height="32" />
+		<img src="assets/img/flag-02.png" alt="flag-02" width="32" height="32" />
+		<img src="assets/img/flag-12.png" alt="flag-12" width="32" height="32" />
 	</div>
 			<a href="http://imaginario.etc.br" id="logo" class="offset2"></a>
 			<div id="socialmedia">
