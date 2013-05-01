@@ -5,9 +5,9 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
 
-<ul class="nav nav-list">
+<ul class="nav nav-list liColetivos">
 <?php foreach ($coletivos as $coletivo): ?>
-    <li><a href="#<?php echo $coletivo->id; ?>"><i class="icon-globe"></i> <?php echo $coletivo->name; ?></a></li>
+    <li><a href="#<?php echo $coletivo->id; ?>"><i class="icon-cog"></i> <?php echo $coletivo->name; ?></a></li>
 <?php endforeach; ?>
 </ul>
 

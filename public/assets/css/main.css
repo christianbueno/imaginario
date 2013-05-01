@@ -1037,7 +1037,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #galeria .btn-group button a:hover {
     text-decoration: none !important;
 }
-.editorCole {
+.editorCole, .liColetivos {
     display: block;
     background: rgba(255,255,255,0.8);
     padding: 25px;
