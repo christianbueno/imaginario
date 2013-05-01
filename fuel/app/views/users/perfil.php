@@ -4,9 +4,12 @@
 
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
+
+<div class="btn-group btn-group-vertical">
 <?php foreach ($coletivos as $coletivo): ?>
-    <a href="#<?php echo $coletivo->id; ?>"><?php echo $coletivo->name; ?></a><br/>
+    <a href="#<?php echo $coletivo->id; ?>" class="btn"><i class="icon-globe"></i> <?php echo $coletivo->name; ?></a><br/>
 <?php endforeach; ?>
+</div>
 
 <?php foreach ($coletivos as $coletivo): ?>
     <div id="<?php echo $coletivo->id; ?>" class="editorCole">    
