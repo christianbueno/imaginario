@@ -124,26 +124,27 @@ $(document).ready(function(){
         anchor: new google.maps.Point(60, 200)
     };
     <?php $i--; ?>
-    var thumb<?php echo $coletivo->id; ?> = new RichMarker({
-        position: location,        
-        map: map,  
-        shadow: null,
-        zIndex: <?php echo $i ?>,
-        flat: true,          
-        optimized: false,  
-        content: '<span class="fundo<?php echo $coletivo->id; ?> foto"><?php echo $coletivo->name; ?></span>',
-    });    
+ 
     <?php $i--; ?>
     var marker<?php echo $coletivo->id; ?> = new google.maps.Marker({
         position: location,        
         map: map,       
-        zIndex: <?php echo $i ?>,     
+        zIndex: Math.round(location.lat()*-100000)<<5,     
         optimized: false,  
         
         icon: seta<?php echo $coletivo->id; ?>,        
         shadow: shadow        
     });
 
+    var thumb<?php echo $coletivo->id; ?> = new RichMarker({
+        position: location,        
+        map: map,  
+        shadow: null,
+        zIndex: marker<?php echo $coletivo->id; ?>.getZIndex() + 1,
+        flat: true,          
+        optimized: false,  
+        content: '<span class="fundo<?php echo $coletivo->id; ?> foto"><?php echo $coletivo->name; ?></span>',
+    }); 
 
     <?php 
         $coletivo_id = $coletivo->id;
