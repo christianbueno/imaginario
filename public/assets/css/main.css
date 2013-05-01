@@ -448,6 +448,11 @@ margin-bottom: -10px;
 
 }
 
+.i-thumb {
+    width: 25px;
+    height: 25px;
+}
+
 .i-small {
     width: 100px;
     height: 100px;
@@ -1025,4 +1030,60 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     display: block;
     width: 545px;
     margin: 0 auto;
+}
+
+#box-coletivos {
+    position: absolute;
+    left: 75%;
+    top: 15%;
+    width: 250px;
+    
+    background: rgba(215, 100, 0, 0.4);
+    z-index: 998;
+}
+
+#box-coletivos h1 {
+    font-family: 'brandon_grotesquebold',sans-serif;
+    font-size: 14px;        
+    text-transform: uppercase; 
+    line-height: 18px;
+    color: white;
+    cursor: move;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    background: #D46002;
+    margin:0;
+    padding: 7px;
+}
+#box-coletivos-lista {
+    margin: 0;
+    padding: 7px;
+    max-height: 350px;
+    overflow-x: hidden;    
+    overflow-y: scroll;    
+}
+
+#box-coletivos-lista li {
+    list-style-image: none;
+    list-style: none;          
+    margin-bottom: 2.5px;  
+}
+#box-coletivos-lista img {
+    margin-right: 5px;
+}
+#box-coletivos-lista a {
+    font-family: 'brandon_grotesquebold',sans-serif;
+    font-size: 13px;    
+    padding: 5px;      
+    display: block;
+    text-transform: uppercase; 
+    background: #D46002; 
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    -webkit-transition: background 0.1s linear;    
+}
+#box-coletivos-lista a:hover {
+    text-decoration: none;
+    background: #c35802;        
 }
