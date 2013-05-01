@@ -5,11 +5,11 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
 <?php foreach ($coletivos as $coletivo): ?>
-    <a href="#<?php echo $coletivo->name; ?>"><?php echo $coletivo->name; ?></a><br/>
+    <a href="#<?php echo $coletivo->id; ?>"><?php echo $coletivo->name; ?></a><br/>
 <?php endforeach; ?>
 
 <?php foreach ($coletivos as $coletivo): ?>
-    <div name="<?php echo $coletivo->name; ?>">    
+    <div name="<?php echo $coletivo->id; ?>">    
         <h3><?php echo $coletivo->name; ?></h3>
         <?php echo Html::anchor("users/conteudo/adicionar/$coletivo->id", '<i class="icon-file"></i> Enviar conteúdo', array('class' => 'btn btn-default')); ?>
         <?php echo Html::anchor("users/evento/adicionar/$coletivo->id", '<i class="icon-calendar"></i> Criar evento', array('class' => 'btn btn-default')); ?>
