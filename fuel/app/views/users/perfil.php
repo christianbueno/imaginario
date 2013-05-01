@@ -5,11 +5,11 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
 
-<div class="btn-group btn-group-vertical">
+<ul class="nav nav-list">
 <?php foreach ($coletivos as $coletivo): ?>
-    <a href="#<?php echo $coletivo->id; ?>" class="btn"><i class="icon-globe"></i> <?php echo $coletivo->name; ?></a><br/>
+    <li><a href="#<?php echo $coletivo->id; ?>"><i class="icon-globe"></i> <?php echo $coletivo->name; ?></a></li>
 <?php endforeach; ?>
-</div>
+</ul>
 
 <?php foreach ($coletivos as $coletivo): ?>
     <div id="<?php echo $coletivo->id; ?>" class="editorCole">    
