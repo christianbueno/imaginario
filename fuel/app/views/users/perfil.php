@@ -5,7 +5,7 @@
 <?php if( count($coletivos) > 0 ) { ?>
 <h2>Meus coletivos</h2>
 <?php foreach ($coletivos as $coletivo): ?>
-    <?php echo $coletivo->name; ?>
+    <?php echo $coletivo->name; ?><br/>
 <?php endforeach; ?>
 
 <?php foreach ($coletivos as $coletivo): ?>    
