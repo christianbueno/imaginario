@@ -1026,3 +1026,14 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     width: 545px;
     margin: 0 auto;
 }
+#galeria .btn-group {
+    margin: 0 0 25px 25px;
+}
+#galeria .btn-group button a {
+    text-decoration: none;
+    color: #3a3a3a !important;
+    font-weight: bold !important;
+}
+#galeria .btn-group button a:hover {
+    text-decoration: none !important;
+}
