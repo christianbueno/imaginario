@@ -19,7 +19,9 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    z-index: 997
+    z-index: 997;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 #logo {
@@ -197,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 .texto-wrapper {
 	position: relative;
 	width: 725px;
-	margin-left: 195px;
+	margin: 0 0 50px 195px;
 	float: left;
 	background: rgba(255,255,255, 0.8);
 	color: #3a3a3a;
@@ -976,4 +978,20 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 .texto-wrapper h1 a:hover {
 	text-decoration: none;
+}
+.copyFooter {
+    background: rgba(255,114,0,0.7);
+    text-align: center;
+    font-size: 10px;
+    margin-top: 50px;
+    padding: 15px 0 15px 0;
+    color: #ffffff;
+    line-height: 12px;
+    bottom: 0px;
+    width:100%;
+    clear: both;
+}
+.copyFooter a {
+    color: #ffffff;
+    text-decoration: underline;
 }
