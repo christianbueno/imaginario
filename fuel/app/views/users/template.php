@@ -8,14 +8,6 @@
     <?php echo Asset::css('main.css'); ?>
 
     <?php echo Asset::js('jquery-1.8.3.min.js'); ?>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-      <link rel="stylesheet" href="/resources/demos/style.css" />
-      <script>
-      $(function() {
-        $( "#accordion" ).accordion();
-      });
-    </script>
 </head>
 <body class="zulub">
     <div id="vignette" class="container-fluid">     
