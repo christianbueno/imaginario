@@ -101,12 +101,12 @@ $(document).ready(function(){
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     locator.init();
+    markers = new Array();
+    highestZIndex = 0;
 
 <?php 
     foreach ($coletivos as $coletivo):
 ?>   
-	
-
 
     var location = new google.maps.LatLng(<?php echo $coletivo->latlng; ?>);
     
@@ -128,12 +128,12 @@ $(document).ready(function(){
         position: location,        
         map: map,       
         zIndex: Math.round(location.lat()*-100000)<<5,     
-        optimized: false,  
-        
+        optimized: false,          
         icon: seta<?php echo $coletivo->id; ?>,        
         shadow: shadow        
     });
     marker<?php echo $coletivo->id; ?>.set("originalZIndex", marker<?php echo $coletivo->id; ?>.getZIndex());
+    markers.push(marker<?php echo $coletivo->id; ?>);
 
     var thumb<?php echo $coletivo->id; ?> = new RichMarker({
         position: location,        
@@ -155,18 +155,33 @@ $(document).ready(function(){
         window.location.href = '<?php echo $url; ?>';
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {        
-        //this.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX-1});   
-        //thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX});   
+        getHighestZIndex();        
+        this.setOptions({zIndex:highestZIndex+1});   
+        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:highestZIndex+2});   
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseout', function(e) {
-        //this.setOptions({zIndex:this.get("originalZIndex")});  
-        //thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
+        this.setOptions({zIndex:this.get("originalZIndex")});  
+        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
     });    
 
     
 <?php endforeach; ?> 
 });
-
+function getHighestZIndex() {        
+    
+    if (highestZIndex==0) {  
+        if (markers.length>0) {  
+            for (var i=0; i<markers.length; i++) {  
+                tempZIndex = markers[i].getZIndex();  
+                if (tempZIndex>highestZIndex) {  
+                    highestZIndex = tempZIndex;  
+                }  
+            }  
+        }  
+    }  
+    return highestZIndex;  
+      
+} 
 </script>
 
 
