@@ -1089,6 +1089,9 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     text-decoration: none;
     background: #c35802;        
 }
+#box-coletivos-lista a:focus {
+    text-decoration: none;
+}
 #galeria .btn-group {
     margin: 0 0 25px 25px;
 }

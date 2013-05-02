@@ -1,4 +1,37 @@
-var shadowbox = (function(){
+var locator = (function(){
+
+    var $box = $('#box-coletivos'),
+        $items = $box.find('a');
+
+    var locate = function(e) {
+        e.preventDefault;
+        $current = $(e.target);
+        latlng = $current.data('latlng');
+        lat = latlng.split(',')[0];
+        lng = latlng.split(',')[1];
+
+        
+        
+        if(map.getZoom() < 15)
+            map.setZoom(15);
+
+        map.panTo(new google.maps.LatLng(lat,lng));
+
+        return false;
+    },
+    binds = function (){
+        $items.on( 'click' , locate );
+    },
+    init = function() {
+        binds();
+    };
+
+    return {
+        init: init
+    }
+
+})(),
+shadowbox = (function(){
     var $items = $('.video'),
         $player = $('#player');
 

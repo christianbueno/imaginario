@@ -54,7 +54,7 @@
             $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
         ?>   
 
-            <li><?php echo Html::anchor($url, Html::img($coletivo->thumb, array('class' => 'i-thumb pull-left')) . $coletivo->name, array('style' => "background-color: #$coletivo->cor")); ?></li>
+            <li><?php echo Html::anchor('javascript:void(0)', Html::img($coletivo->thumb, array('class' => 'i-thumb pull-left')) . $coletivo->name, array('style' => "background-color: #$coletivo->cor", 'data-latlng' => $coletivo->latlng)); ?></li>
         <?php endforeach; ?>
     </div>
     <div class="bgMap" id="map-canvas"></div>
@@ -79,8 +79,9 @@
 ?>
 
 <script>
+
 $(document).ready(function(){
-    $( "#box-coletivos" ).draggable({ 
+    $("#box-coletivos").draggable({ 
         handle: "h1",
         scroll: false,
         containment: 'parent'
@@ -99,10 +100,9 @@ $(document).ready(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-    
+    locator.init();
 
 <?php 
-    $i = 999;
     foreach ($coletivos as $coletivo):
 ?>   
 	
@@ -123,18 +123,17 @@ $(document).ready(function(){
         url: '/assets/img/sombra.png',                
         anchor: new google.maps.Point(60, 200)
     };
-    <?php $i--; ?>
- 
-    <?php $i--; ?>
+
     var marker<?php echo $coletivo->id; ?> = new google.maps.Marker({
         position: location,        
         map: map,       
-        zIndex: Math.round(location.lat()*-100000)<<5,     
+        zIndex: Math.round(location.lat()*-1000)<<5,     
         optimized: false,  
         
         icon: seta<?php echo $coletivo->id; ?>,        
         shadow: shadow        
     });
+    marker<?php echo $coletivo->id; ?>.set("originalZIndex", marker<?php echo $coletivo->id; ?>.getZIndex());
 
     var thumb<?php echo $coletivo->id; ?> = new RichMarker({
         position: location,        
@@ -145,7 +144,7 @@ $(document).ready(function(){
         optimized: false,  
         content: '<span class="fundo<?php echo $coletivo->id; ?> foto"><?php echo $coletivo->name; ?></span>',
     }); 
-
+    thumb<?php echo $coletivo->id; ?>.set("originalZIndex", thumb<?php echo $coletivo->id; ?>.getZIndex());
     <?php 
         $coletivo_id = $coletivo->id;
         $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
@@ -155,15 +154,13 @@ $(document).ready(function(){
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
-    google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {
-        $current = $(e.target);
-
-        $current.addClass('hovered');
+    google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {        
+        this.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX-1});   
+        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX});   
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseout', function(e) {
-        $current = $(e.target);
-
-        $current.removeClass('hovered');
+        this.setOptions({zIndex:this.get("originalZIndex")});  
+        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
     });    
 
     
