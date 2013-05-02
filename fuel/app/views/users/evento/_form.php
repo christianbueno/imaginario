@@ -76,10 +76,17 @@
 
         <div class="input">
             <?php echo Form::select('type', 'teatro', array(
-                'teatral' => 'Teatral',
-                'musical' => 'Musical',
-                'artistico' => 'Artistico',
-                'esportivo' => 'Esportivo',
+                'artes-plasticas' => 'Artes Plásticas',
+                'artes-cenicas' => 'Artes Cênicas (teatro, circo e dança)',
+                'cinema-video' => 'Cinema e Vídeo',
+                'esportes' => 'Esportes',
+                'fotografia' => 'Fotografia',
+                'infantil' => 'Infantil',
+                'meio-ambiente' => 'Meio Ambiente',
+                'musica' => 'Música e Canto',
+                'palestras' => 'Palestras',
+                'poesia' => 'Poesia',
+                'outros' => 'Outros',
             )); ?>
         </div>
     </div>  
