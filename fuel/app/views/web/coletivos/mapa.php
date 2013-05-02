@@ -127,7 +127,7 @@ $(document).ready(function(){
     var marker<?php echo $coletivo->id; ?> = new google.maps.Marker({
         position: location,        
         map: map,       
-        zIndex: Math.round(location.lat()*-1000)<<5,     
+        zIndex: Math.round(location.lat()*-100000)<<5,     
         optimized: false,  
         
         icon: seta<?php echo $coletivo->id; ?>,        
@@ -155,12 +155,12 @@ $(document).ready(function(){
         window.location.href = '<?php echo $url; ?>';
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {        
-        this.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX-1});   
-        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX});   
+        //this.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX-1});   
+        //thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:google.maps.Marker.MAX_ZINDEX});   
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseout', function(e) {
-        this.setOptions({zIndex:this.get("originalZIndex")});  
-        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
+        //this.setOptions({zIndex:this.get("originalZIndex")});  
+        //thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
     });    
 
     
