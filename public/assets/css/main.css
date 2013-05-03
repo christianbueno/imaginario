@@ -1032,18 +1032,21 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     margin: 0 auto;
 }
 
-
-#box-coletivos {
+.box {
     position: absolute;
-    left: 75%;
-    top: 15%;
-    width: 250px;
-    
     background: rgba(215, 100, 0, 0.4);
     z-index: 998;
 }
 
-#box-coletivos h1 {
+#box-coletivos {
+    
+    left: 75%;
+    top: 15%;
+    width: 250px;
+
+}
+
+.box h1 {
     font-family: 'brandon_grotesquebold',sans-serif;
     font-size: 14px;        
     text-transform: uppercase; 
@@ -1109,4 +1112,14 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     padding: 25px;
     margin-bottom: 50px;
 
+}
+
+#toolbar {
+    left: 20%;
+    top: 10%;
+    width: 250px;
+}
+
+#toolbar-menu {
+    padding: 7px;
 }

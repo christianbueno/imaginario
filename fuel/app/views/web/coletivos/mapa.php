@@ -13,7 +13,10 @@
   
   
 <style type="text/css">
-
+.foto:hover {
+    font-size: 24px !important;
+    background: black !important;
+}
 .foto {
     color: white;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
@@ -45,7 +48,7 @@
 </style> 
 </head>
 <body class="noBG">
-    <div id="box-coletivos">
+    <div id="box-coletivos" class="box">
         <h1>Coletivos &amp; Artistas (<?php echo $total; ?>)</h1>
         <ul id="box-coletivos-lista">
         <?php foreach ($coletivos as $coletivo):
@@ -70,6 +73,7 @@
         	<a href="/escolas"><span>Escolas</span></a>
         	<a href="/individual"><span class="partLast">Individual</span></a>
         </div>
+        <?php echo render('modules/toolbar'); ?>
         <?php echo render('modules/menu'); ?>
     </div>
 <?php echo Asset::js('jquery-1.9.1.min.js'); ?>
@@ -81,7 +85,7 @@
 <script>
 
 $(document).ready(function(){
-    $("#box-coletivos").draggable({ 
+    $(".box").draggable({ 
         handle: "h1",
         scroll: false,
         containment: 'parent'
@@ -100,7 +104,10 @@ $(document).ready(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
     locator.init();
+    toolbar.init();
+
     markers = new Array();
     highestZIndex = 0;
 

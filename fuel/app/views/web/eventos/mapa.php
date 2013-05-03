@@ -14,16 +14,22 @@
 
         <a href="/" id="logo" class="offset2"></a>             
 
-
+        <?php echo render('modules/toolbar'); ?>
         <?php echo render('modules/menu'); ?>
     </div>
 <?php echo Asset::js('jquery-1.9.1.min.js'); ?>
+<?php echo Asset::js('jquery-ui-1.10.2.custom.min.js'); ?>
 <?php echo Asset::js('main.js'); 
 
 ?>
 
 <script>
 $(document).ready(function(){
+    $(".box").draggable({ 
+        handle: "h1",
+        scroll: false,
+        containment: 'parent'
+    });
     var mapOptions = {
         zoom: 12,        
         zoomControl: true,
@@ -38,6 +44,8 @@ $(document).ready(function(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);    
+
+    toolbar.init();
 
     <?php foreach ($eventos as $evento):?>   
         var location = new google.maps.LatLng(<?php echo $evento->latlng; ?>); 

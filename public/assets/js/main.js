@@ -1,4 +1,40 @@
-var locator = (function(){
+var toolbar = (function(){
+        var $box = $('#toolbar'),
+            $opt_plus = $('#toolbar-menu-plus'),
+            $opt_minus = $('#toolbar-menu-minus');
+
+        var ZOOM_RANGE = 1;
+
+    var plus_zoom = function(e) {
+        e.preventDefault;
+        
+        current_zoom = map.getZoom();
+
+        map.setZoom(current_zoom + ZOOM_RANGE);
+
+        return false;
+    },
+    minus_zoom = function(e) {
+        e.preventDefault;
+        current_zoom = map.getZoom();
+
+        map.setZoom(current_zoom - ZOOM_RANGE);
+
+        return false;
+    },
+    binds = function (){
+        $opt_plus.on( 'click' , plus_zoom );
+        $opt_minus.on( 'click' , minus_zoom );
+    },
+    init = function() {
+        binds();
+    };
+
+    return {
+        init: init
+    }
+})(),
+locator = (function(){
 
     var $box = $('#box-coletivos'),
         $items = $box.find('a');
