@@ -18,7 +18,7 @@
 			<div id="socialmedia">
 				<a href="http://www.facebook.com/pages/ImaginaRio/210683839051269" target="_blank"><img src="assets/img/facebook_32.png" alt="facebook_32" width="32" height="32" /></a>
 				<img src="assets/img/google_32.png" alt="google_32" width="32" height="32" />
-				<img src="assets/img/twitter_32.png" alt="twitter_32" width="32" height="32" />
+				<a href="http://twitter.com/imaginarioetc" target="_blank"><img src="assets/img/twitter_32.png" alt="twitter_32" width="32" height="32" /></a>
 				<a href="http://www.youtube.com/user/REDEIMAGINARIO?feature=watch" target="_blank"><img src="assets/img/Youtube.png" alt="vimeo_32" width="32" height="32" /></a>
 			</div>	
 			
