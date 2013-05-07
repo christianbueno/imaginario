@@ -1153,7 +1153,8 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 .media-list {
     margin: 5px;  
-    max-height: 500px;  
+    max-height: 500px;
+    overflow: hidden;  
 }
 
 .media h3 {
