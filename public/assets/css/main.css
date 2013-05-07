@@ -920,9 +920,7 @@ font-family: arial,sans-serif;
 }
 
 
-.infoboxeventos {
-    margin-top: 8px; background: #22AADE; padding: 5px;
-}
+
 
 /* Bootstrap Css Map Fix*/
 #map-canvas img { 
@@ -1122,4 +1120,51 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 
 #toolbar-menu {
     padding: 7px;
+}
+
+.infoboxeventos {
+    margin-top: 8px; background: rgba(13,69,90, 0.5);
+}
+
+.infoboxeventos h2 {
+    background: #0d455a;
+    font-family: 'brandon_grotesquebold',sans-serif;
+    font-size: 14px;        
+    text-transform: uppercase; 
+    line-height: 18px;
+    color: white;
+    cursor: move;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    padding: 7px;
+    margin:0;    
+}
+
+.evento-dia {
+    position: relative;
+    top: 5px;
+    color: #05171f;
+}
+
+.media {
+    background: white;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.media-list {
+    margin: 5px;    
+}
+
+.media h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 5px;
+    margin-left: 0;
+}
+.media p {
+    margin: 0;
+    font-size: 12px;
+}
+.media small {
+    font-size: 11px;
 }

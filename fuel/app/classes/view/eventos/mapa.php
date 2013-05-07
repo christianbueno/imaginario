@@ -9,6 +9,7 @@ class View_Eventos_Mapa extends ViewModel
         $eventos = Model_Evento::find('all');
 
         foreach ($eventos as $evento) {
+            $evento->coletivo = Model_Coletivo::find($evento->coletivo_id);
             $evento->info = unserialize($evento->metadata);            
 
             $evento->icon = '/assets/img/eventos/'.$evento->info['type'].'.png';
