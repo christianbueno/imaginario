@@ -83,7 +83,7 @@ $(document).ready(function(){
                                 '<span class="pull-left evento-dia"><?php echo Date::forge($evento->when)->format("<span class=\'dia\'>%d</span><span class=\'mes\'>%b</span><span class=\'ano\'>%Y</span>"); ?></span>' +        
                                     '<div class="media-body">' +
                                         '<h3 class="media-heading"><?php echo $evento->title; ?></h3>' +
-                                        '<?php echo html_tag("p", array(), $evento->description); ?>' + 
+                                        '<?php echo nl2br($evento->description); ?>' + 
                                         '<small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small>' + 
                                     '</div>' +
                                 '</li>' +
