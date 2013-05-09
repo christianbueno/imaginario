@@ -1121,6 +1121,11 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #toolbar-menu {
     padding: 7px;
 }
+.tooltip-eventos {
+    width: 56px;
+    height: 54px;
+    background: url(../img/ico-evento.png) 0 0 no-repeat;
+}
 
 .infoboxeventos {
     margin-top: 8px; background: rgba(13,69,90, 0.5);
@@ -1132,8 +1137,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     font-size: 14px;        
     text-transform: uppercase; 
     line-height: 18px;
-    color: white;
-    cursor: move;
+    color: white;    
     text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
     padding: 7px;
     margin:0;    
@@ -1149,12 +1153,17 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     background: white;
     margin: 0;
     margin-bottom: 5px;
+    margin-right: 5px;
     padding: 5px;
+}
+.media:last-child {
+    margin-bottom: 0;
 }
 .media-list {
     margin: 5px;  
     max-height: 500px;
-    overflow: hidden;  
+    overflow-x: hidden;    
+    overflow-y: scroll;  
 }
 
 .media h3 {
@@ -1162,6 +1171,10 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     line-height: 16px;
     margin: 5px;
     margin-left: 0;
+}
+.media h3 small {
+    display: block;
+    margin-top: 2.5px;
 }
 .media p {
     margin: 0;

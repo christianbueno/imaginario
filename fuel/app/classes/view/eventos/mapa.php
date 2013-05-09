@@ -13,7 +13,8 @@ class View_Eventos_Mapa extends ViewModel
             $evento->info = unserialize($evento->metadata);            
 
             $evento->icon = '/assets/img/eventos/'.$evento->info['type'].'.png';
-            $evento->latlng = $evento->info['latlng'];          
+            $evento->latlng = $evento->info['latlng'];  
+            $evento->endereco = $evento->info['address'];          
         }
 
         $this->eventos = $eventos;

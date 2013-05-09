@@ -64,12 +64,35 @@ $(document).ready(function(){
             icon: "<?php echo $evento->icon; ?>"        
         });
     <?php endforeach; ?> 
+
+        var opt = {
+                 content: ''
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,boxClass: 'tooltip-eventos'
+                ,pixelOffset: new google.maps.Size(-20, -100)
+                ,zIndex: null
+                ,boxStyle: {                   
+                  opacity: 1
+                  ,width: "50px"
+                 }
+                ,closeBoxURL: ''
+                ,closeBoxMargin: "10px 2px 2px 2px"
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+        };
+        var tooltip = new InfoBox(opt);
+
     <?php 
     $i = 0;
     
-    foreach ($locations as $location):?>  
+    foreach ($locations as $location):
+        $i++
+    ?>  
             
-            content = '<h2>Eventos</h2>' +                            
+            content = '<h2><?php echo $location[0]->endereco; ?></h2>' +                            
                             '<ul class="media-list">' +
                             <?php foreach ($location as $evento):
                                 $coletivo = $evento->coletivo;                                    
@@ -82,35 +105,16 @@ $(document).ready(function(){
                                 '<li class="media">' +
                                 '<span class="pull-left evento-dia"><?php echo Date::forge($evento->when)->format("<span class=\'dia\'>%d</span><span class=\'mes\'>%b</span><span class=\'ano\'>%Y</span>"); ?></span>' +        
                                     '<div class="media-body">' +
-                                        '<h3 class="media-heading"><?php echo $evento->title; ?></h3>' +
+                                        '<h3 class="media-heading"><?php echo $evento->title; ?> <small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small></h3>' +
                                         '<?php echo str_replace(array("\r\n", "\r", "\n"), "<br />",$evento->description); ?>' + 
-                                        '<small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small>' + 
+                                        
                                     '</div>' +
                                 '</li>' +
-                            <?php endforeach; 
-                                $i++
-                            ?> 
+                            <?php endforeach; ?> 
                             '</ul>';
             $div = $('<div/>').text(content);
         
-        var myOptions = {
-                 content: $div.text()
-                ,disableAutoPan: false
-                ,maxWidth: 0
-                ,boxClass: 'infoboxeventos'
-                ,pixelOffset: new google.maps.Size(-80, -140)
-                ,zIndex: null
-                ,boxStyle: {                   
-                  opacity: 1
-                  ,width: "350px"
-                 }
-                ,closeBoxURL: ''
-                ,closeBoxMargin: "10px 2px 2px 2px"
-                ,infoBoxClearance: new google.maps.Size(1, 1)
-                ,isHidden: false
-                ,pane: "floatPane"
-                ,enableEventPropagation: false
-        };
+
         var refmarker<?php echo $i; ?> = new google.maps.Marker({
             position: new google.maps.LatLng(<?php echo $latlng; ?>),
             map: map,        
@@ -119,17 +123,44 @@ $(document).ready(function(){
             icon: '/assets/img/placer-eventos.png'
         });
 
+        var myOptions = {
+                 content: $div.text()
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,boxClass: 'infoboxeventos'
+                ,pixelOffset: new google.maps.Size(-80, -140)
+                ,zIndex: refmarker<?php echo $i; ?>.getZIndex() + 100
+                ,boxStyle: {                   
+                  opacity: 1
+                  ,width: "450px"
+                 }                
+                ,closeBoxURL: '/assets/img/glyphicons-halflings-white-remove.png'
+                ,closeBoxMargin: "7px 5px 5px 5px"
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+        };        
+
 
         var infowindow<?php echo $i; ?> = new InfoBox(myOptions);
+
+                
+        
+
+
+        google.maps.event.addListener(refmarker<?php echo $i; ?>, 'click', function(e) {
+            infowindow<?php echo $i; ?>.open(map,refmarker<?php echo $i; ?>);     
+        });      
         
         google.maps.event.addListener(refmarker<?php echo $i; ?>, 'mouseover', function(e) {
-
-            infowindow<?php echo $i; ?>.open(map,refmarker<?php echo $i; ?>);
+            tooltip.open(map,refmarker<?php echo $i; ?>);
         });
         google.maps.event.addListener(refmarker<?php echo $i; ?>, 'mouseout', function(e) {
-            infowindow<?php echo $i; ?>.close();
+            tooltip.close();
         });
 
+        
     <?php endforeach; 
 
     
