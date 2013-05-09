@@ -105,7 +105,7 @@ $(document).ready(function(){
                                 '<li class="media">' +
                                 '<span class="pull-left evento-dia"><?php echo Date::forge($evento->when)->format("<span class=\'dia\'>%d</span><span class=\'mes\'>%b</span><span class=\'ano\'>%Y</span>"); ?></span>' +        
                                     '<div class="media-body">' +
-                                        '<?php echo Html::img($evento->icon, array("class" => "pull-right")); ?>' +
+                                        '<?php echo Html::img($evento->icon, array("class" => "pull-right", "width" => "40", "height" => "40")); ?>' +
                                         '<h3 class="media-heading"><?php echo $evento->title; ?> <small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small></h3>' +
                                         '<?php echo str_replace(array("\r\n", "\r", "\n"), "<br />",$evento->description); ?>' + 
                                         
