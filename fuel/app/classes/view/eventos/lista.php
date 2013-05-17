@@ -35,10 +35,11 @@ class View_Eventos_Lista extends ViewModel
         }
         
 
-
+        $imonth = (int)$this->month;
+        $iyear = (int)$this->year;
         $eventos = Arr::filter_recursive($eventos, function($evento){             
             $date = Date::forge((int)$evento->when);
-            return (((int)$date->format("%m") === (int)$this->month) && ((int)$date->format("%Y") === (int)$this->year)); 
+            return (((int)$date->format("%m") === $imonth) && ((int)$date->format("%Y") === $iyear)); 
         });
         if($this->day)
             $eventos = Arr::filter_recursive($eventos, function($evento){             
