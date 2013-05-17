@@ -42,7 +42,7 @@
 
             </ul>
         </nav>        
-        <h3>Eventos</h3>
+        <h2>Eventos</h2>
         
 <?php
     $days = cal_days_in_month(CAL_GREGORIAN, $month, $year);
@@ -52,7 +52,7 @@
 
         if(count($today) > 0) {
         ?>
-        <h4><?php echo $i; ?> de <?php echo $meses[$month] ?> de <?php echo $year ?></h4>
+        <h3><?php echo $i; ?> de <?php echo $meses[$month] ?> de <?php echo $year ?></h3>
         <ul class="media-list">
         <?php                
         foreach ($today as $evento): 
