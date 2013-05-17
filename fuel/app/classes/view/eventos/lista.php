@@ -34,18 +34,21 @@ class View_Eventos_Lista extends ViewModel
             $evento->endereco = $evento->info['address'];    
         }
         
-
-        $imonth = (int)$this->month;
-        $iyear = (int)$this->year;
+        
+        Session::set_flash('month', (int)$this->month);
+        Session::set_flash('year', (int)$this->year);
+        
         $eventos = Arr::filter_recursive($eventos, function($evento){             
             $date = Date::forge((int)$evento->when);
-            return (((int)$date->format("%m") === $imonth) && ((int)$date->format("%Y") === $iyear)); 
+            return (((int)$date->format("%m") === Session::get_flash('month')) && ((int)$date->format("%Y") === Session::get_flash('year'))); 
         });
-        if($this->day)
+        if($this->day) {
+            Session::set_flash('day', (int)$this->day);
             $eventos = Arr::filter_recursive($eventos, function($evento){             
                 $date = Date::forge((int)$evento->when);
-                return (int)$date->format("%d") === (int)$this->day; 
+                return (int)$date->format("%d") === Session::get_flash('day'); 
             });
+        }
         $this->eventos = $eventos;
         $this->meses = self::$meses;
     }
