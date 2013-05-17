@@ -1,5 +1,5 @@
 <div id="toolbar" class="box">
-    <h1>Ferramentas</h1>
+    <h1>Navegação</h1>
     <nav id="toolbar-menu">
         <a href="/coletivos/" class="btn btn-small btn-default"><i class="icon-screenshot" title="Exibir todos os coletivos"></i></a>
         <a href="/eventos/" class="btn btn-small btn-default"><i class="icon-book" title="Exibir todos os eventos"></i></a>&nbsp;

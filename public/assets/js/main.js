@@ -1,4 +1,36 @@
-var toolbar = (function(){
+var facebook = (function(){
+    var $anchor = null;
+
+    var obj = {
+            method: 'feed',
+            display: 'dialog',
+            link: '',
+            picture: '',
+            name: '',
+            caption: '',
+            description: ''
+        };
+    var share = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $anchor = $(e.target);
+            obj.access_token = $anchor.data('token');
+            baseurl = window.location.protocol + "//" + window.location.host;
+            obj.link = baseurl + window.location.pathname + '/' +  $anchor.data('day') + '/' +  $anchor.data('idevento');
+            obj.picture = 'http://imaginario.etc.br/assets/img/logo.png';
+            obj.name = $anchor.data('name');
+            obj.caption = $anchor.data('caption');
+            obj.description = $anchor.data('desc');
+
+            FB.ui(obj, null);
+        };
+
+        return {
+            share: share
+        };
+})(),
+toolbar = (function(){
         var $box = $('#toolbar'),
             $opt_plus = $('#toolbar-menu-plus'),
             $opt_minus = $('#toolbar-menu-minus');

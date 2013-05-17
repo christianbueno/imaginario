@@ -60,4 +60,13 @@ class Controller_Router extends Controller
 	{
 		return Response::forge(View::forge('web/404'), 404);
 	}
+    public function action_channel()
+    {
+        $cache_expire = 60*60*24*365;       
+        header("Pragma: public");
+        header("Cache-Control: max-age=".$cache_expire);
+        header('Expires: ' . gmdate('D, d M Y H:i:s', time()+$cache_expire) . ' GMT');
+ 
+        return '<script src="//connect.facebook.net/pt_BR/all.js"></script>';
+    }
 }

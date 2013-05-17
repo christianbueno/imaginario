@@ -99,7 +99,7 @@ $(document).ready(function(){
                                 $coletivo_id = $coletivo->id;
                                 $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
                                 $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
-        
+                                
                                 $latlng = $evento->latlng;
                             ?>  
                                 '<li class="media">' +

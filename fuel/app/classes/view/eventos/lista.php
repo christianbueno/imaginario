@@ -3,6 +3,20 @@
 class View_Eventos_Lista extends ViewModel
 {
     public $_view = 'web/eventos/lista';
+    public static $meses = array(
+                            1=>'Janeiro',
+                            2=>'Fevereiro',
+                            3=>'Março',
+                            4=>'Abril',
+                            5=>'Maio',
+                            6=>'Junho',
+                            7=>'Julho',
+                            8=>'Agosto',
+                            9=>'Setembro',
+                            10=>'Outubro',
+                            11=>'Novembro',
+                            12=>'Dezembro'
+                            );
 
     public function view()
     {
@@ -11,9 +25,28 @@ class View_Eventos_Lista extends ViewModel
         ));
 
         foreach ($eventos as $evento) {
-            $evento->info = unserialize($evento->metadata);
+            $evento->coletivo = Model_Coletivo::find($evento->coletivo_id);
+            $evento->info = unserialize($evento->metadata);            
+
+            $evento->day = (int)Date::forge((int)$evento->when)->format("%d");            
+            $evento->icon = '/assets/img/eventos/'.$evento->info['type'].'.png';
+            $evento->latlng = $evento->info['latlng'];  
+            $evento->endereco = $evento->info['address'];    
         }
+        
+
+
+        $eventos = Arr::filter_recursive($eventos, function($evento){             
+            $date = Date::forge((int)$evento->when);
+            return (((int)$date->format("%m") === (int)$this->month) && ((int)$date->format("%Y") === (int)$this->year)); 
+        });
+        if($this->day)
+            $eventos = Arr::filter_recursive($eventos, function($evento){             
+                $date = Date::forge((int)$evento->when);
+                return (int)$date->format("%d") === (int)$this->day; 
+            });
         $this->eventos = $eventos;
+        $this->meses = self::$meses;
     }
 
 

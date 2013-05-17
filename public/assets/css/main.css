@@ -314,17 +314,7 @@ body.mapa-eventos-temp {
     -o-background-size: cover;
     -ms-background-size: cover;
 }
-#agenda div {
-	width: 100%;
-	font-family: 'brandon_grotesquelight_italic', sans-serif;
-	font-size: 18px;
-	padding: 15px 0 15px 10px;
-	float: left;
-}
-#agenda div span {
-	clear: none;
-	float: left;
-}
+
 .linhabranca {
 	background: rgba(255,255,255,0.5);
 }
@@ -365,6 +355,7 @@ body.mapa-eventos-temp {
 	background: url(../img/fbIco.png) no-repeat center center transparent;
 	padding: 0 104px 0 0;
 	margin-right: -65px;
+    cursor: pointer;
 }
 .noBG {
 	background: #fff;
@@ -972,9 +963,8 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	text-decoration: none;
 	color: #fff;
 }
-#agenda {
-	clear: both;
-}
+
+
 #galeria h1 {
 	margin: 25px 0 25px 25px;
 }
@@ -982,11 +972,8 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 	width: 600px;
 	margin: 0 auto;
 }
-#agenda .alert {
-	margin-top: 10px;
-	width: 700px;
-    margin: 0 auto;
-}
+
+
 .texto-wrapper h1 a {
 	color: #3a3a3a;
 }
@@ -1104,12 +1091,12 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 #galeria .btn-group button a:hover {
     text-decoration: none !important;
 }
+
 .editorCole, .liColetivos {
     display: block;
     background: rgba(255,255,255,0.8);
     padding: 25px;
     margin-bottom: 50px;
-
 }
 
 #toolbar {
@@ -1149,37 +1136,74 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     color: #05171f;
 }
 
-.media {
+#map-canvas .media {
     background: white;
     margin: 0;
     margin-bottom: 5px;
     margin-right: 5px;
     padding: 5px;
 }
-.media:last-child {
+#map-canvas .media:last-child {
     margin-bottom: 0;
 }
-.media-list {
+#map-canvas .media-list {
     margin: 5px;  
     max-height: 500px;
     overflow-x: hidden;    
     overflow-y: scroll;  
 }
 
-.media h3 {
+#map-canvas .media h3 {
     font-size: 16px;
     line-height: 16px;
     margin: 5px;
     margin-left: 0;
 }
-.media h3 small {
+#map-canvas .media h3 small {
     display: block;
     margin-top: 2.5px;
 }
-.media p {
+#map-canvas .media p {
     margin: 0;
     font-size: 12px;
 }
-.media small {
+#map-canvas .media small {
     font-size: 11px;
+}
+
+#calendar-years, #calendar-months, #calendar-days {
+    clear: both;    
+}
+
+#calendar-years ul, #calendar-months ul, #calendar-days ul {
+    margin: 0;
+    overflow: auto;
+}
+
+#calendar-years li, #calendar-months li, #calendar-days li {
+    list-style: none;    
+    list-style-image: none;
+    float: left;
+    padding: 2.5px;
+}
+
+
+#agenda .media {
+    background: rgba(255,255,255,0.6);
+    margin: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+#agenda .current h3 {
+    color: rgba(255, 114, 0, 0.7);
+}
+
+#agenda .media h3 small {
+    display: block;    
+}
+
+#agenda .media h3 {
+
 }
