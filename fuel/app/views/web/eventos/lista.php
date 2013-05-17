@@ -19,8 +19,8 @@
         <h2>Ano</h2>
         <nav id="calendar-years">            
             <ul>                
-                <li><?php echo Html::anchor('/eventos/agenda/2012', '2012', array('class' => 'btn btn-link'. ((int)$year === 2012 ? ' btn-inverse' : ' btn-default'))); ?></li>
-                <li><?php echo Html::anchor('/eventos/agenda/2013', '2013', array('class' => 'btn btn-link'. ((int)$year === 2013 ? ' btn-inverse' : ' btn-default'))); ?></li>
+                <li><?php echo Html::anchor("/eventos/agenda/2012/$month", '2012', array('class' => 'btn btn-link'. ((int)$year === 2012 ? ' btn-inverse' : ' btn-default'))); ?></li>
+                <li><?php echo Html::anchor("/eventos/agenda/2013/$month", '2013', array('class' => 'btn btn-link'. ((int)$year === 2013 ? ' btn-inverse' : ' btn-default'))); ?></li>
                 
             </ul>
         </nav>   
