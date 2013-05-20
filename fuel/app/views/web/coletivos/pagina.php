@@ -51,7 +51,7 @@
         ?>
             <li class="media">               
                    <div class="media-body">                       
-                       <h3 class="media-heading"><?php echo Html::img($evento->icon, array("class" => "pull-right", "width" => "40", "height" => "40")); ?><?php echo $evento->title; ?> <small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small></h3>
+                       <h3 class="media-heading"><?php echo Html::img($evento->icon, array("class" => "pull-right", "width" => "40", "height" => "40")); ?><?php echo $evento->title; ?> <small><?php echo Date::forge($evento->when)->format("%d/%m/%Y"); ?></small></h3>
                        
                        <?php echo str_replace(array("\r\n", "\r", "\n"), "<br />",$evento->description); ?> 
                        <span class="eventShare" data-day="<?php echo $evento->day; ?>" data-name="<?php echo $evento->title; ?>" data-idevento="<?php echo $evento->id; ?>" data-caption="Agenda Imaginario" data-desc="Evento do Coletivo/Artista <?php echo $evento->coletivo->name; ?>">Compartilhe</span>
