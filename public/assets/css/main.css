@@ -1013,12 +1013,10 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     z-index: 998;
 }
 
-#box-coletivos {
-    
+#box-coletivos {    
     left: 75%;
     top: 15%;
     width: 250px;
-
 }
 
 .box h1 {
@@ -1090,8 +1088,8 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 
 #toolbar {
-    left: 20%;
-    top: 10%;
+    left: 55%;
+    top: 25%;
     width: 250px;
 }
 
