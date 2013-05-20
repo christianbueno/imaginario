@@ -230,7 +230,7 @@ supports = (function() {
 slider =  (function(){
     var $holder = $('#holder'),
         $item = $holder.find('a'),
-        $text = $item.find('span');
+        $ismall = $holder.find('.i-small');
 
     var timeout = null;
 
@@ -261,7 +261,7 @@ slider =  (function(){
         );   
     },
     init = function() {  
-        $('.i-small').quickfit();      
+        $ismall.quickfit();      
         binds();
         animate();        
     };
