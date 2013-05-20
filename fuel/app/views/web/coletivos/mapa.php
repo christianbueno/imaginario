@@ -111,6 +111,15 @@ $(document).ready(function(){
     markers = new Array();
     highestZIndex = 0;
 
+  var diamante = {
+    url: '/assets/img/diamante.png',    
+    size: new google.maps.Size(46,35),    
+    origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    anchor: new google.maps.Point(0, 32)
+  };
+
+
 <?php 
     foreach ($coletivos as $coletivo):
 ?>   
@@ -123,28 +132,44 @@ $(document).ready(function(){
         fillColor: "#<?php echo $coletivo->cor; ?>",
         fillOpacity: 1,
         scale: 1,
-        anchor: new google.maps.Point(64, 204),
+        anchor: new google.maps.Point(53, 230),
         strokeWeight: 0
     };
     var shadow = {
         url: '/assets/img/sombra.png',                
-        anchor: new google.maps.Point(60, 200)
+        anchor: new google.maps.Point(53, 230)
     };
+
+
+
+
 
     var marker<?php echo $coletivo->id; ?> = new google.maps.Marker({
         position: location,        
         map: map,       
         zIndex: Math.round(location.lat()*-100000)<<5,     
         optimized: false,          
-        icon: seta<?php echo $coletivo->id; ?>,        
-        shadow: shadow        
+        icon: diamante        
     });
     marker<?php echo $coletivo->id; ?>.set("originalZIndex", marker<?php echo $coletivo->id; ?>.getZIndex());
     markers.push(marker<?php echo $coletivo->id; ?>);
 
+
+    var setamarker<?php echo $coletivo->id; ?> = new google.maps.Marker({
+        position: location,        
+        map: map,  
+        shadow: shadow,     
+        zIndex: marker<?php echo $coletivo->id; ?>.getZIndex(),     
+        optimized: false,          
+        icon: seta<?php echo $coletivo->id; ?>       
+    });
+
+    setamarker<?php echo $coletivo->id; ?>.setVisible(false);
+    setamarker<?php echo $coletivo->id; ?>.set("originalZIndex", setamarker<?php echo $coletivo->id; ?>.getZIndex());
     var thumb<?php echo $coletivo->id; ?> = new RichMarker({
         position: location,        
         map: map,  
+        anchor: new google.maps.Size(-50,-150),        
         shadow: null,
         zIndex: marker<?php echo $coletivo->id; ?>.getZIndex() + 1,
         flat: true,          
@@ -157,18 +182,24 @@ $(document).ready(function(){
         $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
         $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
     ?>
-
+    thumb<?php echo $coletivo->id; ?>.setVisible(false);
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {        
         getHighestZIndex();        
-        this.setOptions({zIndex:highestZIndex+1});   
-        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:highestZIndex+2});   
+        //this.setOptions({zIndex:highestZIndex+1});   
+        thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:highestZIndex+2}); 
+        thumb<?php echo $coletivo->id; ?>.setVisible(true); 
+        setamarker<?php echo $coletivo->id; ?>.setOptions({zIndex:highestZIndex+1});
+        setamarker<?php echo $coletivo->id; ?>.setVisible(true); 
     });
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseout', function(e) {
-        this.setOptions({zIndex:this.get("originalZIndex")});  
+        //this.setOptions({zIndex:this.get("originalZIndex")});  
         thumb<?php echo $coletivo->id; ?>.setOptions({zIndex:thumb<?php echo $coletivo->id; ?>.get("originalZIndex")});  
+        thumb<?php echo $coletivo->id; ?>.setVisible(false); 
+        setamarker<?php echo $coletivo->id; ?>.setOptions({zIndex:this.get("originalZIndex")});  
+        setamarker<?php echo $coletivo->id; ?>.setVisible(false);  
     });    
 
     

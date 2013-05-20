@@ -260,8 +260,9 @@ slider =  (function(){
             }
         );   
     },
-    init = function() {  
-        $ismall.quickfit();      
+    init = function() { 
+        if(typeof $ismall.quickfit === 'function') 
+            $ismall.quickfit();      
         binds();
         animate();        
     };
