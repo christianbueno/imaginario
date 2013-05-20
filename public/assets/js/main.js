@@ -261,7 +261,7 @@ slider =  (function(){
         );   
     },
     init = function() {  
-        $item.quickfit();      
+        //$item.quickfit();      
         binds();
         animate();        
     };
