@@ -40,10 +40,13 @@ class Controller_Coletivos extends Controller
         ));
 
         foreach ($eventos as $evento) {
+            $evento->coletivo = Model_Coletivo::find($evento->coletivo_id);
             $evento->info = unserialize($evento->metadata);            
 
+            $evento->day = (int)Date::forge((int)$evento->when)->format("%d");            
             $evento->icon = '/assets/img/eventos/'.$evento->info['type'].'.png';
-            $evento->latlng = $evento->info['latlng'];          
+            $evento->latlng = $evento->info['latlng'];  
+            $evento->endereco = $evento->info['address'];     
         }
         $data['images'] = $images;
         $data['coletivo'] = $coletivo;

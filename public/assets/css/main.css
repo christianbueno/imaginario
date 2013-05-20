@@ -888,6 +888,10 @@ font-family: arial,sans-serif;
 }
 
 
+#coletivo-images {
+    overflow: auto;
+    clear: both;
+}
 
 
 #coletivo-images li {
@@ -1176,7 +1180,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
 }
 
 
-#agenda .media {
+#coletivo-pagina .media, #agenda .media {
     background: rgba(255,255,255,0.6);
     margin: 0;
     margin-bottom: 5px;
@@ -1184,14 +1188,25 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     padding: 10px;
 }
 
-#agenda .current h3 {
+#coletivo-pagina .current h3, #agenda .current h3 {
     color: rgba(255, 114, 0, 0.7);
 }
 
-#agenda .media h3 small {
+#coletivo-pagina .media h3 small, #agenda .media h3 small {
     display: block;    
 }
 
 #agenda .media h3 {
 
+}
+
+#titulo-pagina {
+    background: url(../img/headerCole.png) 0 0 no-repeat;
+    padding: 5px 0 30px 80px;
+}
+
+#agenda-pagina {
+    background: url(../img/agenda-coletivo.png) 0 0 no-repeat;
+    padding: 5px 0 30px 140px;    
+    margin: 20px 0;
 }

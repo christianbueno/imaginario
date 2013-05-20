@@ -10,7 +10,7 @@
     <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
         
 </head>
-<body class="zulub" style="background: url(<?php echo $coletivo->latest_image; ?>) no-repeat center center fixed;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;-ms-background-size: cover;">
+<body class="zulub" id="coletivo-pagina" style="background: url(<?php echo $coletivo->latest_image; ?>) no-repeat center center fixed;background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;-o-background-size: cover;-ms-background-size: cover;">
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
@@ -20,7 +20,7 @@
         
         <div class="texto-wrapper">
 
-        <img src="/assets/img/headerCole.png" alt="headerCole" width="62" height="63" style="margin:0 16px 0 0;float:left;"/><h1 style="width:640px;float:left;margin-top:16px;margin-bottom:40px;"><?php echo Html::anchor( Input::uri() , $coletivo->name ); ?></h1>
+        <h1 id="titulo-pagina"><?php echo Html::anchor( Input::uri() , $coletivo->name ); ?></h1>
         <?php if(count($eventos) > 0) { ?>
         <div class="coleMap" id="map-canvas"></div>
         <?php } ?>
@@ -39,26 +39,32 @@
             echo '</li>';
         endforeach; ?> 
         </ul>
-        <div class="agendaCole pull-left"><img style="margin:0 16px 0 20px;" src="/assets/img/agenda-coletivo.png" alt="agenda-coletivo" width="120" height="63" /><h1>Agenda de eventos</h1>
-            <div id="agenda">
-
-                    <?php 
-        $i = 1;
+        <h2 id="agenda-pagina">Agenda de eventos</h2>
+            
+        <ul class="media-list">
+        <?php                
         foreach ($eventos as $evento): 
-            $i++;
+            $coletivo = $evento->coletivo;                                    
+            $coletivo_id = $coletivo->id;
+            $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
+            $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
         ?>
-            <div <?php echo $i % 2 === 0 ? 'class="linhabranca"' : ''; ?>>
-                <span class="data"><?php echo Date::forge($evento->when)->format("<span class=\"ano\">%Y</span><span class=\"dia\">%d</span><span class=\"mes\">%m</span>"); ?></span>
-                <span class="nome-evento"><?php echo $evento->title ?></span>
-                <span class="eventShare">Compartilhe</span>         
-            </div>
+            <li class="media">               
+                   <div class="media-body">                       
+                       <h3 class="media-heading"><?php echo Html::img($evento->icon, array("class" => "pull-right", "width" => "40", "height" => "40")); ?><?php echo $evento->title; ?> <small>Criado por: <?php echo Html::anchor($url, $coletivo->name); ?></small></h3>
+                       
+                       <?php echo str_replace(array("\r\n", "\r", "\n"), "<br />",$evento->description); ?> 
+                       <span class="eventShare" data-day="<?php echo $evento->day; ?>" data-name="<?php echo $evento->title; ?>" data-idevento="<?php echo $evento->id; ?>" data-caption="Agenda Imaginario" data-desc="Evento do Coletivo/Artista <?php echo $evento->coletivo->name; ?>">Compartilhe</span>
+                   </div>
+            </li>
         <?php endforeach; 
-        if(count($eventos) === 0) {
+                if(count($eventos) === 0) {
         ?> 
-        <p class="alert alert-info"><i class="icon-calendar"></i> Nenhum evento cadastrado</p>
+        <li class="alert alert-info"><i class="icon-calendar"></i> Nenhum evento cadastrado</li>
         <?php } ?>
-        </div>
-        </div>
+        </ul>            
+
+        
         
         </div>
         </div>
@@ -137,6 +143,31 @@ $(document).ready(function(){
         });
     <?php endforeach; ?>     
 });
+</script>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '428196857269693',                        // App ID from the app dashboard
+      channelUrl : '//imaginario.etc.br/router/channel', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+$('.eventShare').on('click', facebook.share);
 </script>
 </body></html>
 
