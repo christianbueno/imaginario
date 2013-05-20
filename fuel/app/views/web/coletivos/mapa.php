@@ -109,6 +109,8 @@ $(document).ready(function(){
     toolbar.init();
 
     markers = new Array();
+    thumbs = new Array();
+    setas = new Array();
     highestZIndex = 0;
 
   var diamante = {
@@ -163,7 +165,7 @@ $(document).ready(function(){
         optimized: false,          
         icon: seta<?php echo $coletivo->id; ?>       
     });
-
+    setas.push(setamarker<?php echo $coletivo->id; ?>);
     setamarker<?php echo $coletivo->id; ?>.setVisible(false);
     setamarker<?php echo $coletivo->id; ?>.set("originalZIndex", setamarker<?php echo $coletivo->id; ?>.getZIndex());
     var thumb<?php echo $coletivo->id; ?> = new RichMarker({
@@ -186,6 +188,7 @@ $(document).ready(function(){
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'click', function(e) {
         window.location.href = '<?php echo $url; ?>';
     });
+    thumbs.push(thumb<?php echo $coletivo->id; ?>);
     google.maps.event.addListener(marker<?php echo $coletivo->id; ?>, 'mouseover', function(e) {        
         getHighestZIndex();        
         //this.setOptions({zIndex:highestZIndex+1});   
@@ -204,6 +207,7 @@ $(document).ready(function(){
 
     
 <?php endforeach; ?> 
+correctLocList(markers);
 });
 function getHighestZIndex() {        
     
@@ -220,6 +224,27 @@ function getHighestZIndex() {
     return highestZIndex;  
       
 } 
+var correctLocList = function (loclist) {    
+    var lng_radius = 0.0003,         // degrees of longitude separation
+        lat_to_lng = 111.23 / 71.7,  // lat to long proportion in Warsaw
+        angle = 0.5,                 // starting angle, in radians
+        loclen = loclist.length,
+        step = 2 * Math.PI / loclen,
+        i,
+        loc,
+        lat_radius = lng_radius / lat_to_lng;
+    for (i = 0; i < loclen; ++i) {
+        loc = loclist[i];        
+        lng = loc.position.lng() + (Math.cos(angle) * lng_radius);
+        lat = loc.position.lat() + (Math.sin(angle) * lat_radius);        
+        offset = new google.maps.LatLng(lat,lng);
+        loc.setPosition(offset);
+        thumbs[i].setPosition(offset);
+        setas[i].setPosition(offset);
+        angle += step;
+    }
+};
+
 </script>
 
 
