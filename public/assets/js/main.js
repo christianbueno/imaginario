@@ -229,12 +229,13 @@ supports = (function() {
 })(); 
 slider =  (function(){
     var $holder = $('#holder'),
-        $item = $holder.find('a');
+        $item = $holder.find('a'),
+        $text = $item.find('span');
 
     var timeout = null;
 
     var binds = function() {
-        $item.hover( holdAndSlow , play );
+        $item.hover( holdAndSlow , play );        
     },
     play = function() {
         clearInterval(timeout);
@@ -259,11 +260,10 @@ slider =  (function(){
             }
         );   
     },
-    init = function() {
-        $.getScript('/assets/js/jquery.pause.min.js').done(function(){
-            binds();
-            animate();
-        });        
+    init = function() {  
+        $item.quickfit();      
+        binds();
+        animate();        
     };
     
     return {

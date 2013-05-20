@@ -63,5 +63,7 @@
     	<a href="http://www.babelteam.com/pt">Babel-Team – Marketing & Vendas Automatizadas</a>
     </footer>
 <?php echo Asset::js('jquery-1.9.1.min.js'); ?>
+<?php echo Asset::js('jquery.quickfit.js'); ?>
+<?php echo Asset::js('jquery.pause.min.js'); ?>
 <?php echo Asset::js('main.js'); ?>
 </body></html>
