@@ -261,7 +261,7 @@ slider =  (function(){
         );   
     },
     init = function() {  
-        //$item.quickfit();      
+        $('.i-small').quickfit();      
         binds();
         animate();        
     };
