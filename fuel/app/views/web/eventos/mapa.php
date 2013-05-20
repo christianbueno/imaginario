@@ -61,7 +61,7 @@ $(document).ready(function(){
         var marker<?php echo $evento->id; ?> = new google.maps.Marker({
             position: location,
             map: map,        
-            icon: "<?php echo $evento->icon; ?>"        
+            icon: "/assets/img/evento<?php echo Date::forge($evento->when)->format('%Y')?>.png"        
         });
     <?php endforeach; ?> 
 
