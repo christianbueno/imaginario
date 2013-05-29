@@ -1210,3 +1210,9 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     padding: 5px 0 30px 140px;    
     margin: 20px 0;
 }
+.Aviso {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
