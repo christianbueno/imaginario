@@ -1211,8 +1211,12 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     margin: 20px 0;
 }
 .Aviso {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
+    left: 580px;
+    top: 48px;
+    position: absolute;
+    padding: 10px;
 }
