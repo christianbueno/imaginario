@@ -13,7 +13,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>             
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <?php echo render('modules/toolbar'); ?>
         <?php echo render('modules/menu'); ?>
     </div>

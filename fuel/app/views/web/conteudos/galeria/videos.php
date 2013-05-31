@@ -22,7 +22,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div id="galeria" class="container">
         <h1>Galeria <?php echo $title; ?></h1>
         <nav class="btn-group">

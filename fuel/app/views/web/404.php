@@ -11,7 +11,7 @@
 	<div id="vignette" class="container-fluid">		
 		
 		<a href="/" id="logo" class="offset2"></a>
-
+		<span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
 		<div class="container notfound">
 			<h1>Ops, página não encontrada :(</h1>
 			<p>Não encontramos o que você procurava, pode se tratar de algum link quebrado ou alguma coisa que não está no ar ainda. Você pode clicar em voltar no navegador para tentar de novo ou clicar <a href="/">aqui</a> para retornar ao inicio.</p>

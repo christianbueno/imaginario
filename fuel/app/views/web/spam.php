@@ -21,7 +21,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
             <h1>Anti-Spam</h1>
                 <p>Esta declaração Anti-Spam rege o uso desta página web e seus serviços associados, outras páginas de Imagina: Rio, domínios e sub-domínios, que são de propriedade do Imagina: Rio. sob a marca Imagina: Rio.</p>

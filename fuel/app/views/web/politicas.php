@@ -21,7 +21,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
             <h1>Política de Privacidade</h1>
             <p>Leia atentamente a Política de Privacidade praticada pelo Imagina: Rio e os sites relacionados com a marca Imagina: Rio.</p>

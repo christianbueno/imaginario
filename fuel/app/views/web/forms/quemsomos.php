@@ -11,7 +11,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
         <h1>Quem somos</h1>
         <p>IMAGINA RIO é uma programação massiva de arte, cultura e educação, toda interligada ao meio ambiente, que vai contribuir para assegurar ao Estado do Rio de Janeiro posição de vanguarda, a partir de ideais de sustentabilidade e preservação da natureza, na busca de novos valores e iniciativas concretas de fomento à economia criativa.</p> 

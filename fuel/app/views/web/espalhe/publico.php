@@ -12,7 +12,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper" style="margin-bottom:250px;">
             <h1>Espalhe sua paixão!</h1>
                 <img src="/assets/img/spread-the-love.png" width="155" height="130" align="right" style="margin-top:-70px;"/>

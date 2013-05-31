@@ -11,7 +11,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         	<div class="texto-wrapper">
 	            <h1>Copyright</h1>
 	            <p>Copyright © 2013 ImaginaRio, marca propriedade do Imagina: Rio. Todos os direitos reservados.</p>

@@ -11,7 +11,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
         <h1>Coletivos & Artistas</h1>
         <p>Se você é um artista ou representa algum coletivo, e gostaria de fazer parte ou descobrir como o IMAGINA RIO ajuda a divulgar você, preencha o formulário abaixo, e nós entraremos em contato com você diretamente.</p>

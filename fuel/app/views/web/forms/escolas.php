@@ -11,7 +11,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
         <h1>Escolas</h1>
         <p>Se você é aluno ou representante de alguma escola ou instituição de ensino e está interessado em participar de algum evento IMAGINA RIO, ou até mesmo realizar alguma pesquisa sobre um ou mais coletivos ou artistas, preencha o formulário abaixo e nós entraremos em contato com você.</p>

@@ -12,7 +12,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper" style="margin-bottom:250px">
             <h1>Obrigado por se cadastrar!</h1>
             <p><a href="/espalhe/publico/"><img src="/assets/img/spread-the-love.png" width="175" height="150" align="right" style="margin-top:-50px;"/></a>Em breve você receberá, via e-mail, a programação completa do <strong>Imagina Rio 2013</strong>. Enquanto isso clique no coração ao lado para compartilhar o <strong>Imagina Rio</strong> com os seus amigos e familiares.</p>

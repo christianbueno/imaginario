@@ -11,7 +11,7 @@
     <div id="vignette" class="container-fluid">     
 
         <a href="/" id="logo" class="offset2"></a>
-
+        <span class="Aviso"><i class="icon-warning-sign icon-white"></i> Portal em Desenvolvimento</span>
         <div class="texto-wrapper">
         <h1>Público Geral</h1>
         <p>Se você se interessou pelo IMAGINA RIO, tem alguma dúvida ou simplesmente gostaria de saber mais sobre o projeto e o que ele representa, preencha o formulário abaixo e nós entraremos em contato com você.</p>
