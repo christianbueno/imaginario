@@ -1219,4 +1219,5 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"]  {
     top: 48px;
     position: absolute;
     padding: 10px;
+    z-index: 9999;
 }
