@@ -147,7 +147,14 @@ $(document).ready(function(){
         var infowindow<?php echo $i; ?> = new InfoBox(myOptions);
 
                 
-        
+        <?php        
+        if($latlng === $find_location) {
+        ?>
+            infowindow<?php echo $i; ?>.open(map,refmarker<?php echo $i; ?>);   
+            map.panTo(new google.maps.LatLng(<?php echo $latlng; ?>));
+        <?php
+        }
+        ?>
 
 
         google.maps.event.addListener(refmarker<?php echo $i; ?>, 'click', function(e) {

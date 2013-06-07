@@ -3,31 +3,23 @@
 class Controller_Users extends Controller_Template
 {
     public $template = 'users/template';
-    private static $_redir = '/';
+    private static $_redir = 'users/perfil';
 
-    public function before()
-    {   
-        if(!strpos(Input::referrer(), 'users/login'))
-            Session::set('redir_to', Input::referrer());
-
-        parent::before();   
-    }
     
     public function action_login()
     {
-        $view = View::forge('users/login');
-
+        $view = View::forge('users/login');        
         $form = Form::forge('login');
         $auth = Auth::instance();
-        $form->add('username', 'Username:');
-        $form->add('password', 'Password:', array('type' => 'password'));
+        $form->add('username', 'Usuário:');
+        $form->add('password', 'Senha:', array('type' => 'password'));
         $form->add('submit', ' ', array('type' => 'submit', 'value' => 'Login'));
 
         if($_POST)
         {
             if($auth->login(Input::post('username'), Input::post('password')))
             {                
-                Response::redirect(Session::get('redir_to'));
+                Response::redirect(self::$_redir);
             }
             else
             {
@@ -36,7 +28,7 @@ class Controller_Users extends Controller_Template
         }
 
         $view->set('form', $form, false);
-        $this->template->title = 'User &raquo; Login';
+        $this->template->title = 'Usuário &raquo; Login';
         $this->template->content = $view;
     }
     public function action_logout()
@@ -67,7 +59,7 @@ class Controller_Users extends Controller_Template
         }
 
         $view->set('reg', $form->build(), false);
-        $this->template->title = 'User &raquo; Register';
+        $this->template->title = 'Usuário &raquo; Registrar';
         $this->template->content = $view;
     }
 

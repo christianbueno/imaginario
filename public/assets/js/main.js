@@ -1,3 +1,12 @@
+//
+// código por KXS
+//
+//   entre em contato! fazemos orçamentos a vonts: 
+//
+//     https://www.facebook.com/pages/KXS/331879920255246
+//
+//   e se você está lendo isso, um :*
+// 
 var facebook = (function(){
     var $anchor = null;
 
@@ -75,10 +84,23 @@ locator = (function(){
         e.preventDefault;
         $current = $(e.target);
         latlng = $current.data('latlng');
+        index = $current.data('index');
         lat = latlng.split(',')[0];
         lng = latlng.split(',')[1];
 
-        
+        getHighestZIndex();   
+        for (var i=0; i<markers.length; i++) {  
+            thumbs[i].setOptions({zIndex:thumbs[i].get("originalZIndex")});  
+            thumbs[i].setVisible(false);     
+
+            setas[i].setOptions({zIndex:setas[i].get("originalZIndex")});  
+            setas[i].setVisible(false);     
+        }               
+        thumbs[index].setOptions({zIndex:highestZIndex+2}); 
+        thumbs[index].setVisible(true);         
+
+        setas[index].setOptions({zIndex:highestZIndex+1}); 
+        setas[index].setVisible(true);   
         
         if(map.getZoom() < 15)
             map.setZoom(15);

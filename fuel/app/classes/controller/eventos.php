@@ -4,7 +4,12 @@ class Controller_Eventos extends Controller
 {
 
     public function action_index()
+    {        
+        return Response::forge(ViewModel::forge('eventos/mapa'));
+    }
+    public function action_localizar()
     {
+        View::set_global('find_location', Input::get('latlng'), false);
         return Response::forge(ViewModel::forge('eventos/mapa'));
     }
 

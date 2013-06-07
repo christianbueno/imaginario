@@ -51,14 +51,18 @@
     <div id="box-coletivos" class="box">
         <h1>Coletivos &amp; Artistas (<?php echo $total; ?>)</h1>
         <ul id="box-coletivos-lista">
-        <?php foreach ($coletivos as $coletivo):
+        <?php 
+        $i = 0;
+        foreach ($coletivos as $coletivo):
             $coletivo_id = $coletivo->id;
             $coletivo_name = Inflector::friendly_title($coletivo->name, '-', true);                
             $url = "/coletivos/ver/$coletivo_name/$coletivo_id";
         ?>   
 
-            <li><?php echo Html::anchor('javascript:void(0)', Html::img($coletivo->thumb, array('class' => 'i-thumb pull-left')) . $coletivo->name, array('style' => "background-color: #$coletivo->cor", 'data-latlng' => $coletivo->latlng)); ?></li>
-        <?php endforeach; ?>
+            <li><?php echo Html::anchor('javascript:void(0)', Html::img($coletivo->thumb, array('class' => 'i-thumb pull-left')) . $coletivo->name, array('data-index' => $i,'style' => "background-color: #$coletivo->cor", 'data-latlng' => $coletivo->latlng)); ?></li>
+        <?php 
+            $i++;
+        endforeach; ?>
     </div>
     <div class="bgMap" id="map-canvas"></div>
     <div id="vignette" class="container-fluid">     
@@ -224,6 +228,7 @@ function getHighestZIndex() {
     return highestZIndex;  
       
 } 
+
 var correctLocList = function (loclist) {    
     var lng_radius = 0.0003,         // degrees of longitude separation
         lat_to_lng = 111.23 / 71.7,  // lat to long proportion in Warsaw
